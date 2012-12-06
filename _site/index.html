@@ -1,9 +1,31 @@
----
-layout: default
-title: James G. Scott
----
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
 
-<div id="home">
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+
+   <!-- Typekit -->
+   <script type="text/javascript" src="http://use.typekit.com/jpd0pfm.js"></script>
+   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+
+<!-- ClickTale Top part -->
+<script type="text/javascript">
+var WRInitTime=(new Date()).getTime();
+</script>
+<!-- ClickTale end of Top part -->
+
+<div class="site">
+  <div class="title">
+    <a href="/">James G. Scott</a>
+    <a class="extra" href="/">home</a>
+  </div>
+  
+  <div id="home">
   
     <h1>About</h1>
   <ul class="posts">
@@ -35,9 +57,7 @@ title: James G. Scott
   <!-- Blog posts, which don't exist!
   <h1>Blog Posts</h1>
   <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
+    
   </ul>
   -->
 
@@ -155,3 +175,18 @@ title: James G. Scott
   </ul>
   
 </div>
+
+  
+  <div class="footer">
+    <div class="contact">
+      <p>
+        James G. Scott<br />
+        firstname.lastname@mccombs.utexas.edu
+      </p>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
