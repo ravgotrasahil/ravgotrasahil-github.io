@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:A90C03EB-5C9C-4CD7-B166-105F0B57F947</id>
+ <title>Page list Atom feed</title>
+ <updated>2011-11-07T09:10:35-06:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:31B7E920-4D5E-49E0-B3E2-219E91BC52F8</id>
+  <title>Home</title>
+  <title xmlns="urn:iweb:">Home</title>
+  <in-navbar xmlns="urn:iweb:">31B7E920-4D5E-49E0-B3E2-219E91BC52F8</in-navbar>
+  <link rel="alternate" href="Home.html"/>
+  <updated>2011-11-07T09:10:35.001-06:00</updated>
+  <content>Home</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:CD99FFC9-1142-4BF1-A351-C67CFFE7BEA9</id>
+  <title>Research</title>
+  <title xmlns="urn:iweb:">Research</title>
+  <in-navbar xmlns="urn:iweb:">CD99FFC9-1142-4BF1-A351-C67CFFE7BEA9</in-navbar>
+  <link rel="alternate" href="Research.html"/>
+  <updated>2011-11-07T09:10:35.002-06:00</updated>
+  <content>Research</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:BD27351B-4026-44DD-ADB8-FC8A10835567</id>
+  <title>Teaching</title>
+  <title xmlns="urn:iweb:">Teaching</title>
+  <in-navbar xmlns="urn:iweb:">BD27351B-4026-44DD-ADB8-FC8A10835567</in-navbar>
+  <link rel="alternate" href="Teaching.html"/>
+  <updated>2011-11-07T09:10:35.003-06:00</updated>
+  <content>Teaching</content>
+ </entry>
+</feed>
