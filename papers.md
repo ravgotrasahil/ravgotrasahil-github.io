@@ -11,8 +11,9 @@ title: Papers
   * (2013) [ False discovery rate regression: an application to neural synchrony detection in primary visual cortex][2] (with R. Kelly, M. Smith, and R. Kass). arXiv:1307.3495v2 [stat.ME].
   * (2013) [ Polya-Gamma data augmentation for dynamic models][2] (with J. Windle, C. Carvalho, and L. Sun). arXiv:1308.0774v1 [stat.CO].
   * (2013) [ Expectation-maximization for logistic regression.][2] (with L. Sun). arXiv:1306.0040v1 [stat.CO].
-  * (2013) [ Nonparametric Bayesian testing for monotonicity][3] (with T.S. Shively and S.G. Walker). arXiv:1304.3378v1 [stat.ME].
-
+  * (2013) [ Nonparametric Bayesian testing for monotonicity][3] (with T.S. Shively and S.G. Walker). arXiv:1304.3378v1 [stat.ME].  
+  
+  
 # Journal Articles and Major Conference Proceedings
 
   * (2013) [ Bayesian inference for logistic models using Polya-Gamma latent variables][4] (with N.G. Polson and J. Windle). _Journal of the American Statistical Association (Theory &amp; Methods)_ 108(504): 1339–49. arXiv:1205.0310 [stat.ME].
@@ -36,9 +37,10 @@ title: Papers
   * (2008) [ Feature-inclusion stochastic search for Gaussian graphical models][22] (with C.M. Carvalho). _Journal of Computational and Graphical Statistics_ 17(4): 790-808 (2008).
   * (2006) [ An exploration of aspects of Bayesian multiple testing][23] (with J.O. Berger). _Journal of Statistical Planning and Inference_ 136(7): 2144-262 (2006).
   * (2006) [ Inverting color-magnitude diagrams to access precise star cluster parameters: a Bayesian approach][24] (with T. von Hippel, W. Jefferys, N. Stein, D. Winget, S. DeGennaro, A. Dam, and E. Jeffery). _The Astrophysical Journal_ 645(2): 1436-47 (2006).
-  * (2005) [ White dwarfs in open clusters: calibrating the clock][25] (with T. von Hippel, W. Jefferys, and D. Winget). 14th European Workshop on White Dwarfs, ASP Conference Series 334: 77-80 (2005).
+  * (2005) [ White dwarfs in open clusters: calibrating the clock][25] (with T. von Hippel, W. Jefferys, and D. Winget). 14th European Workshop on White Dwarfs, ASP Conference Series 334: 77-80 (2005).  
 
-
+  
+  
 # Book chapters
 
   * (2013) [ The partition problem: case studies in Bayesian screening for time-varying model structure][26] (with Z. Liu and J. Windle). To appear in _Bayesian Theory and Applications: Essays in Honor of Adrian Smith_. Oxford University Press (2013).
