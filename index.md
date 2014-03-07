@@ -4,9 +4,9 @@ title: Home
 ---
 
 # Contact
-James G. Scott  
-Assistant Professor of Statistics  
-University of Texas at Austin   
+James G. Scott   
+Assistant Professor of Statistics   
+University of Texas at Austin  
 Department of Information, Risk, and Operations Management (McCombs School of Business)   
   and Department of Statistics and Data Sciences (College of Natural Sciences)   
 [CV](files/jamesscottcv.pdf)  
