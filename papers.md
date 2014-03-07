@@ -8,15 +8,15 @@ title: Papers
 
 # Preprints
 
-(2013) [ False discovery rate regression: an application to neural synchrony detection in primary visual cortex](http://arxiv.org/abs/1307.3495) (with R. Kelly, M. Smith, and R. Kass). arXiv:1307.3495v2 [stat.ME].  
-(2013) [ Efficient data augmentation in dynamic models for binary and count data](http://arxiv.org/abs/1308.0774) (with J. Windle, C. Carvalho, and L. Sun). arXiv:1308.0774v1 [stat.CO].  
-(2013) [ Expectation-maximization for logistic regression.](http://arxiv.org/abs/1306.0040) (with L. Sun). arXiv:1306.0040v1 [stat.CO].  
-(2013) [ Nonparametric Bayesian testing for monotonicity][3] (with T.S. Shively and S.G. Walker). arXiv:1304.3378v1 [stat.ME].   
+- (2013) [ False discovery rate regression: an application to neural synchrony detection in primary visual cortex](http://arxiv.org/abs/1307.3495) (with R. Kelly, M. Smith, and R. Kass). arXiv:1307.3495v2 [stat.ME].  
+- (2013) [ Efficient data augmentation in dynamic models for binary and count data](http://arxiv.org/abs/1308.0774) (with J. Windle, C. Carvalho, and L. Sun). arXiv:1308.0774v1 [stat.CO].  
+- (2013) [ Expectation-maximization for logistic regression.](http://arxiv.org/abs/1306.0040) (with L. Sun). arXiv:1306.0040v1 [stat.CO].  
+- (2013) [ Nonparametric Bayesian testing for monotonicity][3] (with T.S. Shively and S.G. Walker). arXiv:1304.3378v1 [stat.ME].   
 
 
 # Journal Articles and Major Conference Proceedings
 
-(2014) [Factors influencing the likelihood of instrumental delivery success](http://journals.lww.com/greenjournal/Abstract/publishahead/Factors_Influencing_the_Likelihood_of_Instrumental.99515.aspx) (with C. Aiken, A. Aiken, and J. Brocklesby)  Accepted for publication in _Obstetrics and Gynecology._
+(2014) Factors influencing the likelihood of instrumental delivery success (with C. Aiken, A. Aiken, and J. Brocklesby).  Accepted for publication in _Obstetrics and Gynecology._
 (2014) [Inference in two-piece location-scale models with Jeffreys priors: an invited discussion](http://projecteuclid.org/euclid.ba/1393251766).  _Bayesian Analysis_ 9(1): 25-28 (2014).
 
 (2013) [ Bayesian inference for logistic models using Polya-Gamma latent variables][4] (with N.G. Polson and J. Windle). _Journal of the American Statistical Association (Theory &amp; Methods)_ 108(504): 1339–49. arXiv:1205.0310 [stat.ME].  
