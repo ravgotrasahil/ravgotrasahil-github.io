@@ -5,8 +5,10 @@ title: Papers
 
 [ Google Scholar profile.][1]
 
+&nbsp;  
 
 # Preprints
+***
 
 (2013) [ False discovery rate regression: an application to neural synchrony detection in primary visual cortex](http://arxiv.org/abs/1307.3495) (with R. Kelly, M. Smith, and R. Kass). arXiv:1307.3495v2 [stat.ME].
 
@@ -16,9 +18,10 @@ title: Papers
 
 (2013) [ Nonparametric Bayesian testing for monotonicity][3] (with T.S. Shively and S.G. Walker). arXiv:1304.3378v1 [stat.ME].   
 
-***
+&nbsp;  
 
 # Journal Articles and Major Conference Proceedings
+***
 
 (2014) Factors influencing the likelihood of instrumental delivery success (with C. Aiken, A. Aiken, and J. Brocklesby).  Accepted for publication in _Obstetrics and Gynecology._
 
@@ -69,10 +72,10 @@ title: Papers
 
 (2005) [ White dwarfs in open clusters: calibrating the clock][25] (with T. von Hippel, W. Jefferys, and D. Winget). 14th European Workshop on White Dwarfs, ASP Conference Series 334: 77-80 (2005).  
 
-
-***
+&nbsp;  
 
 # Book chapters
+***
 
 (2013) [ The partition problem: case studies in Bayesian screening for time-varying model structure][26] (with Z. Liu and J. Windle). To appear in _Bayesian Theory and Applications: Essays in Honor of Adrian Smith_. Oxford University Press (2013).  
 
