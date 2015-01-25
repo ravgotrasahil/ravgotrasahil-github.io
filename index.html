@@ -1,0 +1,122 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  {% if site.theme.header_text %}
+  <div class="call-out">{{ site.theme.header_text }}</div>
+  {% endif %}
+
+    <div class="content">
+      <article >
+
+
+<section class="post-content">
+    <h3 id="contact-information">Contact information</h3>
+<p>James G. Scott <br />
+Assistant Professor of Statistics <br />
+University of Texas at Austin<br />
+firstname.lastname@mccombs.utexas.edu  <a href="/files/jamesscottcv.pdf">CV</a>
+  <a href="https://github.com/jgscott">GitHub page</a>   </p>
+
+
+
+<h3 id="about">About</h3>
+
+<img src="/files/scott_james_IMG_6450_cropped.png" alt="image" ALIGN=”left” HSPACE=”20” VSPACE=”20”/>
+
+<p>I am a statistician and data scientist.  My research interests are
+mainly in modern computational methods and in Bayesian inference.
+I’ve done recent work on data-augmentation schemes for Bayesian
+computation; scalable algorithms; multiple testing and
+high-dimensional screening problems; prior choice in hierarchical
+models; and Bayesian methods in machine learning.  See my
+<a href="/papers/">Papers</a> and <a href="/software/">Software</a> pages for more
+detail.  </p>
+
+<p>My recent collaborative projects have involved applications in health
+care, security, and neuroscience.  I’ve also done work in linguistics,
+political science, infectious disease, astronomy, and molecular
+biology.  </p>
+
+<h3 id="affiliations">Affiliations</h3>
+<p>Department of Information, Risk, and Operations Management (McCombs
+School of Business)<br />
+Department of Statistics and Data Sciences (College of Natural
+Sciences)  </p>
+
+<h3 id="mailing-address">Mailing Address</h3>
+<p>2110 Speedway, B6500 <br />
+Austin, Texas 78712 <br />
+(512) 471-5905   </p>
+
+<h3 id="education">Education</h3>
+<p>Ph.D in Statistics, Duke University (2009)<br />
+M.A.St in Mathematics, University of Cambridge (2005)<br />
+B.S in Mathematics, University of Texas (2004)  </p>
+
+
+  </section>
+
+</article>
+    </div>
+
+
+
+
+  <div class="posts">
+
+
+    {% for post in paginator.posts %}
+    <div class="post-teaser">
+    
+      <header>
+        <h1>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h1>
+        
+        <p class="meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+      </header>
+
+      <div class="excerpt">
+        {{ post.excerpt }}
+
+        <a class="button" href="{{ post.url | prepend: site.baseurl }}">{{ site.theme.str_continue_reading }}</a>
+      </div>
+      
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+  
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+      <i class="fa fa-chevron-left"></i> 
+      {{ site.theme.str_prev }}
+    </a>
+    
+    {% else %}
+    <span class="button disabled" class="button" >
+      <i class="fa fa-chevron-left"></i> 
+      {{ site.theme.str_prev }}
+    </span>
+    {% endif %}
+
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+      {{ site.theme.str_next }} 
+      <i class="fa fa-chevron-right"></i>
+    </a>
+    
+    {% else %}
+    <span class="button disabled" >
+      {{ site.theme.str_next }} 
+      <i class="fa fa-chevron-right"></i>
+    </span>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
