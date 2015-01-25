@@ -13,7 +13,6 @@ img {
 <div class="home">
 
     <div class="content">
-      <article >
 
 ### About me
 ![Image](/files/scott_james_IMG_6450_cropped.png)
@@ -57,9 +56,6 @@ Ph.D in Statistics, Duke University (2009)
 M.A.St in Mathematics, University of Cambridge (2005)  
 B.S in Mathematics, University of Texas (2004)  
 
-  </section>
-
-</article>
     </div>
 
 
