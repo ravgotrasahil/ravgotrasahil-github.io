@@ -7,32 +7,38 @@ title: Papers
 
 &nbsp;  
 
-# Preprints
-***
+### Preprints
 
-(2013) [ False discovery rate regression: an application to neural synchrony detection in primary visual cortex](http://arxiv.org/abs/1307.3495) (with R. Kelly, M. Smith, and R. Kass). arXiv:1307.3495v2 [stat.ME].
+(2014) [False discovery rate smoothing](http://arxiv.org/abs/1411.6144) (with W. Tansey, O. Koyejo, and R. Poldrack).  
 
-(2013) [ Efficient data augmentation in dynamic models for binary and count data](http://arxiv.org/abs/1308.0774) (with J. Windle, C. Carvalho, and L. Sun). arXiv:1308.0774v1 [stat.CO].
+(2014) [Vertical-likelihood Monte Carlo](http://arxiv.org/abs/1409.3601) (with N. Polson).  
 
-(2013) [ Expectation-maximization for logistic regression.](http://arxiv.org/abs/1306.0040) (with L. Sun). arXiv:1306.0040v1 [stat.CO].
+(2014) [Priors for Random Count Matrices Derived from a Family of Negative Binomial Processes](http://arxiv.org/abs/1404.3331) (with M. Zhou).  
 
-(2013) [ Nonparametric Bayesian testing for monotonicity][3] (with T.S. Shively and S.G. Walker). arXiv:1304.3378v1 [stat.ME].   
+(2014) [Nonparametric Bayesian testing for monotonicity](http://arxiv.org/abs/1304.3378) (with T. Shively and S. Walker).  
+
+(2014) [Mixtures, envelopes, and hierarchical duality](http://arxiv.org/abs/1406.0177) (with N. Polson).  
+
 
 &nbsp;  
 
-# Journal Articles and Major Conference Proceedings
-***
-
-(2014) Factors influencing the likelihood of instrumental delivery success (with C. Aiken, A. Aiken, and J. Brocklesby).  Accepted for publication in _Obstetrics and Gynecology._
-
-(2014) [Inference in two-piece location-scale models with Jeffreys priors: an invited discussion](http://projecteuclid.org/euclid.ba/1393251766).  _Bayesian Analysis_ 9(1): 25-28 (2014).
-
-(2013) [ Bayesian inference for logistic models using Polya-Gamma latent variables][4] (with N.G. Polson and J. Windle). _Journal of the American Statistical Association (Theory &amp; Methods)_ 108(504): 1339–49. arXiv:1205.0310 [stat.ME].
+### Journal Articles and Conference Proceedings
 
 
-(2013) [ No control genes required: Bayesian analysis of qRT-PCR data.][5] (with M.V. Matz and R.G. Wright). _PLoS ONE_ 8(8): e71448 (2013).   
+(2015) [Management of Fetal Malposition in the Second Stage of Labor: A Propensity Score Analysis](http://www.ncbi.nlm.nih.gov/pubmed/25446659).  _American Journal of Obstetrics and Gynecology_ (in press).  
 
-(2013) [ The Bayesian Bridge][6] (with N.G. Polson and J. Windle). arXiv:1109.2279v1 [stat.ME]. _The Journal of the Royal Statistical Society, Series B (Statistical Methodology)._   
+(2015) [ False discovery rate regression: an application to neural synchrony detection in primary visual cortex](http://arxiv.org/abs/1307.3495) (with R. Kelly, M. Smith, P. Zhou, and R. Kass).  _Journal of the American Statistical Association_ (in press).  
+
+(2014) [Factors influencing the likelihood of instrumental delivery success](http://www.ncbi.nlm.nih.gov/pubmed/24785607) (with C. Aiken, A. Aiken, and J. Brocklesby).  _Obstetrics and Gynecology_ 123(4): 796-803.  
+
+(2014) [ The Bayesian Bridge][6] (with N.G. Polson and J. Windle). arXiv:1109.2279v1 [stat.ME]. _The Journal of the Royal Statistical Society, Series B (Statistical Methodology)_ 76:4 (713--33).  
+
+(2014) [Inference in two-piece location-scale models with Jeffreys priors: an invited discussion](http://projecteuclid.org/euclid.ba/1393251766).  _Bayesian Analysis_ 9(1): 25-28 (2014).  
+
+(2013) [ Bayesian inference for logistic models using Polya-Gamma latent variables][4] (with N.G. Polson and J. Windle). _Journal of the American Statistical Association (Theory &amp; Methods)_ 108(504): 1339–49. arXiv:1205.0310 [stat.ME].  
+
+(2013) [ No control genes required: Bayesian analysis of qRT-PCR data.][5] (with M.V. Matz and R.G. Wright). _PLoS ONE_ 8(8): e71448 (2013).    
+
 
 (2013) [ A recursive estimate for the predictive likelihood in a topic model][7] (with J. Baldridge). _Proceedings of the 16th International Conference on Artificial Intelligence and Statistics _ (AISTATS) 31 (2013).   
 
@@ -72,10 +78,11 @@ title: Papers
 
 (2005) [ White dwarfs in open clusters: calibrating the clock][25] (with T. von Hippel, W. Jefferys, and D. Winget). 14th European Workshop on White Dwarfs, ASP Conference Series 334: 77-80 (2005).  
 
-&nbsp;  
 
-# Book chapters
-***
+
+
+### Book chapters
+
 
 (2013) [ The partition problem: case studies in Bayesian screening for time-varying model structure][26] (with Z. Liu and J. Windle). To appear in _Bayesian Theory and Applications: Essays in Honor of Adrian Smith_. Oxford University Press (2013).  
 
