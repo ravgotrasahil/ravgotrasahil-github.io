@@ -13,4 +13,4 @@ title: Teaching
 ## R Walk-throughs
 
 ### Basics
-* [heights](/r/heights/): a ``hello world''-style introduction to the R environment.
+* [heights](/r/heights): a ``hello world''-style introduction to the R environment.
