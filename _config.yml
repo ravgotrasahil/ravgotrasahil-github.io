@@ -11,7 +11,8 @@ theme:
   description: "James Scott's home page at the University of Texas at Austin." # used by search engines
   
   # Header and footer text
-  header_text: > <p>James Scott  •  james.scott@mccombs.utexas.edu
+  header_text: >
+  <p>James Scott  •  james.scott@mccombs.utexas.edu
      <br>
      University of Texas at Austin</p>
 
