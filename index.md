@@ -3,19 +3,23 @@ layout: page
 title: Home
 ---
 
+### Contact information
 James G. Scott   
 Assistant Professor of Statistics   
 University of Texas at Austin  
 firstname.lastname@mccombs.utexas.edu  [CV](files/jamesscottcv.pdf)
   [GitHub page](https://github.com/jgscott)   
 
+![image](/files/scott_james_IMG_6450_cropped.png)
+
+### About
 I am a statistician and data scientist.  My research interests are
 mainly in modern computational methods and in Bayesian inference.
 I've done recent work on data-augmentation schemes for Bayesian
 computation; scalable algorithms; multiple testing and
 high-dimensional screening problems; prior choice in hierarchical
 models; and Bayesian methods in machine learning.  See my
-[Papers](papers.html) and [Software](software.html) pages for more
+[Papers](/papers/) and [Software](/software/) pages for more
 detail.  
 
 My recent collaborative projects have involved applications in health

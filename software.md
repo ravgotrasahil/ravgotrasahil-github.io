@@ -3,8 +3,7 @@ layout: page
 title: Software
 ---
 
-# R packages
-***
+(2014) FDR smoothing. Exploits spatial structure in multiple-testing problem with test statistics on a spatial lattice or arbitrary graph.  [On Github](https://github.com/tansey/smoothfdr).  All the hard work by [Wes Tansey](https://github.com/tansey).  
 
 (2014) FDRreg. Tools for false-discovery rate problems, including
 false-discovery rate regression (whereby covariates can influence
