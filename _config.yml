@@ -1,2 +1,66 @@
-markdown: rdiscount
-pygments: true
+# SITE CONFIGURATION
+baseurl: "/SDS383D_Spring2015" # the subpath of your site, e.g. /blog
+url: "http://jgscott.github.io" # the base hostname & protocol for your site
+BASE_PATH: /SDS383D_Spring2015
+
+# THEME-SPECIFIC CONFIGURATION
+theme:
+  # Meta
+  title: James Scott
+  avatar: avatar.png
+  gravatar: # email md5 hash
+  description: "James Scott's home page at the University of Texas at Austin." # used by search engines
+  
+  # Header and footer text
+  header_text: >
+
+  footer_text: >
+   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type.html">Type Theme</a>
+  
+  # Icons
+  rss: false
+  email_address: "james.scott@mccombs.utexas.edu"
+  behance:
+  bitbucket: 
+  dribbble: 
+  facebook: 
+  flickr: 
+  github: "jgscott"
+  google_plus: 
+  instagram: 
+  linkedin:  # full URL
+  pinterest: 
+  reddit: 
+  soundcloud: 
+  stack_exchange:  # full URL
+  steam: 
+  tumblr: 
+  twitter: 
+  wordpress: 
+  youtube: 
+  
+  # Scripts
+  google_analytics: # tracking id, e.g. "UA-000000-01"
+  disqus_shortname:
+  
+  # Localization strings
+  str_follow_on: "Follow on"
+  str_rss_follow: "Follow RSS feed"
+  str_email: "Email"
+  str_next: "Next"
+  str_prev: "Prev"
+  str_continue_reading: "Continue reading"
+  
+  # Colors, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
+
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: :compressed
