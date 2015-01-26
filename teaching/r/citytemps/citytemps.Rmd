@@ -1,5 +1,4 @@
 ---
-fig.width: 6
 output:
   md_document:
     includes:

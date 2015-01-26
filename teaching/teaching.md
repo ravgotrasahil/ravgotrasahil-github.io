@@ -13,5 +13,8 @@ title: Teaching
 ## R Walk-throughs
 
 ### Basics
-* [heights](r/heights/heights.html): a "hello world"-style introduction to the R environment.
-* [citytemps](r/citytemps/citytemps.html): measuring and visualizing dispersion; changing default plots.
+* [heights](r/heights/heights.html): a "hello world"-style introduction to the R environment.  
+* [titanic](r/titanic/titanic.html): basics of contingency tables.  
+* [citytemps](r/citytemps/citytemps.html): measuring and visualizing dispersion; changing default plots.  
+* [sat](r/sat/sat.html): boxplots, scatter plots, and lattice plots.
+  
