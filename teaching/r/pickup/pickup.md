@@ -166,8 +166,8 @@ There is no systematic trend, which is just as it should be if we've
 done a good job modeling the response using the predictor.
 
 Which pickup looks like the best deal, adjusting for mileage? We could
-assess this by finding the minimum residual, which is the truck is
-asking price is the farthest below its expected cost, given mileage:
+assess this by finding the minimum residual, which is the truck whose
+asking price is the farthest below its expected cost, given its mileage:
 
     min(resid(model1))
 
@@ -179,7 +179,7 @@ asking price is the farthest below its expected cost, given mileage:
     ## 44
 
 Finally, how much variation is left in the residuals, compared to the
-original variation in price:
+original variation in price?
 
     sd(pickup$price)
 
@@ -194,4 +194,5 @@ original variation in price:
     ## [1] 4263.337
 
 This quantifies the information content of the model: that is, how much
-our uncertainty in a truck's price is reduced by knowing its mileage.
+our uncertainty in a truck's price is reduced by knowing its mileage,
+and how much remains in the residuals.
