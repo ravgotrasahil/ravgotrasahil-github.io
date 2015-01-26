@@ -145,9 +145,9 @@ function:
 The first line says to use ordinary least squares to a linear model for
 SAT.Q using School as a grouping variable. The second line then extracts
 the coefficients of the linear model. These coefficients express the
-groupwise means in baseline-offset form: - the coefficient for
-Architecture is just the group mean for Architecture, which serves as
-the baseline  
+groupwise means in baseline-offset form:  
+- the coefficient for Architecture is just the group mean for
+Architecture, which serves as the baseline  
 - all the other coefficients are the offsets: that is, the amount by
 which the corresponding group mean differs from the baseline.
 
