@@ -100,8 +100,22 @@ Next, download the ut2000.csv file and read it in.
     ## 
 
 School (which of the 10 different undergraduate schools at UT the
-student graduated from) is a natural grouping variable here. Let's start
-by computing the mean SAT math score stratified by school.
+student graduated from) is a natural grouping variable here. To see both
+the between-group and within-group variation, let's examine a boxplot of
+SAT math scores (SAT.Q) versus school.
+
+    bwplot(SAT.Q ~ School, data=ut2000)
+
+![](sat_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+
+The `bwplot` command is available because we loaded the `mosaic`
+package. You'll notice the aesthetics are a little nicer than the basic
+R command `boxplot`. You may also notice the names of the colleges along
+the x axis running together, which you can fix by clicking "Zoom" in the
+Plots tab and manually resizing the window.
+
+Let's first focus the between-group variation. We can quantify this by
+seeing how the group means differ from one another.
 
     mean(SAT.Q ~ School, data=ut2000)
 
@@ -112,34 +126,65 @@ by computing the mean SAT math score stratified by school.
     ##         NURSING     SOCIAL WORK 
     ##        561.1905        602.1429
 
-This gives you an idea of between-group variation. To see both the
-between-group and within-group variation, you'll need a boxplot then a
-boxplot of SAT math scores (SAT.Q)
+This function you the group means "straight up." A slightly different
+way of presenting the same information is given by the lm (linear model)
+function:
 
-    bwplot(SAT.Q ~ School, data=ut2000)
+    lm1 = lm(SAT.Q ~ School, data=ut2000)
+    coef(lm1)
 
-![](sat_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+    ##           (Intercept)        SchoolBUSINESS  SchoolCOMMUNICATIONS 
+    ##            684.687500            -51.766827            -93.053513 
+    ##       SchoolEDUCATION     SchoolENGINEERING       SchoolFINE ARTS 
+    ##           -130.039613             -9.522032            -87.508013 
+    ##    SchoolLIBERAL ARTS SchoolNATURAL SCIENCE         SchoolNURSING 
+    ##            -87.183439            -51.780833           -123.497024 
+    ##     SchoolSOCIAL WORK 
+    ##            -82.544643
 
-The `bwplot` command is available because we loaded the `mosaic`
-package. You'll notice the aesthetics are a little nicer than the basic
-R command `boxplot`. You may also notice the names of the colleges along
-the x axis running together, which you can fix by clicking "Zoom" in the
-Plots tab and manually resizing the window.
+The first line says to use ordinary least squares to a linear model for
+SAT.Q using School as a grouping variable. The second line then extracts
+the coefficients of the linear model. These coefficients express the
+groupwise means in baseline-offset form: - the coefficient for
+Architecture is just the group mean for Architecture, which serves as
+the baseline  
+- all the other coefficients are the offsets: that is, the amount by
+which the corresponding group mean differs from the baseline.
+
+If we wanted to quote numbers that describe the within-group and
+between-group variation, a natural way to do so is to compute the
+standard deviation of the fitted values and residuals from the model.
+
+    my_fitted_values = fitted(lm1)
+    my_residuals = resid(lm1)
+    sd(my_fitted_values)
+
+    ## [1] 29.75042
+
+    sd(my_residuals)
+
+    ## [1] 77.57288
 
 Next, let's look at a scatterplot of graduating GPA versus SAT math
 scores for all students.
 
     plot(GPA ~ SAT.Q, data=ut2000)
 
-![](sat_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![](sat_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
-If we want to see this relationship separately for each of the 10
-colleges, we need what's called a lattice plot. The `xyplot` command
-produces one:
+We can compute a simple correlation using cor:
+
+    cor(GPA ~ SAT.Q, data=ut2000)
+
+    ## [1] 0.3164184
+
+Finally, if we want to see this bivariate relationship plotted
+separately for each of the 10 colleges, we need what's called a lattice
+plot. The `xyplot` command produces one:
 
     xyplot(GPA ~ SAT.Q | School, data=ut2000)
 
-![](sat_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](sat_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
 The vertical bar (|) should be read as "conditional upon" or "stratified
 by."
