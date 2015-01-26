@@ -85,8 +85,11 @@ that modifies the default behavior of the quantile function to yield the
 5th and 95th percentiles. We could use these numbers to construct a 90%
 coverage interval.
 
-Next, let's make a histogram for Rapid City, while changing the default
-title and x-axis label:
+### Changing the default look of plots
+
+Next, we'll make a histogram for Rapid City, except we'll change the
+default title and x-axis label to something a bit more fit for human
+consumption.
 
     hist(citytemps$Temp.RapidCity, main="Average Daily Temperatures in Rapid City, 1995-2011", xlab='Temperature')
 
