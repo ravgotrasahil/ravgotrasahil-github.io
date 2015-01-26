@@ -1,0 +1,102 @@
+---
+fig.width: 6
+output:
+  md_document:
+    includes:
+      in_header: ../header.txt
+---
+
+### Measuring and visualizing dispersion
+
+In this walk-through, you'll learn how to measure and visualize dispersion of a single quantitative variable.  You will also learn how to change some of the default graphics settings in R plots.
+
+Data files:  
+* [citytemps.csv](citytemps.csv): daily average temperatures in San Diego, CA and Rapid City, SD.  
+
+First download the citytemps.csv file and read it in. You can use RStudio's Import Dataset button, or use the read.csv command:
+```{r}
+citytemps = read.csv('citytemps.csv')
+```
+If you do this second option, make sure you're working from the directory where the data lives, or put the full path to the file between the quotation marks.
+
+We'll start off by getting R to summarize the variables:
+
+```{r}
+summary(citytemps)
+```
+
+You can see we have 17 years of temperature data on San Diego and Rapid City.  Let's focus on San Diego. We'll start with a histogram, one of the most basic plots for a single quantitative variable:
+
+```{r}
+hist(citytemps$Temp.SanDiego)
+```
+
+You already know one way of summarizing the dispersion of this distribution: the standard deviation.
+```{r}
+mean(citytemps$Temp.SanDiego)
+sd(citytemps$Temp.SanDiego)
+```
+
+
+Another measure of dispersion is the coverage interval: that is, an interval covering a specified fraction of the observations.  For example, to get a central 50% coverage interval, we'd need the 25th and 75 percentiles of the distribution.  By definition, 50% of the observations are between these two numbers.  You can get these from the quantile function.
+```{r}
+quantile(citytemps$Temp.SanDiego)
+```
+
+You can also ask for different quantiles by passing a second argument called "probs," like this:
+```{r}
+quantile(citytemps$Temp.SanDiego, probs=c(0.05, 0.95))
+```
+In computer science an "argument" is just something we pass to a function.  In this case, `probs=c(0.05, 0.95)` is an optional argument that modifies the default behavior of the quantile function to yield the 5th and 95th percentiles.  We could use these numbers to construct a 90% coverage interval.
+
+
+Next, let's make a histogram for Rapid City, while changing the default title and x-axis label:
+```{r}
+hist(citytemps$Temp.RapidCity, main="Average Daily Temperatures in Rapid City, 1995-2011", xlab='Temperature')
+```
+
+Notice again that we've used optional arguments (main and xlab) to change the main title and x-axis label, respectively.
+
+Next, let's stack the two histograms on top of each other, to make a multi-frame plot.  We do this with the following code block.  The first line says to make a multi-frame plot (filled in along the rows) with 2 rows and 1 column.  The next two plotting commands then fill in the two frames.
+
+```{r, fig.height=8}
+par(mfrow=c(2,1))
+hist(citytemps$Temp.SanDiego)
+hist(citytemps$Temp.RapidCity)
+```
+
+This won't do at all: notice that the axes and bin sizes differ between the two plots.  This makes it hard to compare the two distributions at a glance.  We need to align these two plots to have the same axes and bins.  Just as we did above, we'll do this by passing additional arguments to the `hist` function.
+
+First, we must define a set of breakpoints for the histogram grams.  We'll do this with the `seq` (which stands for sequence) command:
+```{r}
+mybreaks = seq(-20, 92, by=2)
+```
+This says to make a sequence running from -20 to 92 degrees in increments of 2.  You'll see the whole sequence if you type `mybreaks` directly into the console"
+```{r}
+mybreaks
+```
+
+Now we can make the histograms using these custom bins.  We'll also change the x and y axes using the xlim and ylim arguments:
+```{r, fig.height=8}
+par(mfrow=c(2,1))
+hist(citytemps$Temp.SanDiego, breaks=mybreaks, xlim=c(-20,100), ylim=c(0, 760))
+hist(citytemps$Temp.RapidCity, breaks=mybreaks, xlim=c(-20,100), ylim=c(0, 760))
+```
+
+Now the bins and axes are comparable, making the distributions themselves much easier to compare.
+
+### Optional
+
+Below, I've included a set of commands that produce a much prettier plot.  Feel free to go line by line and modify these commands to see what behavior they produce.  You can learn a lot about R this way:
+
+```{r}
+mybreaks = seq(-20, 92, by=2)
+par(mfrow=c(1,1), mar=c(3,0,1,3), mgp=c(2,1,0))
+hist(citytemps$Temp.SanDiego, breaks=mybreaks, xlab="Average Daily Temperature (F)", main="", border="darkgrey", col="grey", axes=FALSE, ylim=c(0, 760))
+hist(citytemps$Temp.RapidCity,breaks=mybreaks,add=TRUE, border=rgb(0,100,0,100,maxColorValue=255), col= rgb(0,100,0,50,maxColorValue=255))
+axis(4,at=seq(0,700,by=100), las=1,tick=FALSE)
+axis(1,pos=0)
+text(55, 770, "San Diego, CA", pos=4, font=2)
+text(30, 260, "Rapid City, SD", pos=4, font=2)
+```
+

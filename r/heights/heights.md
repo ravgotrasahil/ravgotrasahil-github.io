@@ -2,7 +2,7 @@
 layout: page
 ---
 
-This is the very first R script I show in my intro classes.
+This is a "hello world" walk-through intended as a gentle introduction to R.
 
 Data files:  
 * [heights.csv](heights.csv): data on students' heights versus their parents' heights.  
@@ -15,10 +15,12 @@ Let's start with the simplest thing of all that you can do with R: use it as a c
     log10(100)
 
 
-This gets boring quickly; let's look at some data.   Read in the heights.csv data set using the Import Dataset button in RStudio.  In the version of RStudio I'm using (0.98.1091), this is under the Environment tab.  By default, R should name the imported data frame in the variable ``heights''.
+Next, let's look at some data.   Read in the heights.csv data set using the Import Dataset button in RStudio.  In the version of RStudio I'm using (0.98.1091), this is under the Environment tab.  By default, R should name the imported data frame in the variable ``heights''.  This data set has three variables:  
+* SHGT: student height in inches  
+* MHGT: mother's height in inches  
+* FHGT: father's height in inches  
 
 R has many functions for computing basic summary statistics.  Meet three of the most basic by copying the following code to your console.
-
 
     # Get a summary of each variable in the data set
     summary(heights)
@@ -54,15 +56,22 @@ Another basic operation in R is to store the results of computations in new vari
 	mu = mean(heights$SHGT)
 	sigma = sd(heights$SHGT)
 
-Now these variables are availble to be used in subsequent computations.
+In computer-science parlance, this is called "declaring variables."  We're telling R to store the mean of the student height variable in a new variable called "mu" and to store the standard deviation in a new variable called "sigma".  When you execute these commands you won't see any output in the console.  But now these variables are available to be used in subsequent computations.  We can just refer to them by name:
 
 	> mu - 2*sigma
 	[1] 61.79985
 	> mu + 2*sigma
 	[1] 77.32637
 
+An important thing to remember is that R is case sensitive.  If you use the wrong case, you'll get an error:
 
-You can get help about any R command using the question mark.
+	> Mu + 2*sigma
+	Error: object 'Mu' not found
+	> mu + 2*Sigma
+	Error: object 'Sigma' not found
+
+
+All R commands have extensive documentation.  You can get help about anything using the question mark:
 
 	?mean
 	?sd
