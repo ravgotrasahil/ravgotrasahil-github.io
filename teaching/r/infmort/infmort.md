@@ -2,10 +2,10 @@
 layout: page
 ---
 
-In this walk-through, you'll learn fit a power law curve to data using
-linear least squares and the log transformation. The log transform is
-often useful for data bounded below by 0, or data that span many orders
-of magnitude.
+In this walk-through, you'll learn to fit a power law curve to data
+using linear least squares and the log transformation. The log transform
+is often useful for data bounded below by 0, or data that span many
+orders of magnitude.
 
 Data files:  
 \* [infmort.csv](infmort.csv): infant mortality and size of economy for
@@ -18,7 +18,7 @@ First load the two libraries you'll need: mosaic and faraway.
     library(mosaic)
     library(faraway)
 
-If you can an error like this:
+If you see an error like this:
 
     Error in library(faraway) : there is no package called ‘faraway’
 
@@ -47,26 +47,28 @@ We'll start by plotting the data:
 
     plot(mortality ~ gdp, data=infmort)
 
-![](infmort_files/figure-markdown_strict/unnamed-chunk-3-1.png) There's
-a noticeable bunching of the data at the left of the plot. This happens
-because GDP is a highly skewed variables: many many small economies, and
-a small handful of large ones. We can see this effect quite easily in a
+![](infmort_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+
+There's a noticeable bunching of the data at the left of the plot. This
+happens because GDP is a highly skewed variable; there are many small
+economies and few large ones. We can see this effect easily in a
 histogram.
 
     hist(infmort$gdp, breaks=20)
 
-![](infmort_files/figure-markdown_strict/unnamed-chunk-4-1.png) Note the
-long right tail. This suggests that we should try using the logarithm of
-GDP, which will have the effect of unbunching the data. Let's try
-plotting infant mortality versus log GDP, by specifying that we want the
-x variable to be displayed on a log scale.
+![](infmort_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+
+Note the long right tail. This suggests that we should try using the
+logarithm of GDP, which will have the effect of unbunching the data.
+Let's try plotting infant mortality versus log GDP, by specifying that
+we want the x variable to be transformed to a log scale.
 
     plot(mortality ~ log(gdp), data=infmort)
 
 ![](infmort_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
-Notice that scale of the x axis changes: it's measured in units of log
-GDP now. (In R, log means natural log... if you want the base-10
+Notice that the scale of the x axis changes: it's measured in units of
+log GDP now. (In R, log means natural log... if you want the base-10
 logarithm, use log10 instead.)
 
 This plot looks better, but now we notice that the points are bunched
@@ -120,8 +122,9 @@ point style:
     plot(mortality ~ gdp, data=infmort)
     points(mort.pred ~ gdp, data=infmort, col='blue', pch=18)
 
-![](infmort_files/figure-markdown_strict/unnamed-chunk-11-1.png) Try
-typing in ?points if you want to see the options for pch.
+![](infmort_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+
+Try typing in ?points if you want to see the options for pch.
 
 We could also add the fitted curve directly to the scatter plot using
 the `curve` function, based on what we know about power laws and log
@@ -130,7 +133,12 @@ transformations:
     plot(mortality ~ gdp, data= infmort)
     curve(exp(mybeta[1]) * x^(mybeta[2]), add=TRUE, col='blue')
 
-![](infmort_files/figure-markdown_strict/unnamed-chunk-12-1.png) The
-`curve` function allows you to treat R as a graphing calculator. It can
-plot functions or add those functions to existing scatter plots, as
-above.
+![](infmort_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+
+As the above example suggests, the `curve` function allows you to treat
+R as a graphing calculator. It can plot functions or add those functions
+to existing scatter plots, as above. If you want to see this function in
+action, try a few examples:
+
+    curve(x^2 - x, from=-3, to=3)
+    curve(sin(x), from=0, to=4*pi)
