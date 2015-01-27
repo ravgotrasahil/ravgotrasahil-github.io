@@ -15,9 +15,11 @@ title: Teaching
 I use R in all my courses, and over the years I've built up a library of teaching scripts.  In 2015 I'm converting these to R Markdown as each one comes up in class.  Here are the ones I've gotten to so far.  You can find the raw R markdown files through my GitHub page.
 
 ### Basics
-* [heights](r/heights/heights.html): a "hello world"-style introduction to the R environment.  
-* [titanic](r/titanic/titanic.html): basics of contingency tables.  
-* [citytemps](r/citytemps/citytemps.html): measuring and visualizing dispersion; changing default plots.  
-* [sat](r/sat/sat.html): boxplots, residuals, fitted values, groupwise means, scatter plots, and lattice plots.   
-* [pickup](r/pickup/pickup.html): simple linear regression via ordinary least squares, residual summaries  
+* [Heights of students versus their parents](r/heights/heights.html): a "hello world"-style introduction to the R environment.  
+* [Survival on the Titanic](r/titanic/titanic.html): basics of contingency tables.  
+* [Temperatures in San Diego and Rapid City](r/citytemps/citytemps.html): measuring and visualizing dispersion; changing default plots in R.
+* [SAT scores and GPA at UT-Austin](r/sat/sat.html): boxplots, residuals, fitted values, groupwise means, scatter plots, and lattice plots.    
 
+### Ordinary least squares with one predictor
+* [Asking prices of pickup trucks on Craigslist](r/pickup/pickup.html): simple linear regression via ordinary least squares, residual summaries   
+* [Infant mortality and GDP](r/infmort/infmort.html): using log transformations to fit power laws via linear least squares   
