@@ -10,11 +10,11 @@ hist(pickup$price, breaks=20)
 # Describe the variation numerically
 # Standard deviation and 80% coverage interval
 sd(pickup$price)
-qdata(c(0.1, 0.9), price, data=pickup)
+endpoints80 = quantile(pickup$price, probs=c(0.1, 0.9))
 
 # Look at the coverage interval on the histogram
 hist(pickup$price, breaks=20, col='lightblue')
-abline(v=qdata(c(0.1, 0.9), price, data=pickup), col='red')
+abline(v=endpoints80, col='red')
 
 # Show a scatteplot of asking price versus mileage
 plot(price~miles, data=pickup)
@@ -34,7 +34,7 @@ resid(model1)
 plot(price~miles, data=pickup)
 abline(model1)
 
-# tory 1: plug in prediction
+# Story 1: plug in prediction
 newx = c(25000,50000,100000)
 yhat = 14419.3762 + (-0.0643)*newx
 
