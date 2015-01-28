@@ -8,9 +8,9 @@ output:
 ### Example: traffic fatalities
   
 Data files:  
-* [trafficdeaths.csv](trafficdeaths.csv): Year by year state fatalities due to traffic accidents, along with some potential predictors.
+* [trafficdeaths.csv](trafficdeaths.csv): Year by year state fatalities due to traffic accidents, along with some potential predictors.  
 * [fips.csv](fips.csv): Standard FIPS numerical codes for each state.
-
+  
 First read in both data sources: traffic deaths and fips (state codes).  The relevant variables in the data set are:  
 * mrall: traffic deaths per 10000 residents  
 * vmiles: average miles per driver  

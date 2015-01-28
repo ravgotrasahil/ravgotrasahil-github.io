@@ -6,8 +6,8 @@ layout: page
 
 Data files:  
 \* [trafficdeaths.csv](trafficdeaths.csv): Year by year state fatalities
-due to traffic accidents, along with some potential predictors. \*
-[fips.csv](fips.csv): Standard FIPS numerical codes for each state.
+due to traffic accidents, along with some potential predictors.  
+\* [fips.csv](fips.csv): Standard FIPS numerical codes for each state.
 
 First read in both data sources: traffic deaths and fips (state codes).
 The relevant variables in the data set are:  
