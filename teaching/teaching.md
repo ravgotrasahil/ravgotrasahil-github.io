@@ -23,3 +23,4 @@ I use R in all my courses, and over the years I've built up a library of teachin
 ### Ordinary least squares with one predictor
 * [Asking prices of pickup trucks on Craigslist](r/pickup/pickup.html): simple linear regression via ordinary least squares, residual summaries   
 * [Infant mortality and GDP](r/infmort/infmort.html): using log transformations to fit power laws via linear least squares   
+* [Utility bills versus temperature](r/utilities/utilities.html): add polynomial terms to fit nonlinear curves     
