@@ -90,7 +90,7 @@ as a function of the predictor variable.
 ![](utilities_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
 One approach to address this shortcoming is to fit a parabola: that is,
-y versus <math>x</math> and <math>x\^2</math>.
+y versus x and x\^2.
 
     # Fit a model with a quadratic term:
     lm2=lm(daily.average.gasbill ~ temp + I(temp^2), data=utilities)

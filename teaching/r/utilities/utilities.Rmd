@@ -46,7 +46,7 @@ This model doesn't do a very good job: we're fitting a linear model to obviously
 plot(resid(lm1) ~ temp, data=utilities)
 ```
 
-One approach to address this shortcoming is to fit a parabola: that is, y versus <math>x</math> and <math>x^2</math>.
+One approach to address this shortcoming is to fit a parabola: that is, y versus x and x^2.
 ```{r}
 # Fit a model with a quadratic term:
 lm2=lm(daily.average.gasbill ~ temp + I(temp^2), data=utilities)
