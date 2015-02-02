@@ -12,7 +12,7 @@ predictors
 and interaction terms
 
 Data files:  
-\* [rxntime.csv](solder.csv): data on a neuroscience experiment
+\* [rxntime.csv](rxntime.csv): data on a neuroscience experiment
 measuring people's reaction time to visual stimuli
 
 ### More than one categorical predictor
@@ -100,6 +100,7 @@ unlittered scenes:
     ## (Intercept)    Littered 
     ##   506.71042    87.46354
 
+    # Add the baseline and offset to get the second group mean
     506.71042 + 87.46354 
 
     ## [1] 594.174
@@ -113,9 +114,9 @@ identified was near or far away:
     ## (Intercept)    Littered     FarAway 
     ##   481.64323    87.46354    50.13437
 
-This model says that the predited "baseline" reaction time (for
+This model says that the predicted "baseline" reaction time (for
 unlittered scenes with a nearby target) is 481.6 ms. For scenes that
-were littered, we'd predict a reaction times 87.5 ms longer than the
+were littered, we'd predict a reaction time 87.5 ms longer than the
 baseline. For scenes with a far-away target, we'd predict a reaction
 time 50.1 ms longer than baseline. For scenes that are both littered
 *and* far away, the model tells us to simply add the sum of the two
@@ -128,7 +129,7 @@ individual effects:
 So according to the model, we'd predict these scenes to be 137.6 ms
 longer than baseline.
 
-For reasons that will become clean in a moment, we refer to the Littered
+For reasons that will become clear in a moment, we refer to the Littered
 and FarAway coefficients as the "main effects" of the model.
 
 ### Interactions
@@ -165,11 +166,13 @@ model:
     ## Multiple R-squared:  0.1292, Adjusted R-squared:  0.1278 
     ## F-statistic: 94.73 on 3 and 1916 DF,  p-value: < 2.2e-16
 
-The last term in the model is an interaction variable, with an estimated
-coefficient of 39.1. It allows the joint effect of the two predictors to
-be different than the sum of the individual (main) effects. To
-understand the output, let's work our way through the predictions of the
-above model based on the fitted coefficients:  
+As before, the first two terms are called "main effects." The last term
+in the model is an interaction variable, with an estimated coefficient
+of 39.1. It allows the joint effect of the two predictors to be
+different than the sum of the individual (main) effects.
+
+To understand the output, let's work our way through the predictions of
+the above model based on the fitted coefficients:  
 \* Baseline scenes: (Littered=0, FarAway=0): baseline only (491.4 ms)  
 \* Littered=1, FarAway=0 scenes: add the baseline and the Littered main
 effect (491.4 + 67.9 = 559.3 ms)  
