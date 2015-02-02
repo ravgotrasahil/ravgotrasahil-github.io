@@ -27,7 +27,10 @@ I use R in all my courses, and over the years I've built up a library of teachin
 * [Kidney function and aging](r/creatinine/creatinine.html): naive prediction intervals; R^2 and the decomposition of variance     
 
 ### Multiple regression: the basics
+* [Reaction time in video games](r/rxntime/rxntime.html): modeling numerical outcomes with more than one categorical predictor; dummy variables and interaction terms; analysis of variance.  
 
 ## Case studies  
-* [Traffic fatalities](r/trafficdeaths/trafficdeaths.html): predictors of state-level traffic fatalities  
+* [Traffic fatalities](r/trafficdeaths/trafficdeaths.html): predictors of state-level traffic fatalities   
+* [Circuit-board manufacturing](r/solder/solder.html): predictors of manufacturing flaws in AT&T circuit boards
+
   

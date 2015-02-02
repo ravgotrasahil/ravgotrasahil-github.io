@@ -3,10 +3,9 @@ layout: page
 ---
 
 Learning goals:  
-\* split a data set into training and validation subsets  
 \* create a naive prediction interval to quantify forecasting
 uncertainty  
-\* compute R\^2 of a linear model, both "by hand" and using R's
+\* compute R-squared of a linear model, both "by hand" and using R's
 `summary` function.
 
 Data files:  
@@ -181,7 +180,7 @@ It looks like 8 data points, or about 5% of the total, fell outside our
 family of prediction intervals. Thus our intervals have an empirical
 coverage (or accuracy) rate of 95%.
 
-### The variance decomposition and R\^2
+### The variance decomposition and R-squared
 
 Let's compare the following three quantities:  
 \* the standard deviation of the original response variable (creatinine
