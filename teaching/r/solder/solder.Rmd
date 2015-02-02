@@ -5,6 +5,7 @@ output:
       in_header: ../header.txt
 ---
 
+## Manufacturing flaws in circuit boards
 
 In this case study, you'll look at data from a quality-control experiment from AT&T's process for manufacturing printed circuit boards.  The data are in [solder.csv](solder.csv), and come to us courtesy of the R package `faraway.`
 
@@ -31,6 +32,7 @@ bwplot(skips ~ Solder, data=solder)
 bwplot(skips ~ Opening, data=solder)
 bwplot(skips ~ Mask, data=solder)
 ```
+
 Each seems to predict some of the variation in solder skips.
 
 Build a model to predict solder skips using these three predictor variables.  Include whatever combination of main effects and interaction terms you deem appropriate.  Justify your final choice of model.  By this, I mean that if you include a term in the model, explain why.  Similarly, if you decide to leave a possible term out of the model, explain why.

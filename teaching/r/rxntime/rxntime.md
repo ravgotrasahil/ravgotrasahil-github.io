@@ -2,6 +2,9 @@
 layout: page
 ---
 
+Reaction times in video games
+-----------------------------
+
 Learning goals:  
 \* model a numerical outcome in terms of multiple categorical
 predictors  

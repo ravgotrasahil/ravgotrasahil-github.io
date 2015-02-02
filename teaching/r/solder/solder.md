@@ -2,6 +2,9 @@
 layout: page
 ---
 
+Manufacturing flaws in circuit boards
+-------------------------------------
+
 In this case study, you'll look at data from a quality-control
 experiment from AT&T's process for manufacturing printed circuit boards.
 The data are in [solder.csv](solder.csv), and come to us courtesy of the
@@ -54,8 +57,9 @@ variable individually.
 
     bwplot(skips ~ Mask, data=solder)
 
-![](solder_files/figure-markdown_strict/unnamed-chunk-3-3.png) Each
-seems to predict some of the variation in solder skips.
+![](solder_files/figure-markdown_strict/unnamed-chunk-3-3.png)
+
+Each seems to predict some of the variation in solder skips.
 
 Build a model to predict solder skips using these three predictor
 variables. Include whatever combination of main effects and interaction
