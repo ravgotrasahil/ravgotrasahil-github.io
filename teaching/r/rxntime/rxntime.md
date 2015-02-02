@@ -186,11 +186,13 @@ of Littered and FarAway:
     ##      0.0      1.0      0.1      1.1 
     ## 491.4229 559.3271 521.9979 629.0208
 
-A reasonable question is: why both with the extra complexity of main
+A reasonable question is: why er with the extra complexity of main
 effects and interactions if all we're doing is computing the group-wise
-means for all four combinations of the two variables? In fact, if we
-have only these two variables, there isn't really a compelling reason to
-do so. However, let's suppose we wanted to add a third variable:
+means for all four combinations of the two variables?
+
+In fact, if we have only these two variables, there isn't really a
+compelling reason to do so. However, let's suppose we wanted to add a
+third variable:
 
     lm4 = lm(PictureTarget.RT ~ Littered + FarAway + Littered:FarAway + factor(Subject), data=rxntime)
     summary(lm4)

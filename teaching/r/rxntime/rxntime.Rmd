@@ -84,11 +84,14 @@ Notice that to get the prediction for scenes that are both littered and far away
 mean(PictureTarget.RT ~ Littered + FarAway, data=rxntime)
 ```
 
-A reasonable question is: why both with the extra complexity of main effects and interactions if all we're doing is computing the group-wise means for all four combinations of the two variables?  In fact, if we have only these two variables, there isn't really a compelling reason to do so.  However, let's suppose we wanted to add a third variable:
+A reasonable question is: why er with the extra complexity of main effects and interactions if all we're doing is computing the group-wise means for all four combinations of the two variables?
+
+In fact, if we have only these two variables, there isn't really a compelling reason to do so.  However, let's suppose we wanted to add a third variable:
 ```{r}
 lm4 = lm(PictureTarget.RT ~ Littered + FarAway + Littered:FarAway + factor(Subject), data=rxntime)
 summary(lm4)
 ```
+
 Now we've added subject-level dummy variables to account for between-subject variability, and R-squared has jumped from 13% to 23%.  But we're still assuming that the effect of the Littered and FarAway variables is the same for every subject.  Thus we have 15 parameters to estimate: an intercept/baseline, two main effects for Littered and FarAway, one interaction term, and 11 subject-level dummy variables.  Suppose that instead we were to look at all possible combinations of subject, Littered, and FarAway variables, and compute the groupwise means:
 ```{r}
 mean(PictureTarget.RT ~ Littered + FarAway + factor(Subject), data=rxntime)
