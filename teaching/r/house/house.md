@@ -214,7 +214,7 @@ slope to form each neighborhood-specific slope.
 Thus our model above output says that:  
 \* Neighborhood 1 (the baseline): price = 32906 + 40.30 \* sqft  
 \* Neighborhood 2: price = (32906 - 7224) + (40.30 + 9.13) \* sqft  
-\* Neighborhood 3: price = (32906 + 23753) + (40.30 + 0.02) \* sqft
+\* Neighborhood 3: price = (32906 + 23753) + (40.30 + 9.02) \* sqft
 
 ### Multiple categorical predictors
 
