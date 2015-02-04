@@ -28,6 +28,9 @@ I use R in all my courses, and over the years I've built up a library of teachin
 
 ### Multiple regression: the basics
 * [Reaction time in video games](r/rxntime/rxntime.html): modeling numerical outcomes with more than one categorical predictor; dummy variables and interaction terms; analysis of variance.  
+* [House prices](r/house/house.html): regression with one numerical and multiple categorical predictors; dummy variables and interactions in simple regression models.  
+
+
 
 ## Case studies  
 * [Traffic fatalities](r/trafficdeaths/trafficdeaths.html): predictors of state-level traffic fatalities   
