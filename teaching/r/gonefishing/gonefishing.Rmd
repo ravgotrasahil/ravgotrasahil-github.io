@@ -53,7 +53,7 @@ Next, let's compute the mean weight of the fish in our sample:
 mean_weight_sample = mean(fishing_trip$weight)
 mean_weight_sample
 ```
-Because your sample is different from, the sample mean you compute will be different from mine as well.  Crucially, both also differ from the true population mean of 519, which we calculated above.
+Because your random sample will be different from mine, the sample mean you compute will be different from mine as well.  Crucially, both also differ from the true population mean of 519, which we calculated above.
 
 That was yesterday's fishing trip.  What about today's?  (Let's say we released the fish back into the lake, so we're taking a fresh sample from the population.)  We'll repeat all the commands above to get a new sample mean:
 ```{r}
@@ -91,7 +91,7 @@ head(my_fishing_year)
 
 You can see that `my_fishing_year` is a data frame with one column called "result."  This column contains 365 sample means, one for each fishing trip (i.e. sample of size 30 from the population).  Let's look at a histogram of these simulated sample means:
 ```{r}
-hist(my_fishing_year$result)
+hist(my_fishing_year$result, breaks=20)
 sd(my_fishing_year$result)
 ```
 We call this the sampling distribution of the sample mean.  The dispersion of this distribution tells us how precisely the mean from any given sample of size 30 approximates the population mean.  The standard deviation of this sampling distribution is a natural measure of this dispersion; it is usually called the "standard error" of the sample mean.
@@ -124,8 +124,9 @@ lm1 = lm(weight ~ volume, data=fishing_trip)
 points(weight ~ volume, data=fishing_trip, pch=19, col='orange')
 abline(lm1, lwd=3, col='orange')
 ```
+Each time, you should see a slightly different fitted line, reflecting the variability from sample to sample.  The line from the sample should be close to the true population line, but they won't be exactly the same.
 
-Let's use the same approach as above to look at the sampling distribution of the least-squares estimator from a sample of size 30.  This time instead of the sample mean of the weight, we'll collect the intercept and slope of the least-squares line.
+Next, let's use the same approach as above to look at the sampling distribution of the least-squares estimator from a sample of size 30.  This time we'll collect the intercept and slope of the least-squares line, rather than the sample mean of the weight.
 ```{r}
 my_fishing_year = do(365)*{
   fishing_trip = sample(gonefishing, n_fish)
@@ -136,12 +137,13 @@ my_fishing_year = do(365)*{
 head(my_fishing_year)
 ```
 
-Notice that the `my_fishing_year` variable has two columnn, representing the intercept and slope for the `volume` variable.  To examine the sampling distribution of the slope, we could look at a histogram and compute the standard error:
+Notice that the `my_fishing_year` variable has two columns, representing the intercept and slope for the `volume` variable.  To examine the sampling distribution of the slope, we could look at a histogram and compute the standard error:
 ```{r}
 hist(my_fishing_year$volume)
 sd(my_fishing_year$volume)
 ```
 
+365 different fishing trips of 30 fish, 365 different estimates slopes: a sampling distribution.
 
 
 ### Fancy plots (optional)
@@ -161,4 +163,4 @@ for(i in 1:100) {
 }
 ```
 
-The "fan" of different fitted lines provides a visual depicting of the sampling distribution of the OLS estimator.  Note: if you want to see all the different graphical parameters, try typing `?par` into the console.
+The "fan" of different fitted lines provides a visual depiction of the sampling distribution of the OLS estimator.  Note: if you want to see all the different graphical parameters, try typing `?par` into the console.

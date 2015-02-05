@@ -60,11 +60,11 @@ random sample in order to simulate this process.
     head(fishing_trip, 5)
 
     ##     length height width weight orig.ids
-    ## 159    8.1    3.3   1.2    228      159
-    ## 34    13.5    5.4   2.0    460       34
-    ## 114   13.8    5.6   2.0    739      114
-    ## 183    9.0    3.6   1.3    265      183
-    ## 429   14.0    5.7   2.1    674      429
+    ## 610   12.7    5.1   1.9    601      610
+    ## 659   11.9    4.8   1.7    461      659
+    ## 65    13.7    5.5   2.1    789       65
+    ## 510   13.9    5.6   2.0    699      510
+    ## 754   11.3    4.5   1.7    388      754
 
 The row names tell us which fish (numbered 1 to 800 in the original data
 set) that we happened to catch on this trip. Because the sample is
@@ -76,11 +76,11 @@ Next, let's compute the mean weight of the fish in our sample:
     mean_weight_sample = mean(fishing_trip$weight)
     mean_weight_sample
 
-    ## [1] 541.5667
+    ## [1] 475.6667
 
-Because your sample is different from, the sample mean you compute will
-be different from mine as well. Crucially, both also differ from the
-true population mean of 519, which we calculated above.
+Because your random sample will be different from mine, the sample mean
+you compute will be different from mine as well. Crucially, both also
+differ from the true population mean of 519, which we calculated above.
 
 That was yesterday's fishing trip. What about today's? (Let's say we
 released the fish back into the lake, so we're taking a fresh sample
@@ -91,7 +91,7 @@ sample mean:
     mean_weight_sample = mean(fishing_trip$weight)
     mean_weight_sample
 
-    ## [1] 457.5667
+    ## [1] 464.8333
 
 Today's sample mean will be different from yesterday's. Both will be
 different from the population mean. The next step is to get a sense of
@@ -106,31 +106,31 @@ performing a Monte Carlo simulation. Try this:
     }
 
     ##      result
-    ## 1  604.6667
-    ## 2  630.8333
-    ## 3  570.8000
-    ## 4  482.2667
-    ## 5  422.5333
-    ## 6  497.7000
-    ## 7  548.3333
-    ## 8  613.6000
-    ## 9  595.6333
-    ## 10 517.5333
-    ## 11 515.9333
-    ## 12 532.9000
-    ## 13 499.2333
-    ## 14 507.2333
-    ## 15 546.0667
-    ## 16 574.0000
-    ## 17 568.3000
-    ## 18 525.3333
-    ## 19 489.2333
-    ## 20 564.2000
-    ## 21 501.5000
-    ## 22 534.9667
-    ## 23 518.5667
-    ## 24 456.7000
-    ## 25 583.6000
+    ## 1  479.2667
+    ## 2  485.4333
+    ## 3  589.9333
+    ## 4  530.3333
+    ## 5  574.6000
+    ## 6  638.6000
+    ## 7  489.0667
+    ## 8  550.2667
+    ## 9  587.3333
+    ## 10 533.0000
+    ## 11 561.1000
+    ## 12 547.2667
+    ## 13 481.5000
+    ## 14 591.1333
+    ## 15 513.9333
+    ## 16 500.1000
+    ## 17 529.6000
+    ## 18 490.1667
+    ## 19 551.3000
+    ## 20 608.5000
+    ## 21 511.6000
+    ## 22 538.5333
+    ## 23 501.9000
+    ## 24 493.2667
+    ## 25 469.6667
 
 Notice what we did here:  
 1) We took our original code block for performing a random sample from
@@ -157,25 +157,25 @@ simulations, and we'll save the result.
     head(my_fishing_year)
 
     ##     result
-    ## 1 443.0000
-    ## 2 510.6667
-    ## 3 522.2667
-    ## 4 456.0333
-    ## 5 575.3000
-    ## 6 484.8000
+    ## 1 526.9000
+    ## 2 510.9000
+    ## 3 464.6667
+    ## 4 526.9333
+    ## 5 556.4333
+    ## 6 625.4667
 
 You can see that `my_fishing_year` is a data frame with one column
 called "result." This column contains 365 sample means, one for each
 fishing trip (i.e. sample of size 30 from the population). Let's look at
 a histogram of these simulated sample means:
 
-    hist(my_fishing_year$result)
+    hist(my_fishing_year$result, breaks=20)
 
 ![](gonefishing_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
     sd(my_fishing_year$result)
 
-    ## [1] 45.07452
+    ## [1] 47.59968
 
 We call this the sampling distribution of the sample mean. The
 dispersion of this distribution tells us how precisely the mean from any
@@ -226,11 +226,15 @@ few times and compare the different lines you get.
     abline(lm1, lwd=3, col='orange')
 
 ![](gonefishing_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+Each time, you should see a slightly different fitted line, reflecting
+the variability from sample to sample. The line from the sample should
+be close to the true population line, but they won't be exactly the
+same.
 
-Let's use the same approach as above to look at the sampling
+Next, let's use the same approach as above to look at the sampling
 distribution of the least-squares estimator from a sample of size 30.
-This time instead of the sample mean of the weight, we'll collect the
-intercept and slope of the least-squares line.
+This time we'll collect the intercept and slope of the least-squares
+line, rather than the sample mean of the weight.
 
     my_fishing_year = do(365)*{
       fishing_trip = sample(gonefishing, n_fish)
@@ -240,15 +244,15 @@ intercept and slope of the least-squares line.
     # Look at the first few lines of the outpout
     head(my_fishing_year)
 
-    ##   Intercept   volume
-    ## 1  44.75985 4.620290
-    ## 2  27.91764 4.419146
-    ## 3  27.96989 4.484440
-    ## 4  45.67785 4.130225
-    ## 5  14.65657 4.887726
-    ## 6 103.45643 3.838173
+    ##    Intercept   volume
+    ## 1 66.4082828 3.941812
+    ## 2 -0.0407894 4.598468
+    ## 3 41.1395797 4.066665
+    ## 4 24.8024982 4.419548
+    ## 5 47.1439772 4.296976
+    ## 6 58.2026874 4.191525
 
-Notice that the `my_fishing_year` variable has two columnn, representing
+Notice that the `my_fishing_year` variable has two columns, representing
 the intercept and slope for the `volume` variable. To examine the
 sampling distribution of the slope, we could look at a histogram and
 compute the standard error:
@@ -259,7 +263,10 @@ compute the standard error:
 
     sd(my_fishing_year$volume)
 
-    ## [1] 0.3422806
+    ## [1] 0.346819
+
+365 different fishing trips of 30 fish, 365 different estimates slopes:
+a sampling distribution.
 
 ### Fancy plots (optional)
 
@@ -282,6 +289,6 @@ function to make things more visually appealing.
 
 ![](gonefishing_files/figure-markdown_strict/unnamed-chunk-14-1.png)
 
-The "fan" of different fitted lines provides a visual depicting of the
+The "fan" of different fitted lines provides a visual depiction of the
 sampling distribution of the OLS estimator. Note: if you want to see all
 the different graphical parameters, try typing `?par` into the console.
