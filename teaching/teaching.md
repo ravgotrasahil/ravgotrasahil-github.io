@@ -26,9 +26,14 @@ I use R in all my courses, and over the years I've built up a library of teachin
 * [Utility bills versus temperature](r/utilities/utilities.html): adding polynomial terms to fit nonlinear curves     
 * [Kidney function and aging](r/creatinine/creatinine.html): naive prediction intervals; R^2 and the decomposition of variance     
 
-### Multiple regression: the basics
+### Regression with multiple categorical varaibles  
 * [Reaction time in video games](r/rxntime/rxntime.html): modeling numerical outcomes with more than one categorical predictor; dummy variables and interaction terms; analysis of variance.  
 * [House prices](r/house/house.html): regression with one numerical and multiple categorical predictors; dummy variables and interactions in simple regression models.  
+
+
+### Quantifying uncertainty: the basics   
+* [Gone fishing](r/gonefishing/gonefishing.html): using the Monte Carlo method to simulate the sampling distributions of the sample mean and of the least-squares estimator  
+
 
 
 
