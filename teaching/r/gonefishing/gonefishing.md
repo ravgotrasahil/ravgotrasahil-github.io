@@ -60,11 +60,11 @@ random sample in order to simulate this process.
     head(fishing_trip, 5)
 
     ##     length height width weight orig.ids
-    ## 610   12.7    5.1   1.9    601      610
-    ## 659   11.9    4.8   1.7    461      659
-    ## 65    13.7    5.5   2.1    789       65
-    ## 510   13.9    5.6   2.0    699      510
-    ## 754   11.3    4.5   1.7    388      754
+    ## 533   11.7    4.7   1.8    387      533
+    ## 35    12.9    5.1   1.9    572       35
+    ## 539   10.8    4.3   1.7    400      539
+    ## 605    9.6    3.8   1.4    333      605
+    ## 214   12.4    4.9   1.9    537      214
 
 The row names tell us which fish (numbered 1 to 800 in the original data
 set) that we happened to catch on this trip. Because the sample is
@@ -76,7 +76,7 @@ Next, let's compute the mean weight of the fish in our sample:
     mean_weight_sample = mean(fishing_trip$weight)
     mean_weight_sample
 
-    ## [1] 475.6667
+    ## [1] 500.4667
 
 Because your random sample will be different from mine, the sample mean
 you compute will be different from mine as well. Crucially, both also
@@ -91,7 +91,7 @@ sample mean:
     mean_weight_sample = mean(fishing_trip$weight)
     mean_weight_sample
 
-    ## [1] 464.8333
+    ## [1] 515.7333
 
 Today's sample mean will be different from yesterday's. Both will be
 different from the population mean. The next step is to get a sense of
@@ -106,31 +106,31 @@ performing a Monte Carlo simulation. Try this:
     }
 
     ##      result
-    ## 1  479.2667
-    ## 2  485.4333
-    ## 3  589.9333
-    ## 4  530.3333
-    ## 5  574.6000
-    ## 6  638.6000
-    ## 7  489.0667
-    ## 8  550.2667
-    ## 9  587.3333
-    ## 10 533.0000
-    ## 11 561.1000
-    ## 12 547.2667
-    ## 13 481.5000
-    ## 14 591.1333
-    ## 15 513.9333
-    ## 16 500.1000
-    ## 17 529.6000
-    ## 18 490.1667
-    ## 19 551.3000
-    ## 20 608.5000
-    ## 21 511.6000
-    ## 22 538.5333
-    ## 23 501.9000
-    ## 24 493.2667
-    ## 25 469.6667
+    ## 1  489.0000
+    ## 2  614.4333
+    ## 3  497.7333
+    ## 4  535.1333
+    ## 5  502.7000
+    ## 6  512.2333
+    ## 7  493.2000
+    ## 8  610.6333
+    ## 9  529.2333
+    ## 10 524.3667
+    ## 11 529.3333
+    ## 12 516.5667
+    ## 13 518.9000
+    ## 14 446.9667
+    ## 15 562.8333
+    ## 16 554.8000
+    ## 17 483.6667
+    ## 18 529.4333
+    ## 19 561.3667
+    ## 20 446.0000
+    ## 21 478.4000
+    ## 22 506.0333
+    ## 23 568.9333
+    ## 24 546.6000
+    ## 25 548.1333
 
 Notice what we did here:  
 1) We took our original code block for performing a random sample from
@@ -142,10 +142,10 @@ command.
 The result is 25 different sample means, each corresponding to a
 different random sample from the population. This process is an example
 of Monte Carlo simulation, wherein a computer is used to simulate a
-random process.
+random process. Our code above produced 25 Monte Carlo samples.
 
-Now let's make two small modifications: we'll do more than 25
-simulations, and we'll save the result.
+Now let's make two small modifications: we'll do more than 25 Monte
+Carlo samples, and we'll save the result.
 
     # Save the Monte Carlo output
     my_fishing_year = do(365)*{
@@ -157,12 +157,12 @@ simulations, and we'll save the result.
     head(my_fishing_year)
 
     ##     result
-    ## 1 526.9000
-    ## 2 510.9000
-    ## 3 464.6667
-    ## 4 526.9333
-    ## 5 556.4333
-    ## 6 625.4667
+    ## 1 504.8333
+    ## 2 497.6667
+    ## 3 519.2667
+    ## 4 542.2000
+    ## 5 587.9000
+    ## 6 551.2333
 
 You can see that `my_fishing_year` is a data frame with one column
 called "result." This column contains 365 sample means, one for each
@@ -175,7 +175,7 @@ a histogram of these simulated sample means:
 
     sd(my_fishing_year$result)
 
-    ## [1] 47.59968
+    ## [1] 43.95984
 
 We call this the sampling distribution of the sample mean. The
 dispersion of this distribution tells us how precisely the mean from any
@@ -225,16 +225,17 @@ few times and compare the different lines you get.
     points(weight ~ volume, data=fishing_trip, pch=19, col='orange')
     abline(lm1, lwd=3, col='orange')
 
-![](gonefishing_files/figure-markdown_strict/unnamed-chunk-11-1.png)
-Each time, you should see a slightly different fitted line, reflecting
-the variability from sample to sample. The line from the sample should
-be close to the true population line, but they won't be exactly the
-same.
+![](gonefishing_files/figure-markdown_strict/unnamed-chunk-11-1.png) For
+each Monte Carlo sample, you should see a slightly different fitted
+line, reflecting the variability from sample to sample. The line from
+the sample should be close to the true population line, but they won't
+be exactly the same.
 
 Next, let's use the same approach as above to look at the sampling
 distribution of the least-squares estimator from a sample of size 30.
 This time we'll collect the intercept and slope of the least-squares
-line, rather than the sample mean of the weight.
+line, rather than the sample mean of the weight. We'll use 365 Monte
+Carlo samples, to simulate a year of fishing trips.
 
     my_fishing_year = do(365)*{
       fishing_trip = sample(gonefishing, n_fish)
@@ -245,12 +246,12 @@ line, rather than the sample mean of the weight.
     head(my_fishing_year)
 
     ##    Intercept   volume
-    ## 1 66.4082828 3.941812
-    ## 2 -0.0407894 4.598468
-    ## 3 41.1395797 4.066665
-    ## 4 24.8024982 4.419548
-    ## 5 47.1439772 4.296976
-    ## 6 58.2026874 4.191525
+    ## 1  52.908723 4.256654
+    ## 2  63.129530 4.174433
+    ## 3  67.565998 4.164029
+    ## 4 -22.938851 4.817717
+    ## 5  22.948715 4.716953
+    ## 6   8.077959 4.735984
 
 Notice that the `my_fishing_year` variable has two columns, representing
 the intercept and slope for the `volume` variable. To examine the
@@ -263,7 +264,7 @@ compute the standard error:
 
     sd(my_fishing_year$volume)
 
-    ## [1] 0.346819
+    ## [1] 0.3312174
 
 365 different fishing trips of 30 fish, 365 different estimates slopes:
 a sampling distribution.

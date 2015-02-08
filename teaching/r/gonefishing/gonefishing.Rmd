@@ -75,9 +75,9 @@ Notice what we did here:
 2) We placed that code block in curly braces {}.  
 3) We then told R to repeat that code block 25 times, via the `do(25)*` command.  
 
-The result is 25 different sample means, each corresponding to a different random sample from the population.  This process is an example of Monte Carlo simulation, wherein a computer is used to simulate a random process.
+The result is 25 different sample means, each corresponding to a different random sample from the population.  This process is an example of Monte Carlo simulation, wherein a computer is used to simulate a random process.  Our code above produced 25 Monte Carlo samples.  
 
-Now let's make two small modifications: we'll do more than 25 simulations, and we'll save the result.
+Now let's make two small modifications: we'll do more than 25 Monte Carlo samples, and we'll save the result.
 ```{r}
 # Save the Monte Carlo output
 my_fishing_year = do(365)*{
@@ -124,9 +124,9 @@ lm1 = lm(weight ~ volume, data=fishing_trip)
 points(weight ~ volume, data=fishing_trip, pch=19, col='orange')
 abline(lm1, lwd=3, col='orange')
 ```
-Each time, you should see a slightly different fitted line, reflecting the variability from sample to sample.  The line from the sample should be close to the true population line, but they won't be exactly the same.
+For each Monte Carlo sample, you should see a slightly different fitted line, reflecting the variability from sample to sample.  The line from the sample should be close to the true population line, but they won't be exactly the same.
 
-Next, let's use the same approach as above to look at the sampling distribution of the least-squares estimator from a sample of size 30.  This time we'll collect the intercept and slope of the least-squares line, rather than the sample mean of the weight.
+Next, let's use the same approach as above to look at the sampling distribution of the least-squares estimator from a sample of size 30.  This time we'll collect the intercept and slope of the least-squares line, rather than the sample mean of the weight.  We'll use 365 Monte Carlo samples, to simulate a year of fishing trips.  
 ```{r}
 my_fishing_year = do(365)*{
   fishing_trip = sample(gonefishing, n_fish)
