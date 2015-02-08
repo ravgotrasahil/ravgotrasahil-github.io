@@ -11,6 +11,7 @@ Learning goals:
 * bootstrap the sample mean  
 * bootstrap the OLS estimator  
 * compute and interpret the bootstrapped standard error  
+* compute confidence intervals from bootstrapped samples  
 
 Data files:  
 * [creatinine.csv](creatinine.csv): data on age and kidney function for 157 adult males from a single clinic.
@@ -58,7 +59,8 @@ The height of each bar shows how many times that original data point was picked.
 
 There's actually a more concise way to draw bootstrapped samples using the `resample` command, which we'll use from now on.  Try executing the following block of code 5 or 10 times to get a feel for the different patterns of ties and omissions that arise in each bootstrapped sample.
 ```{r}
-bootstrapped_sample = resample(creatinine)  # same as sample(creatinine, size = 157, replace=TRUE)
+# same as sample(creatinine, size = 157, replace=TRUE)
+bootstrapped_sample = resample(creatinine)  
 plot(table(bootstrapped_sample$orig.ids))
 ```
 
@@ -72,7 +74,7 @@ We repeat this process a large number of times (say, 1000 or more).  The key poi
 
 Try executing the following block of code 5-10 times to see the different sample means you get for each bootstrapped sample.
 ```{r}
-bootstrapped_sample = resample(creatinine)  # same as sample(creatinine, size = 157, replace=TRUE)
+bootstrapped_sample = resample(creatinine)
 mean(bootstrapped_sample$creatclear)
 ```
 
@@ -129,6 +131,7 @@ myboot2 = do(1000)*{
   lm_boot = lm(creatclear~age, data=resample(creatinine))
   lm_boot
 }
+# Inspect the first several lines
 head(myboot2)
 ```
 
