@@ -48,7 +48,7 @@ lm1 = lm(Salary~Experience, data=salary)
 summary(lm1)
 ```
 
-We expect experienced workers to be paid more, all else being equal.  How does these residuals---that is, salary adjusted for experience---look when we stratify them by sex?
+We expect experienced workers to be paid more, all else being equal.  How do these residuals---that is, salary adjusted for experience---look when we stratify them by sex?
 ```{r}
 boxplot(resid(lm1)~salary$Sex)
 ```
@@ -76,7 +76,7 @@ confint(lm3)
 
 ### Bootstrapping a multiple regression model
 
-If we don't trust the normality assumptions, we can quantify uncertainty about this effect via bootstrapping
+If we don't trust the normality assumptions, we can quantify uncertainty about this effect via bootstrapping:
 ```{r}
 myboot = do(1000)*{
   lm_boot = lm(Salary~Experience+Education+Sex, data=resample(salary))

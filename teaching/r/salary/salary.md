@@ -76,8 +76,8 @@ experience?
     ## F-statistic: 11.42 on 1 and 41 DF,  p-value: 0.001605
 
 We expect experienced workers to be paid more, all else being equal. How
-does these residuals---that is, salary adjusted for experience---look
-when we stratify them by sex?
+do these residuals---that is, salary adjusted for experience---look when
+we stratify them by sex?
 
     boxplot(resid(lm1)~salary$Sex)
 
@@ -163,7 +163,7 @@ interval contains zero:
 ### Bootstrapping a multiple regression model
 
 If we don't trust the normality assumptions, we can quantify uncertainty
-about this effect via bootstrapping
+about this effect via bootstrapping:
 
     myboot = do(1000)*{
       lm_boot = lm(Salary~Experience+Education+Sex, data=resample(salary))
@@ -175,11 +175,11 @@ about this effect via bootstrapping
 
     confint(myboot)
 
-    ##         name      lower     upper level method   estimate margin.of.error
-    ## 1  Intercept 30137.1110 55307.580  0.95 stderr 42722.3457      12585.2347
-    ## 2 Experience   214.4115   654.280  0.95 stderr   434.3457        219.9342
-    ## 3  Education  -621.0929  3820.746  0.95 stderr  1599.8267       2220.9196
-    ## 4        Sex -2384.8828  9677.720  0.95 stderr  3646.4185       6031.3014
+    ##         name      lower      upper level method   estimate margin.of.error
+    ## 1  Intercept 29935.1224 55228.3470  0.95 stderr 42581.7347      12646.6123
+    ## 2 Experience   216.7165   643.4637  0.95 stderr   430.0901        213.3736
+    ## 3  Education  -581.5238  3895.3986  0.95 stderr  1656.9374       2238.4612
+    ## 4        Sex -2454.6020  9639.1313  0.95 stderr  3592.2647       6046.8666
 
 In this case, the bootstrapped confidence interval is pretty similar to
 the one we estimate using the normal-theory formulas.
