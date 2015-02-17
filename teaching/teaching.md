@@ -34,6 +34,7 @@ I use R in all my courses, and over the years I've built up a library of teachin
 ### Quantifying uncertainty: the basics   
 * [Gone fishing](r/gonefishing/gonefishing.html): using the Monte Carlo method to simulate the sampling distributions of the sample mean and of the least-squares estimator  
 * [Kidney function and aging, revisited](r/creatinine/creatinine_bootstrap.html): bootstrapping the sample mean and the OLS estimator; computing confidence intervals from bootstrapped samples.  
+* [Newspapers](r/newspapers/newspapers.html): using the normal linear regression model to quantify uncertainty about parameters and predictions.   
 
 
 ## Case studies  
