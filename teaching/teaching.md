@@ -26,7 +26,7 @@ I use R in all my courses, and over the years I've built up a library of teachin
 * [Utility bills versus temperature](r/utilities/utilities.html): adding polynomial terms to fit nonlinear curves     
 * [Kidney function and aging](r/creatinine/creatinine.html): naive prediction intervals; R^2 and the decomposition of variance     
 
-### Regression with multiple categorical varaibles  
+### Regression with multiple categorical variables  
 * [Reaction time in video games](r/rxntime/rxntime.html): modeling numerical outcomes with more than one categorical predictor; dummy variables and interaction terms; analysis of variance.  
 * [House prices](r/house/house.html): regression with one numerical and multiple categorical predictors; dummy variables and interactions in simple regression models.  
 
@@ -35,6 +35,10 @@ I use R in all my courses, and over the years I've built up a library of teachin
 * [Gone fishing](r/gonefishing/gonefishing.html): using the Monte Carlo method to simulate the sampling distributions of the sample mean and of the least-squares estimator  
 * [Kidney function and aging, revisited](r/creatinine/creatinine_bootstrap.html): bootstrapping the sample mean and the OLS estimator; computing confidence intervals from bootstrapped samples.  
 * [Newspapers](r/newspapers/newspapers.html): using the normal linear regression model to quantify uncertainty about parameters and predictions.   
+
+
+### Multiple regression  
+* [The wage gap](r/salary/salary.html): an introduction to multiple regression  
 
 
 ## Case studies  

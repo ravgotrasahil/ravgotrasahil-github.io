@@ -1,0 +1,90 @@
+---
+output:
+  md_document:
+    includes:
+      in_header: ../header.txt
+---
+  
+### Example: predictors of white-collar salaries
+  
+In this walk-through, we'll look at whether there seems to be a "wage gap" at a tech firm between male and female employees with similar qualifications.  We will use multiple regression to adjust for the effect of education and experience in evaluating the correlation between an employee's sex and his or her annual salary.  
+
+Learning goals:  
+* fit a multiple regression model  
+* correctly interpret the estimated coefficients    
+* quantify uncertainty about parameters in a multiple-regression model using both normal-theory formulas and bootstrapping  
+
+
+Data files:  
+* [salary.csv](salary.csv): human-resources data on employees at a tech firm.
+
+First load the mosaic library and read in the data.
+```{r, message=FALSE}
+library(mosaic)
+```
+
+```{r}
+salary = read.csv('salary.csv', header=TRUE)
+```
+  
+The variables in the data set are:  
+* Salary: annual salary in dollars   
+* Education: years of post-second education  
+* Experience: months of experience at the particular company  
+* Months: total months of work experience, including all previous jobs  
+* Sex: whether the employee is male or female
+
+
+Let's first Look at the distibution of salary by sex.
+```{r}
+mean(Salary~Sex,data=salary)
+boxplot(Salary~Sex,data=salary, names=c("Female", "Male"))
+```
+
+It looks as though women are paid more at this company than men, on average.  However, does the story change if we adjust for work experience?
+```{r}
+plot(Salary~Experience, data=salary)
+lm1 = lm(Salary~Experience, data=salary)
+summary(lm1)
+```
+
+We expect experienced workers to be paid more, all else being equal.  How does these residuals---that is, salary adjusted for experience---look when we stratify them by sex?
+```{r}
+boxplot(resid(lm1)~salary$Sex)
+```
+
+### Fitting a multiple regression model by least squares
+
+Now it looks like men are being paid more than women for an equivalent amount of work experience.  What about a multiple-regression model that accounts for education, too?  It is straightforward to fit such a model by least squares in R.
+```{r}
+lm2 = lm(Salary~Experience+Education, data=salary)
+summary(lm2)
+boxplot(resid(lm2)~salary$Sex)
+```
+
+The story appears similar: for equivalent levels of Experience and Education, women appear to be paid less.  Let's build a model that accounts for both these factors and includes a dummy variable for the sex of the employee.
+```{r}
+lm3= lm(Salary~Experience+Education+Sex, data=salary)
+summary(lm3)
+```
+
+According to this model, men are paid $3544 more per year than similarly qualified women, but the standard error of the effect size is $3525.  This makes it tough to rule out $0 as a plausible value for the wage gap.  We can also see this by noting that the 95% confidence interval contains zero:
+```{r}
+confint(lm3)
+```
+
+
+### Bootstrapping a multiple regression model
+
+If we don't trust the normality assumptions, we can quantify uncertainty about this effect via bootstrapping
+```{r}
+myboot = do(1000)*{
+  lm_boot = lm(Salary~Experience+Education+Sex, data=resample(salary))
+  coef(lm_boot)
+}
+hist(myboot$Sex)
+confint(myboot)
+```
+
+In this case, the bootstrapped confidence interval is pretty similar to the one we estimate using the normal-theory formulas.
+
