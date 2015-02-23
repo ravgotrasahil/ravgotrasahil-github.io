@@ -9,6 +9,9 @@ output:
 
 In this walk-through, you will learn a few tools for summarizing categorical data using contingency tables.
 
+Data files:  
+* [TitanicSurvival.csv](TitanicSurvival.csv)  
+
 First download the TitanicSurvival.csv file and read it in. You can use RStudio's Import Dataset button, or the read.csv command:
 ```{r}
 TitanicSurvival = read.csv('TitanicSurvival.csv')

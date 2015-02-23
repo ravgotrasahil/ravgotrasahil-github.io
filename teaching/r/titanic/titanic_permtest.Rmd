@@ -13,6 +13,9 @@ In this walk-through, you will revisit the Titanic data to learn about permutati
 * odds ratio  
 * permutation test  
 
+Data files:  
+* [TitanicSurvival.csv](TitanicSurvival.csv)  
+
 First download the TitanicSurvival.csv file and read it in. You can use RStudio's Import Dataset button, or the read.csv command:
 ```{r, message=FALSE}
 library(mosaic)

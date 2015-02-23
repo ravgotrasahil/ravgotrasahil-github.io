@@ -7,6 +7,9 @@ layout: page
 In this walk-through, you will learn a few tools for summarizing
 categorical data using contingency tables.
 
+Data files:  
+\* [TitanicSurvival.csv](TitanicSurvival.csv)
+
 First download the TitanicSurvival.csv file and read it in. You can use
 RStudio's Import Dataset button, or the read.csv command:
 
@@ -64,8 +67,8 @@ standardizing along the rows (margin=1).
 
 We can also standardize along the columns, which probably makes more
 sense here. We're thinking of sex as the predictor and survival as the
-response, and therefore we want to see how the relative proportion of
-survives changes for men versus women:
+response, and therefore we want to see how the relative chances of
+survival changes for men versus women:
 
     prop.table(table1, margin=1)
 

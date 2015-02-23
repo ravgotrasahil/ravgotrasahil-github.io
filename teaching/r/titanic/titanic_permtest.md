@@ -11,6 +11,9 @@ permutation tests. Key concepts and skills:
 \* odds ratio  
 \* permutation test
 
+Data files:  
+\* [TitanicSurvival.csv](TitanicSurvival.csv)
+
 First download the TitanicSurvival.csv file and read it in. You can use
 RStudio's Import Dataset button, or the read.csv command:
 
@@ -104,11 +107,11 @@ of letters:
     data.frame(shuffle(sesame_street), army)
 
     ##   shuffle.sesame_street.    army
-    ## 1                      B   alpha
-    ## 2                      E   bravo
-    ## 3                      D charlie
-    ## 4                      A   delta
-    ## 5                      C    echo
+    ## 1                      E   alpha
+    ## 2                      C   bravo
+    ## 3                      A charlie
+    ## 4                      B   delta
+    ## 5                      D    echo
 
 Try executing the line above a few times. Each time you'll get a
 different permutation of the Sesame Street alphabet, and therefore a
@@ -129,8 +132,8 @@ different times:
     ## 4                          male                       no
     ## 5                        female                       no
     ## 6                          male                      yes
-    ## 7                        female                      yes
-    ## 8                          male                       no
+    ## 7                          male                      yes
+    ## 8                        female                       no
     ## 9                          male                      yes
     ## 10                         male                       no
 
@@ -144,7 +147,7 @@ follows:
     t1_shuffle = xtabs(~shuffle(sex) + survived, data=TitanicSurvival)
     relrisk(t1_shuffle)
 
-    ## [1] 0.9946352
+    ## [1] 1.021879
 
 Try executing the code block above a few times. You notice that each
 time you calculate the relative risk, you get something much closer to 1
@@ -160,12 +163,12 @@ hypothesis of no assocation between sex and survival status.
     head(permtest1)
 
     ##          RR
-    ## 1 1.0675211
-    ## 2 0.9580408
-    ## 3 0.9039069
-    ## 4 0.9735100
-    ## 5 1.0108670
-    ## 6 1.0558642
+    ## 1 0.9529538
+    ## 2 1.0108670
+    ## 3 1.0558642
+    ## 4 1.0443738
+    ## 5 0.9892993
+    ## 6 0.9529538
 
     hist(permtest1$RR)
 
@@ -218,11 +221,11 @@ Let's now use the odds ratio in a permutation test.
     head(permtest2)
 
     ##          OR
-    ## 1 1.2343010
-    ## 2 0.8194182
-    ## 3 0.8801815
-    ## 4 0.9185747
-    ## 5 1.2002824
+    ## 1 0.9859985
+    ## 2 1.0142304
+    ## 3 1.0432162
+    ## 4 1.1191310
+    ## 5 0.9185747
     ## 6 0.9584985
 
     hist(permtest2$OR)
