@@ -40,6 +40,7 @@ I use R in all my courses, and over the years I've built up a library of teachin
 
 ### Multiple regression  
 * [The wage gap](r/salary/salary.html): an introduction to multiple regression  
+* [The wage gap](r/cps/cps.html): ANOVA tables in multiple regression models; stepwise selection using AIC  
 
 
 ## Case studies  
