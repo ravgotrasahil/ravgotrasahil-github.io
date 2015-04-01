@@ -8,8 +8,9 @@ output:
 ### Logistic regression
 
 In this walk-through, you'll learn about the logistic regression model.  Key ideas:  
-* Fit a linear probability model and recognize its shortcomings 
-* Compute standard errors under a logistic-regression model
+* Fit a linear probability model and recognize its shortcoming.  
+* Fit a logistic regression model.  
+* Compute standard errors and confidence intervals using both bootstrapping and the central limit theorem.  
 
 Data files:  
 * [bballbets.csv](bballbets.csv): Data on college basketball games.  Each row is a game.  The variable we'd like to predict is `homewin`, which is an indicator for whether the home team won the game (1) or lost the game (0).  Our predictor is `spread`, which is the Las Vegas [point spread](http://en.wikipedia.org/wiki/Spread_betting) in favor of the home team for that game.  For example, if the point spread is 10, then the betting markets collectively expect that the home team will win by 10 points.

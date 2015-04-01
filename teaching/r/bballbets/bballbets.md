@@ -6,8 +6,10 @@ layout: page
 
 In this walk-through, you'll learn about the logistic regression model.
 Key ideas:  
-\* Fit a linear probability model and recognize its shortcomings \*
-Compute standard errors under a logistic-regression model
+\* Fit a linear probability model and recognize its shortcoming.  
+\* Fit a logistic regression model.  
+\* Compute standard errors and confidence intervals using both
+bootstrapping and the central limit theorem.
 
 Data files:  
 \* [bballbets.csv](bballbets.csv): Data on college basketball games.
@@ -201,9 +203,9 @@ of at least two options. First, we can bootstrap:
 
     confint(boot1)
 
-    ##        name      lower     upper level method  estimate margin.of.error
-    ## 1 Intercept -0.1037572 0.3434380  0.95 stderr 0.1198404      0.22359758
-    ## 2    spread  0.1280985 0.1792418  0.95 stderr 0.1536702      0.02557166
+    ##        name       lower     upper level method  estimate margin.of.error
+    ## 1 Intercept -0.09376071 0.3189724  0.95 stderr 0.1126059      0.20636656
+    ## 2    spread  0.12639960 0.1804211  0.95 stderr 0.1534104      0.02701077
 
 We can also appeal to R's summary function, which computes confidence
 intervals under a normal approximation to the coefficients arising from
@@ -213,9 +215,9 @@ the central limit theorem:
 
     ## Waiting for profiling to be done...
 
-    ##                  2.5 %    97.5 %
-    ## (Intercept) -0.1575926 0.2878971
-    ## spread       0.1353938 0.1935399
+    ##                   2.5 %    97.5 %
+    ## (Intercept) -0.09794528 0.3414270
+    ## spread       0.13190904 0.1899437
 
 In this case, the confidence intervals are similar for the two
 techniques.
