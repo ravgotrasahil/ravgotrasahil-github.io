@@ -7,10 +7,11 @@ output:
 
 ### Logistic regression
 
-In this walk-through, you'll learn about the logistic regression model.  Key ideas:  
-* Fit a linear probability model and recognize its shortcoming.  
+In this walk-through, you'll learn about the logistic regression model.  Learning goals:  
+* Fit a linear probability model and recognize its shortcomings.  
 * Fit a logistic regression model.  
 * Compute standard errors and confidence intervals using both bootstrapping and the central limit theorem.  
+* Make predictions from a logistic regression model.  
 
 Data files:  
 * [bballbets.csv](bballbets.csv): Data on college basketball games.  Each row is a game.  The variable we'd like to predict is `homewin`, which is an indicator for whether the home team won the game (1) or lost the game (0).  Our predictor is `spread`, which is the Las Vegas [point spread](http://en.wikipedia.org/wiki/Spread_betting) in favor of the home team for that game.  For example, if the point spread is 10, then the betting markets collectively expect that the home team will win by 10 points.
@@ -122,3 +123,27 @@ confint(glm1)
 
 In this case, the confidence intervals are similar for the two techniques.
 
+### Making predictions from a logit model
+
+Suppose we want to predict the probability of a home-team victory when the point-spread is 5 points in the visiting team's favor (that is, `spread = -5`).  One way to do this is "by hand," using the equation of a logistic regression model:
+
+```{r}
+mybeta = coef(glm1)
+new_x = -5
+psi = mybeta[1] + mybeta[2]*new_x  # linear predictor
+predicted_prob = exp(psi)/{1+exp(psi)}
+predicted_prob
+```
+
+Thus the predicted probability of a home-team victory, given a point spread of 5 points in favor of the visiting team, is about 34%.
+
+We can also use the predict function to streamline this process, which is especially useful if we want to generate predictions at multiple values of x:
+```{r}
+new_x = data.frame(spread=c(-5, -2, 7, 14))
+predict(glm1, newdata=new_x, type='response')
+```
+
+We can also use the `predict` function to get the values of the linear predictor (i.e. before it is run through the link function):
+```{r}
+predict(glm1, newdata=new_x, type='link')
+```

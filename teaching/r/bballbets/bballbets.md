@@ -5,11 +5,12 @@ layout: page
 ### Logistic regression
 
 In this walk-through, you'll learn about the logistic regression model.
-Key ideas:  
-\* Fit a linear probability model and recognize its shortcoming.  
+Learning goals:  
+\* Fit a linear probability model and recognize its shortcomings.  
 \* Fit a logistic regression model.  
 \* Compute standard errors and confidence intervals using both
-bootstrapping and the central limit theorem.
+bootstrapping and the central limit theorem.  
+\* Make predictions from a logistic regression model.
 
 Data files:  
 \* [bballbets.csv](bballbets.csv): Data on college basketball games.
@@ -172,8 +173,8 @@ of at least two options. First, we can bootstrap:
     confint(boot1)
 
     ##        name       lower     upper level method  estimate margin.of.error
-    ## 1 Intercept -0.09519652 0.3289035  0.95 stderr 0.1168535      0.21205003
-    ## 2    spread  0.12615598 0.1806608  0.95 stderr 0.1534084      0.02725238
+    ## 1 Intercept -0.09762385 0.3274133  0.95 stderr 0.1148947      0.21251858
+    ## 2    spread  0.12632166 0.1794258  0.95 stderr 0.1528737      0.02655207
 
 We can also appeal to R's summary function, which computes confidence
 intervals under a normal approximation to the coefficients arising from
@@ -184,8 +185,45 @@ the central limit theorem:
     ## Waiting for profiling to be done...
 
     ##                   2.5 %    97.5 %
-    ## (Intercept) 0.001569779 0.4584173
-    ## spread      0.141979865 0.2037390
+    ## (Intercept) -0.04064309 0.3882956
+    ## spread       0.12564430 0.1817760
 
 In this case, the confidence intervals are similar for the two
 techniques.
+
+### Making predictions from a logit model
+
+Suppose we want to predict the probability of a home-team victory when
+the point-spread is 5 points in the visiting team's favor (that is,
+`spread = -5`). One way to do this is "by hand," using the equation of a
+logistic regression model:
+
+    mybeta = coef(glm1)
+    new_x = -5
+    psi = mybeta[1] + mybeta[2]*new_x  # linear predictor
+    predicted_prob = exp(psi)/{1+exp(psi)}
+    predicted_prob
+
+    ## (Intercept) 
+    ##   0.3571208
+
+Thus the predicted probability of a home-team victory, given a point
+spread of 5 points in favor of the visiting team, is about 34%.
+
+We can also use the predict function to streamline this process, which
+is especially useful if we want to generate predictions at multiple
+values of x:
+
+    new_x = data.frame(spread=c(-5, -2, 7, 14))
+    predict(glm1, newdata=new_x, type='response')
+
+    ##         1         2         3         4 
+    ## 0.3571208 0.4674315 0.7758795 0.9096309
+
+We can also use the `predict` function to get the values of the linear
+predictor (i.e. before it is run through the link function):
+
+    predict(glm1, newdata=new_x, type='link')
+
+    ##          1          2          3          4 
+    ## -0.5878827 -0.1304587  1.2418134  2.3091361
