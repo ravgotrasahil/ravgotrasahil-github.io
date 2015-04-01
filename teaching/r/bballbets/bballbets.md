@@ -171,9 +171,9 @@ of at least two options. First, we can bootstrap:
 
     confint(boot1)
 
-    ##        name      lower     upper level method  estimate margin.of.error
-    ## 1 Intercept -0.1030404 0.3248073  0.95 stderr 0.1108834      0.21392384
-    ## 2    spread  0.1261455 0.1801104  0.95 stderr 0.1531279      0.02698244
+    ##        name       lower     upper level method  estimate margin.of.error
+    ## 1 Intercept -0.09519652 0.3289035  0.95 stderr 0.1168535      0.21205003
+    ## 2    spread  0.12615598 0.1806608  0.95 stderr 0.1534084      0.02725238
 
 We can also appeal to R's summary function, which computes confidence
 intervals under a normal approximation to the coefficients arising from
@@ -183,9 +183,9 @@ the central limit theorem:
 
     ## Waiting for profiling to be done...
 
-    ##                  2.5 %    97.5 %
-    ## (Intercept) -0.1104084 0.3352105
-    ## spread       0.1409962 0.2028006
+    ##                   2.5 %    97.5 %
+    ## (Intercept) 0.001569779 0.4584173
+    ## spread      0.141979865 0.2037390
 
 In this case, the confidence intervals are similar for the two
 techniques.
