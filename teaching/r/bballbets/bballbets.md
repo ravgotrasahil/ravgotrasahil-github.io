@@ -23,40 +23,8 @@ the betting markets collectively expect that the home team will win by
 
 First we'll load the required libraries and data set.
 
-    ## Loading required package: car
-    ## Loading required package: dplyr
-    ## 
-    ## Attaching package: 'dplyr'
-    ## 
-    ## The following object is masked from 'package:stats':
-    ## 
-    ##     filter
-    ## 
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-    ## 
-    ## Loading required package: lattice
-    ## Loading required package: ggplot2
-    ## 
-    ## Attaching package: 'mosaic'
-    ## 
-    ## The following objects are masked from 'package:dplyr':
-    ## 
-    ##     count, do, tally
-    ## 
-    ## The following object is masked from 'package:car':
-    ## 
-    ##     logit
-    ## 
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     binom.test, cor, cov, D, fivenum, IQR, median, prop.test,
-    ##     quantile, sd, t.test, var
-    ## 
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     max, mean, min, prod, range, sample, sum
+    library(mosaic)
+    bballbets = read.csv("bballbets.csv", header=TRUE)
 
 Let's plot the outcome (homewin) versus the point spread. Note that,
 because the homewin variable is either 0 or 1, it is hard to distinguish
@@ -203,9 +171,9 @@ of at least two options. First, we can bootstrap:
 
     confint(boot1)
 
-    ##        name       lower     upper level method  estimate margin.of.error
-    ## 1 Intercept -0.09376071 0.3189724  0.95 stderr 0.1126059      0.20636656
-    ## 2    spread  0.12639960 0.1804211  0.95 stderr 0.1534104      0.02701077
+    ##        name      lower     upper level method  estimate margin.of.error
+    ## 1 Intercept -0.1030404 0.3248073  0.95 stderr 0.1108834      0.21392384
+    ## 2    spread  0.1261455 0.1801104  0.95 stderr 0.1531279      0.02698244
 
 We can also appeal to R's summary function, which computes confidence
 intervals under a normal approximation to the coefficients arising from
@@ -215,9 +183,9 @@ the central limit theorem:
 
     ## Waiting for profiling to be done...
 
-    ##                   2.5 %    97.5 %
-    ## (Intercept) -0.09794528 0.3414270
-    ## spread       0.13190904 0.1899437
+    ##                  2.5 %    97.5 %
+    ## (Intercept) -0.1104084 0.3352105
+    ## spread       0.1409962 0.2028006
 
 In this case, the confidence intervals are similar for the two
 techniques.
