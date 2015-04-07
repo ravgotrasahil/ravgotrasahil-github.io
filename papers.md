@@ -5,29 +5,30 @@ title: Papers
 
 [ Google Scholar profile.][1]
 
-&nbsp;  
 
 ### Preprints
 
-(2014) [False discovery rate smoothing](http://arxiv.org/abs/1411.6144) (with W. Tansey, O. Koyejo, and R. Poldrack).  
+(2015) [Proximal algorithms in statistics and machine learning](http://arxiv.org/abs/1502.03175) (with N. Polson and B. Willard).   
+
+(2015) [Tensor decomposition with generalized lasso penalties](http://arxiv.org/abs/1502.06930) (with O. Padilla).  
+
+(2014) [False discovery rate smoothing](http://arxiv.org/abs/1411.6144) (with W. Tansey, O. Koyejo, and R. Poldrack).   
 
 (2014) [Vertical-likelihood Monte Carlo](http://arxiv.org/abs/1409.3601) (with N. Polson).  
 
 (2014) [Priors for Random Count Matrices Derived from a Family of Negative Binomial Processes](http://arxiv.org/abs/1404.3331) (with M. Zhou).  
 
-(2014) [Nonparametric Bayesian testing for monotonicity](http://arxiv.org/abs/1304.3378) (with T. Shively and S. Walker).  
-
 (2014) [Mixtures, envelopes, and hierarchical duality](http://arxiv.org/abs/1406.0177) (with N. Polson).  
 
-
-&nbsp;  
+ 
 
 ### Journal Articles and Conference Proceedings
 
-
-(2015) [Management of Fetal Malposition in the Second Stage of Labor: A Propensity Score Analysis](http://www.ncbi.nlm.nih.gov/pubmed/25446659).  _American Journal of Obstetrics and Gynecology_ (in press).  
+(2015) [Nonparametric Bayesian testing for monotonicity](http://arxiv.org/abs/1304.3378) (with T. Shively and S. Walker). _Biometrika_ (in press). 
 
 (2015) [ False discovery rate regression: an application to neural synchrony detection in primary visual cortex](http://arxiv.org/abs/1307.3495) (with R. Kelly, M. Smith, P. Zhou, and R. Kass).  _Journal of the American Statistical Association_ (in press).  
+
+(2015) [Management of Fetal Malposition in the Second Stage of Labor: A Propensity Score Analysis](http://www.ncbi.nlm.nih.gov/pubmed/25446659).  _American Journal of Obstetrics and Gynecology_ 212: 3, p. 355.  
 
 (2014) [Factors influencing the likelihood of instrumental delivery success](http://www.ncbi.nlm.nih.gov/pubmed/24785607) (with C. Aiken, A. Aiken, and J. Brocklesby).  _Obstetrics and Gynecology_ 123(4): 796-803.  
 
@@ -77,8 +78,6 @@ title: Papers
 (2006) [ Inverting color-magnitude diagrams to access precise star cluster parameters: a Bayesian approach][24] (with T. von Hippel, W. Jefferys, N. Stein, D. Winget, S. DeGennaro, A. Dam, and E. Jeffery). _The Astrophysical Journal_ 645(2): 1436-47 (2006).  
 
 (2005) [ White dwarfs in open clusters: calibrating the clock][25] (with T. von Hippel, W. Jefferys, and D. Winget). 14th European Workshop on White Dwarfs, ASP Conference Series 334: 77-80 (2005).  
-
-
 
 
 ### Book chapters
