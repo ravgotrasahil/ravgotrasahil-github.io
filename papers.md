@@ -8,21 +8,23 @@ title: Papers
 
 ### Preprints
 
+(2015) [A fast and flexible algorithm for the graph-fused lasso](http://arxiv.org/abs/1505.06475) (with W. Tansey).   
+
 (2015) [Proximal algorithms in statistics and machine learning](http://arxiv.org/abs/1502.03175) (with N. Polson and B. Willard).   
 
 (2015) [Tensor decomposition with generalized lasso penalties](http://arxiv.org/abs/1502.06930) (with O. Padilla).  
 
+(2015) [Vertical-likelihood Monte Carlo](http://arxiv.org/abs/1409.3601) (with N. Polson).  
+
 (2014) [False discovery rate smoothing](http://arxiv.org/abs/1411.6144) (with W. Tansey, O. Koyejo, and R. Poldrack).   
 
-(2014) [Vertical-likelihood Monte Carlo](http://arxiv.org/abs/1409.3601) (with N. Polson).  
-
 (2014) [Priors for Random Count Matrices Derived from a Family of Negative Binomial Processes](http://arxiv.org/abs/1404.3331) (with M. Zhou).  
-
-(2014) [Mixtures, envelopes, and hierarchical duality](http://arxiv.org/abs/1406.0177) (with N. Polson).  
 
  
 
 ### Journal Articles and Conference Proceedings
+
+(2015) [Mixtures, envelopes, and hierarchical duality](http://arxiv.org/abs/1406.0177) (with N. Polson).  _Journal of the Royal Statistical Society, Series B_ (accepted).
 
 (2015) [Nonparametric Bayesian testing for monotonicity](http://arxiv.org/abs/1304.3378) (with T. Shively and S. Walker). _Biometrika_ (in press). 
 
