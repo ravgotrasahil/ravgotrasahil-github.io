@@ -8,9 +8,11 @@ title: Papers
 
 ### Preprints
 
+(2015) [Multiscale spatial density smoothing: an application to large-scale radiological survey and anomaly detection](http://arxiv.org/abs/1507.07271) (with W. Tansey, A. Athey, and A. Reinhart).   
+
 (2015) [A fast and flexible algorithm for the graph-fused lasso](http://arxiv.org/abs/1505.06475) (with W. Tansey).   
 
-(2015) [Proximal algorithms in statistics and machine learning](http://arxiv.org/abs/1502.03175) (with N. Polson and B. Willard).   
+(2015) [The design and analysis of binary variable traits in common garden genetic experiments of highly fecund species to assess heritability](http://biorxiv.org/content/early/2015/04/17/018044) (with S Scarpino, SW Davies, T Pongwarin, and M Matz).
 
 (2015) [Tensor decomposition with generalized lasso penalties](http://arxiv.org/abs/1502.06930) (with O. Padilla).  
 
@@ -18,17 +20,19 @@ title: Papers
 
 (2014) [False discovery rate smoothing](http://arxiv.org/abs/1411.6144) (with W. Tansey, O. Koyejo, and R. Poldrack).   
 
-(2014) [Priors for Random Count Matrices Derived from a Family of Negative Binomial Processes](http://arxiv.org/abs/1404.3331) (with M. Zhou).  
-
  
 
-### Journal Articles and Conference Proceedings
+### Journal Articles and Refereed Conference Proceedings
+
+(2015) [Priors for Random Count Matrices Derived from a Family of Negative Binomial Processes](http://arxiv.org/abs/1404.3331) (with M. Zhou).  _Journal of the American Statistical Association (Theory and Methods)_ (accepted).
+
+(2015) [Proximal algorithms in statistics and machine learning](http://arxiv.org/abs/1502.03175) (with N. Polson and B. Willard).   _Statistical Science_ (accepted).
 
 (2015) [Mixtures, envelopes, and hierarchical duality](http://arxiv.org/abs/1406.0177) (with N. Polson).  _Journal of the Royal Statistical Society, Series B_ (accepted).
 
 (2015) [Nonparametric Bayesian testing for monotonicity](http://arxiv.org/abs/1304.3378) (with T. Shively and S. Walker). _Biometrika_ (in press). 
 
-(2015) [ False discovery rate regression: an application to neural synchrony detection in primary visual cortex](http://arxiv.org/abs/1307.3495) (with R. Kelly, M. Smith, P. Zhou, and R. Kass).  _Journal of the American Statistical Association_ (in press).  
+(2015) [False discovery rate regression: an application to neural synchrony detection in primary visual cortex](http://arxiv.org/abs/1307.3495) (with R. Kelly, M. Smith, P. Zhou, and R. Kass).  _Journal of the American Statistical Association_ 110: 510, pp 459-71.
 
 (2015) [Management of Fetal Malposition in the Second Stage of Labor: A Propensity Score Analysis](http://www.ncbi.nlm.nih.gov/pubmed/25446659).  _American Journal of Obstetrics and Gynecology_ 212: 3, p. 355.  
 
@@ -41,7 +45,6 @@ title: Papers
 (2013) [ Bayesian inference for logistic models using Polya-Gamma latent variables][4] (with N.G. Polson and J. Windle). _Journal of the American Statistical Association (Theory &amp; Methods)_ 108(504): 1339–49. arXiv:1205.0310 [stat.ME].  
 
 (2013) [ No control genes required: Bayesian analysis of qRT-PCR data.][5] (with M.V. Matz and R.G. Wright). _PLoS ONE_ 8(8): e71448 (2013).    
-
 
 (2013) [ A recursive estimate for the predictive likelihood in a topic model][7] (with J. Baldridge). _Proceedings of the 16th International Conference on Artificial Intelligence and Statistics _ (AISTATS) 31 (2013).   
 
