@@ -34,7 +34,7 @@ title: Papers
 
 (2015) [False discovery rate regression: an application to neural synchrony detection in primary visual cortex](http://arxiv.org/abs/1307.3495) (with R. Kelly, M. Smith, P. Zhou, and R. Kass).  _Journal of the American Statistical Association_ 110: 510, pp 459-71.
 
-(2015) [Management of Fetal Malposition in the Second Stage of Labor: A Propensity Score Analysis](http://www.ncbi.nlm.nih.gov/pubmed/25446659).  _American Journal of Obstetrics and Gynecology_ 212: 3, p. 355.  
+(2015) [Management of Fetal Malposition in the Second Stage of Labor: A Propensity Score Analysis](http://www.ncbi.nlm.nih.gov/pubmed/25446659). (with A. Aiken, C. Aiken, M. Alberry, J. Brocklesby).  _American Journal of Obstetrics and Gynecology_ 212: 3, p. 355.  
 
 (2014) [Factors influencing the likelihood of instrumental delivery success](http://www.ncbi.nlm.nih.gov/pubmed/24785607) (with C. Aiken, A. Aiken, and J. Brocklesby).  _Obstetrics and Gynecology_ 123(4): 796-803.  
 
