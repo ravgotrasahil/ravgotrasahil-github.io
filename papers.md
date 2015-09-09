@@ -28,7 +28,7 @@ title: Papers
 
 (2015) [Proximal algorithms in statistics and machine learning](http://arxiv.org/abs/1502.03175) (with N. Polson and B. Willard).   _Statistical Science_ (accepted).
 
-(2015) [Mixtures, envelopes, and hierarchical duality](http://arxiv.org/abs/1406.0177) (with N. Polson).  _Journal of the Royal Statistical Society, Series B_ (accepted).
+(2015) [Mixtures, envelopes, and hierarchical duality](http://arxiv.org/abs/1406.0177) (with N. Polson).  _Journal of the Royal Statistical Society, Series B_ (in press).
 
 (2015) [Nonparametric Bayesian testing for monotonicity](http://arxiv.org/abs/1304.3378) (with T. Shively and S. Walker). _Biometrika_ (in press). 
 
