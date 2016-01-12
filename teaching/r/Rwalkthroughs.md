@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Teaching
 ---
 
 ## R Walk-throughs
