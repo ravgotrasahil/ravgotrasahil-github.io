@@ -2,10 +2,8 @@
 layout: page
 ---
 
-This page will walk you through the installation of R, RStudio, and the mosaic library.  
-* R is the workhorse that actually does the computations.  You won't ever need to launch the R program directly, but it has to be installed on your computer.  
-* RStudio is a nice graphical front-end to R.  This is the program you will interact with directly.  
-* A library is a piece of software that provides additional functionality to R, beyond what's contained in the basic installation.  R has an enormous ecosystem of libraries (number in the tens of thousands) for various data-analysis tasks.  
+This page will walk you through the installation of R and RStudio.  R is the workhorse that actually does the computations.  You won't ever need to launch the R program directly, but it has to be installed on your computer.  RStudio is a nice graphical front-end to R.  This is the program you will interact with directly, but it depends "under the hood" on R itself.  
+
 
 ### Installing R
 

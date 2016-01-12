@@ -6,8 +6,9 @@ layout: page
 
 ### Introduction to R
 * [Installing R](basics/installing_R.html): installing R and RStudio.  
-* [Installing a library](basics/installing_library.html): installing the mosaic library from within RStudio.  
 * [Heights of students versus their parents](heights/heights.html): a "hello world"-style introduction to the R environment.  
+* [Installing a library](basics/installing_library.html): installing the mosaic library from within RStudio.  
+
 
 ### Exploratory data analysis
 * [Survival on the Titanic](titanic/titanic.html): basics of contingency tables.  

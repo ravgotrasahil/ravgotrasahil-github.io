@@ -2,9 +2,11 @@
 layout: page
 ---
 
-### Installing a library from within RStudio
+A library is a piece of software that provides additional functionality to R, beyond what's contained in the basic installation.  R has an enormous ecosystem of libraries (number in the tens of thousands) for various data-analysis tasks.  
 
-We'll use the mosaic library repeatedly throughout the semester.  This will walk you through the process of installing this library (and by extension, any of the other libraries you'll need).  Conveniently, libraries (also called packages) are installed from within RStudio itself. 
+We'll use the mosaic library repeatedly throughout the semester.  This will walk you through the process of installing this library (and by extension, any of the other libraries you'll need).  Conveniently, libraries (also called packages) are installed from within RStudio itself.   
+
+### Installing a library from within RStudio
 
 Launch RStudio, and find the row of tabs for Files, Plots, Packages, etc.  You can see this on the upper-right panel in the figure below.
 
