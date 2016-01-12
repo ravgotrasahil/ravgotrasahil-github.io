@@ -12,8 +12,6 @@ title: Papers
 
 (2015) [A fast and flexible algorithm for the graph-fused lasso](http://arxiv.org/abs/1505.06475) (with W. Tansey).   
 
-(2015) [The design and analysis of binary variable traits in common garden genetic experiments of highly fecund species to assess heritability](http://biorxiv.org/content/early/2015/04/17/018044) (with S Scarpino, SW Davies, T Pongwarin, and M Matz).
-
 (2015) [Tensor decomposition with generalized lasso penalties](http://arxiv.org/abs/1502.06930) (with O. Padilla).  
 
 (2015) [Vertical-likelihood Monte Carlo](http://arxiv.org/abs/1409.3601) (with N. Polson).  
@@ -25,6 +23,8 @@ title: Papers
 ### Journal Articles and Refereed Conference Proceedings
 
 (2015) [Priors for Random Count Matrices Derived from a Family of Negative Binomial Processes](http://arxiv.org/abs/1404.3331) (with M. Zhou).  _Journal of the American Statistical Association (Theory and Methods)_ (accepted).
+
+(2015) [Estimating trait heritability in highly fecund species](http://biorxiv.org/content/early/2015/04/17/018044) (with S Scarpino, SW Davies, T Pongwarin, and M Matz). _G3: Genes, Genomes, Genetics_ (accepted).
 
 (2015) [Proximal algorithms in statistics and machine learning](http://arxiv.org/abs/1502.03175) (with N. Polson and B. Willard).   _Statistical Science_ (accepted).
 
