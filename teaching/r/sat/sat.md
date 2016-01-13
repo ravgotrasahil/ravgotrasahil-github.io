@@ -50,8 +50,7 @@ Next, download the ut2000.csv file and read it in.
     ##  Max.   :4.000           
     ## 
 
-Between-group and within-group variation
-========================================
+### Between-group and within-group variation
 
 School (which of the 10 different undergraduate schools at UT the
 student graduated from) is a natural grouping variable here. To see both
@@ -151,7 +150,8 @@ versus SAT math scores for all students.
     plot(GPA ~ SAT.Q, data=ut2000, pch=19, cex=0.5, col='grey')
 
 ![](sat_files/figure-markdown_strict/unnamed-chunk-8-1.png)  
-Try `?plot` and `points` to see some more of the plotting options.
+Try `?plot`, `?points`, and `?par` to see some more of the plotting
+options.
 
 To compute a correlation coefficient, use the `cor` function:
 
@@ -170,11 +170,17 @@ and GPA, respectively):
     pairs(ut2000[,c(1,2,5)])
 
 ![](sat_files/figure-markdown_strict/unnamed-chunk-10-1.png)  
- You might find this plot redundant---for example, the plot of SAT.V
-versus GPA (row 1, column 3) contains the same information as the plot
-of GPA versus SAT.V (row 3, column 1). We've just flipped which variable
-appears on the vertical axis. To suppress this redundancy, pass in the
-following flag:
+The brackets to the right of our data set, `ut2000[,c(1,2,5)]`, say
+"give me all rows from the 1st, 2nd, and 5th columns." If you wanted,
+say, the first 100 rows of these columns, you'd use
+`ut2000[1:100,c(1,2,5)]`. But because we left the row index blank in the
+command above, R gives us all the rows by default.
+
+You might find this pairs plot redundant---for example, the plot of
+SAT.V versus GPA (row 1, column 3) contains the same information as the
+plot of GPA versus SAT.V (row 3, column 1). We've just flipped which
+variable appears on the vertical axis. To suppress this redundancy, pass
+in the following flag:
 
     pairs(ut2000[,c(1,2,5)], upper.panel=NULL)
 
@@ -193,3 +199,23 @@ command produces one:
 The vertical bar (|) should be read as "conditional upon" or "stratified
 by." In this case, the GPA versus SAT.Q relationship looks broadly
 similar across all colleges.
+
+We can also make a lattice of boxplots. For example, we might be
+interested the relationship between graduating GPA and college depends
+on a student's incoming SAT score. We can do this by discretizing SAT
+score into intervals. (You'll remember we did this using the `cut`
+function in an [earlier
+walkthrough](http://jgscott.github.io/teaching/r/titanic/titanic.html).)
+We can then use these intervals to define a lattice plot.
+
+    ut2000$SATcat = cut(ut2000$SAT.C, breaks=c(0, 1000, 1200, 1400, 1600))
+    bwplot(GPA ~ School | SATcat, data=ut2000)
+
+![](sat_files/figure-markdown_strict/unnamed-chunk-13-1.png)  
+ This is really ugly because all the axis labels are running together.
+We can rotate the college labels to 45 degrees using the (admittedly
+also ugly) command below:
+
+    bwplot(GPA ~ School | SATcat, data=ut2000, scales=list(x=list(rot=45)))
+
+![](sat_files/figure-markdown_strict/unnamed-chunk-14-1.png)
