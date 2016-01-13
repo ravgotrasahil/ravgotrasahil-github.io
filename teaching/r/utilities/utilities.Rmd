@@ -5,12 +5,12 @@ output:
       in_header: ../header.txt
 ---
 
-### Polynomial regression
+### Gas consumption versus temperature  
 
 In this walk-through, you'll learn how to fit nonlinear models by least squares using a simple trick: adding powers (squared, cubed, etc) of the original predictor variable.  You will also see that new variables can be defined in terms of old ones.
 
 Data files:  
-* [utilities.csv](utilities.csv): monthly gas bill versus temperature for a house in Minnesota.  
+* [utilities.csv](utilities.csv): monthly gas bill versus temperature for a house in Minnesota.  Data source: Daniel T. Kaplan, _Statistical Modeling: A Fresh Approach_, 2009.
 
 First let's load the mosaic library and read in the utilities data set.
 ```{r, message=FALSE}
@@ -23,6 +23,8 @@ As usual, we'll look at a quick summary of the variables:
 summary(utilities)
 ```
 
+### Defining a new variable in terms of existing ones  
+
 Our goal will be to model the monthly gas bill in terms of temperature.  There's a wrinkle here, however: different billing periods have different numbers of billing days:
 ```{r}
 hist(utilities$billingDays, breaks=20)
@@ -30,7 +32,7 @@ hist(utilities$billingDays, breaks=20)
 
 Thus we probably want to be measuring gas usage per day, rather than to the total over each billing period.  Let's define a new variable, called daily.average.gasbill:
 ```{r}
-daily.average.gasbill = utilities$gasbill/utilities$billingDays
+utilities$daily.average.gasbill = utilities$gasbill/utilities$billingDays
 ```
 
 Now let's plot the new variable we've created versus temperature, fit a linear model, and add the line to the plot.
@@ -45,6 +47,8 @@ This model doesn't do a very good job: we're fitting a linear model to obviously
 ```{r}
 plot(resid(lm1) ~ temp, data=utilities)
 ```
+
+### Polynomial regression models  
 
 One approach to address this shortcoming is to fit a parabola: that is, y versus x and x^2.
 ```{r}

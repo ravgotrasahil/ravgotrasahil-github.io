@@ -180,7 +180,10 @@ predictor.
 
 Which pickup looks like the best deal, adjusting for mileage? We could
 assess this by finding the minimum residual, which is the truck whose
-asking price is the farthest below its expected cost, given its mileage:
+asking price is the farthest below its expected cost, given its mileage.
+We can get the minimum residual itself with the `min` function, and the
+*index* of the minimum residual (i.e. which case in the data set) using
+the `which.min` function:
 
     min(resid(model1))
 
@@ -199,7 +202,8 @@ adjusting for mileage:
     ##    year miles price make
     ## 44 1993 90000  1900  GMC
 
-It's a 1993 GMC with 90000 miles on it, priced at only $1900.
+It's a 1993 GMC with 90000 miles on it, priced at only $1900. It's
+probably cheap because it's old.
 
 ### Quantifying residual variation
 
