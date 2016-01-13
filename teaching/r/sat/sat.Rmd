@@ -92,7 +92,8 @@ You might find this pairs plot redundant---for example, the plot of SAT.V versus
 pairs(ut2000[,c(1,2,5)], upper.panel=NULL)
 ```
 
-### Lattice plots
+
+### Lattice plots  
 
 Finally, if we want to see this bivariate relationship plotted separately for each of the 10 colleges, we need what's called a lattice plot.  A lattice plot allows us to see whether, and how, the relationship between two variables is modulated by a third variable.  The `xyplot` command produces one:
 ```{r}

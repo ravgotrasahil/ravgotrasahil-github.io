@@ -13,12 +13,14 @@ layout: page
 ### Exploratory data analysis
 * [Survival on the Titanic](titanic/titanic.html): basics of contingency tables.  
 * [Temperatures in San Diego and Rapid City](citytemps/citytemps.html): measuring and visualizing dispersion; changing default plots in R.
-* [SAT scores and GPA at UT-Austin](sat/sat.html): boxplots, residuals, fitted values, groupwise means, scatter plots, and lattice plots.    
+* [SAT scores and GPA at UT-Austin](sat/sat.html): boxplots, between-group and within-group variation, sample correlation, scatter plots, pairs plots, and lattice plots.    
 
-### Fitting simple equations to data
+### Fitting equations to data
 * [Asking prices of pickup trucks on Craigslist](pickup/pickup.html): simple linear regression via ordinary least squares; residual summaries   
 * [Utility bills versus temperature](utilities/utilities.html): adding polynomial terms to fit nonlinear curves  
 * [Infant mortality and GDP](infmort/infmort.html): using log transformations to fit power laws via linear least squares      
+
+### Predictable and unpredictable variation  
 * [Kidney function and aging](creatinine/creatinine.html): naive prediction intervals; R^2 and the decomposition of variance     
 
 ### Regression with multiple categorical variables  
@@ -39,11 +41,3 @@ layout: page
 * [Google flu trends](flu/flu.html): Building and checking a predictive model  
 * [Basketball point spreads](bballbets/bballbets.html): Logistic regression.  
 * [Atmospheric CO2](maunaloa/maunaloa.html): Trends and seasonal variation in time-series models.  
-
-
-
-## Case studies  
-* [Traffic fatalities](trafficdeaths/trafficdeaths.html): predictors of state-level traffic fatalities   
-* [Circuit-board manufacturing](solder/solder.html): predictors of manufacturing flaws in AT&T circuit boards
-
-  

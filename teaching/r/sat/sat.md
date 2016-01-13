@@ -185,7 +185,8 @@ in the following flag:
     pairs(ut2000[,c(1,2,5)], upper.panel=NULL)
 
 ![](sat_files/figure-markdown_strict/unnamed-chunk-11-1.png)  
- \#\#\# Lattice plots
+
+### Lattice plots
 
 Finally, if we want to see this bivariate relationship plotted
 separately for each of the 10 colleges, we need what's called a lattice

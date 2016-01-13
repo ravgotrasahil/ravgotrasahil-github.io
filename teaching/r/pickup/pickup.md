@@ -2,7 +2,7 @@
 layout: page
 ---
 
-### Ordinary least squares
+### Asking prices of pickup trucks.
 
 In this walk-through, you'll learn simple linear regression: that is,
 how to fit a straight line by ordinary least squares. You will also
@@ -12,10 +12,13 @@ Data files:
 \* [pickup.csv](pickup.csv): details on pickup trucks sold on Craiglist
 in Austin.
 
-First read in the data. For the sake of completeness here's the
-command-line version; you should probably use the RStudio Import Dataset
-button.
+### Warm-up
 
+First load the mosaic library and read in the data. For the sake of
+completeness here's the command-line version; you should probably use
+the RStudio Import Dataset button.
+
+    library(mosaic)
     pickup=read.csv('pickup.csv', header=TRUE)
     summary(pickup)
 
@@ -33,31 +36,37 @@ coverage interval.
 
     hist(pickup$price, breaks=20)
 
-![](pickup_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+![](pickup_files/figure-markdown_strict/unnamed-chunk-2-1.png)  
 
-    endpoints80 = quantile(pickup$price, probs=c(0.1, 0.9))
+    endpoints80 = qdata(pickup$price, p=c(0.1, 0.9))
     endpoints80
 
-    ##   10%   90% 
-    ##  2500 16240
+    ##     quantile   p
+    ## 10%     2500 0.1
+    ## 90%    16240 0.9
+
+The `endpoints80` variable is a data frame containing the quantiles and
+corresponding probabilities.
 
 You can now superimpose those endpoints on the histogram to show the
 coverage interval.
 
     hist(pickup$price, breaks=20, col='lightblue')
-    abline(v=endpoints80, col='red')
+    abline(v=endpoints80$quantile, col='red')
 
-![](pickup_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+![](pickup_files/figure-markdown_strict/unnamed-chunk-3-1.png)  
+ Notice the color we've added to our lives.
 
-Notice the color we've added to our lives. Next, let's make a
-scatterplot of asking price versus mileage.
+### Fitting a straight line by ordinary least squares (OLS)
+
+Next, let's make a scatterplot of asking price versus mileage.
 
     plot(price~miles, data=pickup)
 
-![](pickup_files/figure-markdown_strict/unnamed-chunk-4-1.png)
-
-Notice the downward trend. We'll use the `lm` function to fit a trend
-line by least squares, to quantify the steepness of the decline.
+![](pickup_files/figure-markdown_strict/unnamed-chunk-4-1.png)  
+ Notice the downward trend. We'll use the `lm` function to fit a trend
+line by ordinary least squares, to quantify the steepness of the
+decline.
 
     lm(price~miles, data=pickup)
 
@@ -82,14 +91,14 @@ functions to extract information about the fitted model.
 The second (slope) coefficient summarizes the downward trend of price
 versus mileage.
 
-Finally, let's add the fitted trend-line to the scatter plot
+We can also use the fitted model object (which we called `model1`) to
+add the fitted trend-line to the scatter plot, like this:
 
     plot(price~miles, data=pickup)
     abline(model1)
 
-![](pickup_files/figure-markdown_strict/unnamed-chunk-7-1.png)
-
-### Plug-in prediction
+![](pickup_files/figure-markdown_strict/unnamed-chunk-7-1.png)  
+ \#\#\# Plug-in prediction
 
 One simple thing we can use the model to do is to make plug-in
 predictions. Let's say we had saw pickups for sale: one with 25000
@@ -102,7 +111,7 @@ expect their asking price to be? We could do this by hand:
 
     ## [1] 12811.876 11204.376  7989.376
 
-Or we could use the predict function:
+Or we could pass in a new data frame to the `predict` function:
 
     new_pickups = data.frame(miles=c(25000,50000,100000))
     predict(model1, newdata=new_pickups)
@@ -110,8 +119,10 @@ Or we could use the predict function:
     ##         1         2         3 
     ## 12811.890 11204.404  7989.433
 
-For more complicated settings, the second way will be far easier (as
-we'll see later).
+The new data frame must have the same predictors that the original data
+frame did. These two ways of doing plug-in prediction given the same
+answer, but for more complicated settings, the second way will be far
+easier (as we'll see later).
 
 ### Residual summaries and plots
 
@@ -160,10 +171,12 @@ original x variable:
 
     plot(resid(model1) ~ miles, data=pickup)
 
-![](pickup_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+![](pickup_files/figure-markdown_strict/unnamed-chunk-11-1.png)  
+ There is no systematic trend left in the residuals, which is just as it
+should be if we've done a good job modeling the response using the
+predictor.
 
-There is no systematic trend, which is just as it should be if we've
-done a good job modeling the response using the predictor.
+### Statistical adjustment (taking the X-ness out of Y)
 
 Which pickup looks like the best deal, adjusting for mileage? We could
 assess this by finding the minimum residual, which is the truck whose
@@ -177,6 +190,18 @@ asking price is the farthest below its expected cost, given its mileage:
 
     ## 44 
     ## 44
+
+It looks like the 44th pickup in the data set is the best price,
+adjusting for mileage:
+
+    pickup[44,]
+
+    ##    year miles price make
+    ## 44 1993 90000  1900  GMC
+
+It's a 1993 GMC with 90000 miles on it, priced at only $1900.
+
+### Quantifying residual variation
 
 Finally, how much variation is left in the residuals, compared to the
 original variation in price?
