@@ -5,7 +5,9 @@ layout: page
 ### Contingency tables
 
 In this walk-through, you will learn a few tools for summarizing
-categorical data using contingency tables.
+categorical data using contingency tables. You will also learn how to
+turn a numerical variable into a categorical variable using the `cut`
+function.
 
 Data files:  
 \* [TitanicSurvival.csv](TitanicSurvival.csv)
@@ -15,8 +17,8 @@ RStudio's Import Dataset button, or the read.csv command:
 
     TitanicSurvival = read.csv('TitanicSurvival.csv')
 
-Let's look at the first few lines of the data set using the `head`
-function.
+Let's look at the first few lines of the data set, which we can do using
+the `head` function.
 
     head(TitanicSurvival)
 
@@ -50,6 +52,27 @@ Or by passenger class:
     ##      no  123 158 528
     ##      yes 200 119 181
 
+Or by all three, to yield a multi-way table:
+
+    xtabs(~survived + passengerClass + sex, data=TitanicSurvival)
+
+    ## , , sex = female
+    ## 
+    ##         passengerClass
+    ## survived 1st 2nd 3rd
+    ##      no    5  12 110
+    ##      yes 139  94 106
+    ## 
+    ## , , sex = male
+    ## 
+    ##         passengerClass
+    ## survived 1st 2nd 3rd
+    ##      no  118 146 418
+    ##      yes  61  25  75
+
+Notice how this is presented as a set of two-way tables, given the
+constraints of the two-dimensional screen.
+
 We can also turn a table of counts into a table of proportions using the
 `prob.table` command.
 
@@ -63,68 +86,154 @@ We can also turn a table of counts into a table of proportions using the
 
 The first command says to store the table of raw counts in a variable
 called `table1`. The second says to turn the counts into proportions,
-standardizing along the rows (margin=1).
+standardizing so that the rows (margin=1) sum to 1.
 
-We can also standardize along the columns, which probably makes more
-sense here. We're thinking of sex as the predictor and survival as the
-response, and therefore we want to see how the relative chances of
+We can also standardize along the columns. In fact, this probably makes
+more sense here. We're thinking of sex as the predictor and survival as
+the response, and therefore we want to see how the relative chances of
 survival changes for men versus women:
 
-    prop.table(table1, margin=1)
+    prop.table(table1, margin=2)
 
     ##         sex
     ## survived    female      male
-    ##      no  0.1569839 0.8430161
-    ##      yes 0.6780000 0.3220000
+    ##      no  0.2725322 0.8090154
+    ##      yes 0.7274678 0.1909846
 
-From the table, we can read off the odds of survival for both men and
-women. Let's store these in new variables:
+### Relative risk
 
-    odds_male = 0.19/0.81
-    odds_female = 0.73/0.27
+From the last table above (where the columns sum to 1), we can compute
+the relative risk and odds ratio. First, the relative risk. The risk of
+dying for men is the 1st row, second column of the table. We can access
+this number by explicitly referring to the row and column numbers inside
+brackets, like this:
 
-Now we can use these to compute the odds ratio, a standard measure of
-association in two-by-two contingency tables.
+    risk_table = prop.table(table1, margin=2)
+    risk_men = risk_table[1,2]
+    risk_men
 
-    odds_ratio = odds_female/odds_male
+    ## [1] 0.8090154
+
+Or about 81%.
+
+Similarly, the risk of dying for women is the first row, first column of
+the standardized table:
+
+    risk_women = risk_table[1,1]
+    risk_women
+
+    ## [1] 0.2725322
+
+Or about 27%.
+
+Now we can compute the relative risk from these two quantities:
+
+    relative_risk = risk_men/risk_women
+    relative_risk
+
+    ## [1] 2.968513
+
+It looks like men were about three times as likely to die on the Titanic
+as women.
+
+### Odds ratio
+
+We can compute the odds ratio in a similar way. First let's compute the
+odds of dying for both men and women, remembering that the relevant
+table looks like this:
+
+            sex
+    survived    female      male
+         no  0.2725322 0.8090154
+         yes 0.7274678 0.1909846
+
+Let's store the odds of dying for each sex in new variables:
+
+    odds_men = risk_table[1,2]/risk_table[2,2]
+    odds_women = risk_table[1,1]/risk_table[1,2]
+
+    odds_ratio = odds_men/odds_women
     odds_ratio
 
-    ## [1] 11.52632
+    ## [1] 12.5747
 
-An odds ratio of about 12 quantifies the extent to which females were
-more likely to survive than males.
+An odds ratio of about 12 quantifies the extent to which males were more
+likely to die than females.
 
-We can also look at survival stratified by two variables.
+### Discretizing a variable into categories
 
-    xtabs(~survived + sex + passengerClass, data=TitanicSurvival)
+Our data set on the Titanic also has a numerical variable called `age`,
+measured in years. Incidentally, this piece of information is missing
+for 263 of the passengers:
 
-    ## , , passengerClass = 1st
-    ## 
-    ##         sex
-    ## survived female male
-    ##      no       5  118
-    ##      yes    139   61
-    ## 
-    ## , , passengerClass = 2nd
-    ## 
-    ##         sex
-    ## survived female male
-    ##      no      12  146
-    ##      yes     94   25
-    ## 
-    ## , , passengerClass = 3rd
-    ## 
-    ##         sex
-    ## survived female male
-    ##      no     110  418
-    ##      yes    106   75
+    summary(TitanicSurvival$age)
 
-We can also see whether age seems correlated with survival:
+    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+    ##  0.1667 21.0000 28.0000 29.8800 39.0000 80.0000     263
 
-    boxplot(age~survived:sex, data=TitanicSurvival)
+The age of these 263 people is shown as NA, for "not available."
 
-![](titanic_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+Let's say we want to build a table of relative survival rates for
+children (i.e. those 17 and younger). This requires that we convert the
+age variable into categories.
 
-The colon between survived and sex refers to an interaction. It says to
-give separate boxplots for every pairwise combination of these two
-variables.
+We can do this using the `cut` function, like so:
+
+    TitanicSurvival$AgeCategory = cut(TitanicSurvival$age, breaks=c(0,17,80))
+
+This expression has a lot going on. Focus on the righthand side first:
+we've cut the age variable in the TitanicSurvival data frame, choosing
+0, 17, and 80 as the endpoints of our intervals. We chose 80, because
+that was the maximum age in the data set; and 0, because that was
+slightly lower than the lowest age in the data set (the intervals are
+right-inclusive by default).
+
+We've then taken the result of the right-hand side and stored it in a
+new variable called AgeCategory, which now lives in the TitanicSurvival
+data frame. If we ask for a new summary of the TitanicSurvival data set,
+we'll see the fruits of our labor:
+
+    summary(TitanicSurvival)
+
+    ##                                X        survived      sex     
+    ##  Abbing, Mr. Anthony            :   1   no :809   female:466  
+    ##  Abbott, Master. Eugene Joseph  :   1   yes:500   male  :843  
+    ##  Abbott, Mr. Rossmore Edward    :   1                         
+    ##  Abbott, Mrs. Stanton (Rosa Hunt:   1                         
+    ##  Abelseth, Miss. Karen Marie    :   1                         
+    ##  Abelseth, Mr. Olaus Jorgensen  :   1                         
+    ##  (Other)                        :1303                         
+    ##       age          passengerClass  AgeCategory 
+    ##  Min.   : 0.1667   1st:323        (0,17] :154  
+    ##  1st Qu.:21.0000   2nd:277        (17,80]:892  
+    ##  Median :28.0000   3rd:709        NA's   :263  
+    ##  Mean   :29.8811                               
+    ##  3rd Qu.:39.0000                               
+    ##  Max.   :80.0000                               
+    ##  NA's   :263
+
+The new variable we've created, AgeCategory, tells us whether someone is
+a child or adult.
+
+Let's now use this to build a table:
+
+    xtabs(~survived + AgeCategory, data=TitanicSurvival)
+
+    ##         AgeCategory
+    ## survived (0,17] (17,80]
+    ##      no      73     546
+    ##      yes     81     346
+
+Many more children than adults survived.
+
+### Mosaic plot
+
+A mosaic plot can be useful to visualize multiway tables.
+
+    mosaicplot(~ sex + AgeCategory + survived, data=TitanicSurvival)
+
+![](titanic_files/figure-markdown_strict/unnamed-chunk-17-1.png)  
+The area of each box tells you what fraction of cases fall into the
+corresponding cell of the contingency table. From this plot, it's clear
+that adult male passengers of the Titanic died in far higher proportions
+than any other category of person.
