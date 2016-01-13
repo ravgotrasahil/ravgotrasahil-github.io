@@ -2,9 +2,9 @@
 layout: page
 ---
 
-A library is a piece of software that provides additional functionality to R, beyond what's contained in the basic installation.  R has an enormous ecosystem of libraries (number in the tens of thousands) for various data-analysis tasks.  
+A library is a piece of software that provides additional functionality to R, beyond what's contained in the basic installation.  R has an enormous ecosystem of libraries (number in the tens of thousands) for various data-analysis tasks, ranging from the simple to the very sophisticated. The mosaic package was written specifically for use in statistics classrooms. We will use it along with a handful of other packages this semester, so you’ll need to learn how to install them. 
 
-We'll use the mosaic library repeatedly throughout the semester.  This will walk you through the process of installing this library (and by extension, any of the other libraries you'll need).  Conveniently, libraries (also called packages) are installed from within RStudio itself.   
+The first minute of [this video](https://www.youtube.com/watch?v=u1r5XTqrCTQ) gives a walk-through, but we'll walk through the steps here, too.  (The same process works for any of the other libraries you'll need).  Conveniently, libraries, also called packages, are installed from within RStudio itself.   
 
 ### Installing a library from within RStudio
 

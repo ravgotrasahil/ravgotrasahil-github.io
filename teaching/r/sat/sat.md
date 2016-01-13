@@ -2,80 +2,72 @@
 layout: page
 ---
 
-### Boxplots, scatter plots, and lattice plots
+Test scores and GPA for UT graduates
+------------------------------------
 
-In this walk-through, you'll learn how to visualize relationhip of a
-single quantitative variable. You will also learn how to change some of
-the default graphics settings in R plots.
+In this walk-through, you'll learn how to summarize and visualize the
+following kinds of relationships:  
+- between a numerical variable and a categorical variable, via
+group-wise means and boxplots.  
+- between two numerical variables, via scatter plots and correlation
+coefficients.  
+- three variables, using lattice plots.
 
-Data files:  
+You will also learn how to change more of the default plot settings in R
+plots.
+
+You'll need this data file:  
 \* [ut2000.csv](ut2000.csv): data on SAT scores and graduating GPA for
 every student who entered the University of Texas at Austin in the fall
 of 2000 and went on to graduate within 6 years.
 
-First, in order to complete this analysis we need to load in the
-`mosaic` library from within RStudio. An R library (or package) is
-bundle of commands that provides additional functionality, beyond what
-comes with the basic R installation. There are literally thousands of
-packages available for R, ranging from the simple to the very
-sophisticated. The mosaic package was written specifically for use in
-statistics classrooms. We will use it along with a handful of other
-packages this semester, so you’ll need to learn how to install them. The
-first minute of [this
-video](https://www.youtube.com/watch?v=u1r5XTqrCTQ) gives a
-walk-through, but it's quite simple: under the Packages tab, there's a
-button for install. Click it, type in the package name (it should
-auto-complete), click install.
+### Preliminaries
 
-Once the installation is done, you'll be ready to use the library. Load
-it in with the `library` command:
+First, in order to complete this analysis we need to load in the
+`mosaic` library from within RStudio:
 
     library(mosaic)
 
-    ## Loading required package: car
     ## Loading required package: dplyr
+
     ## 
     ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:stats':
     ## 
-    ## The following object is masked from 'package:stats':
-    ## 
-    ##     filter
-    ## 
+    ##     filter, lag
+
     ## The following objects are masked from 'package:base':
     ## 
     ##     intersect, setdiff, setequal, union
-    ## 
+
     ## Loading required package: lattice
+
     ## Loading required package: ggplot2
+
+    ## Loading required package: car
+
+    ## Loading required package: mosaicData
+
     ## 
     ## Attaching package: 'mosaic'
-    ## 
-    ## The following objects are masked from 'package:dplyr':
-    ## 
-    ##     count, do, tally
-    ## 
+
     ## The following object is masked from 'package:car':
     ## 
     ##     logit
+
+    ## The following objects are masked from 'package:dplyr':
     ## 
+    ##     count, do, tally
+
     ## The following objects are masked from 'package:stats':
     ## 
     ##     binom.test, cor, cov, D, fivenum, IQR, median, prop.test,
     ##     quantile, sd, t.test, var
-    ## 
+
     ## The following objects are masked from 'package:base':
     ## 
     ##     max, mean, min, prod, range, sample, sum
-
-There will be a lot of information returned to the console when you load
-the library, but you only have to worry if you see an actual error, like
-this:
-
-    Error in library(mosaic) : there is no package called ‘mosaic’
-
-This means you haven't installed the package! You'll only have to do the
-installation once, but you will have to load the mosaic library (as
-above) at the beginning of each new R session if you intend to use it.
 
 Next, download the ut2000.csv file and read it in.
 
@@ -99,23 +91,34 @@ Next, download the ut2000.csv file and read it in.
     ##  Max.   :4.000           
     ## 
 
+Between-group and within-group variation
+========================================
+
 School (which of the 10 different undergraduate schools at UT the
 student graduated from) is a natural grouping variable here. To see both
 the between-group and within-group variation, let's examine a boxplot of
 SAT math scores (SAT.Q) versus school.
 
-    bwplot(SAT.Q ~ School, data=ut2000)
+    bwplot(SAT.Q ~ School, data=ut2000, main="SAT Math Scores by College")
 
-![](sat_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+![](sat_files/figure-markdown_strict/unnamed-chunk-3-1.png)  
+ The `bwplot` command is available because we loaded the `mosaic`
+package (if you didn't do this, the bwplot command will produce only an
+error). The aesthetics of `bwplot` are a little nicer than the basic R
+command `boxplot`, which would also work just fine. You may also notice
+the names of the colleges along the x axis running together, which you
+can fix by clicking "Zoom" in the Plots tab and manually resizing the
+window.
 
-The `bwplot` command is available because we loaded the `mosaic`
-package. You'll notice the aesthetics are a little nicer than the basic
-R command `boxplot`. You may also notice the names of the colleges along
-the x axis running together, which you can fix by clicking "Zoom" in the
-Plots tab and manually resizing the window.
+The boxplot allows you to get a sense of whether the between-group or
+within-group variation of SAT math scores is larger.  
+- Between-group variation: how much do the central dots for each group
+differ from one another?  
+- Within-group variation: how spread out are the cases within each
+group?
 
-Let's first focus the between-group variation. We can quantify this by
-seeing how the group means differ from one another.
+Let's first focus the between-group variation, by examining how the
+group means differ from one another.
 
     mean(SAT.Q ~ School, data=ut2000)
 
@@ -126,65 +129,108 @@ seeing how the group means differ from one another.
     ##         NURSING     SOCIAL WORK 
     ##        561.1905        602.1429
 
-This function you the group means "straight up." A slightly different
-way of presenting the same information is given by the lm (linear model)
-function:
+Informally, it looks like the typical difference between group means is
+about 40 points.
 
-    lm1 = lm(SAT.Q ~ School, data=ut2000)
-    coef(lm1)
+We can also examine the within-group variation, by looking at the
+standard deviation of SAT math scores within each college:
 
-    ##           (Intercept)        SchoolBUSINESS  SchoolCOMMUNICATIONS 
-    ##            684.687500            -51.766827            -93.053513 
-    ##       SchoolEDUCATION     SchoolENGINEERING       SchoolFINE ARTS 
-    ##           -130.039613             -9.522032            -87.508013 
-    ##    SchoolLIBERAL ARTS SchoolNATURAL SCIENCE         SchoolNURSING 
-    ##            -87.183439            -51.780833           -123.497024 
-    ##     SchoolSOCIAL WORK 
-    ##            -82.544643
+    sd(SAT.Q ~ School, data=ut2000)
 
-The first line says to use ordinary least squares to a linear model for
-SAT.Q using School as a grouping variable. The second line then extracts
-the coefficients of the linear model. These coefficients express the
-groupwise means in baseline-offset form:  
-- the coefficient for Architecture is just the group mean for
-Architecture, which serves as the baseline  
-- all the other coefficients are the offsets: that is, the amount by
-which the corresponding group mean differs from the baseline.
+    ##    ARCHITECTURE        BUSINESS  COMMUNICATIONS       EDUCATION 
+    ##        59.35048        81.71892        82.62860        66.81893 
+    ##     ENGINEERING       FINE ARTS    LIBERAL ARTS NATURAL SCIENCE 
+    ##        74.23923        71.53429        76.69357        79.47781 
+    ##         NURSING     SOCIAL WORK 
+    ##        78.46709        49.64157
 
-If we wanted to quote numbers that describe the within-group and
-between-group variation, a natural way to do so is to compute the
-standard deviation of the fitted values and residuals from the model.
+It looks as if SAT math scores vary most within Communications, and
+least within Social Work.
 
-    my_fitted_values = fitted(lm1)
-    my_residuals = resid(lm1)
-    sd(my_fitted_values)
+The `favstats` command will compute both the mean and standard
+deviation, along with several of your favorite statistics (like the
+minimum/maximum values, the first and third quartiles, and the median),
+for each college:
 
-    ## [1] 29.75042
+    favstats(SAT.Q ~ School, data=ut2000)
 
-    sd(my_residuals)
+    ##             School min    Q1 median    Q3 max     mean       sd    n
+    ## 1     ARCHITECTURE 520 650.0    690 720.0 790 684.6875 59.35048   32
+    ## 2         BUSINESS 320 580.0    640 690.0 800 632.9207 81.71892  832
+    ## 3   COMMUNICATIONS 360 532.5    600 650.0 800 591.6340 82.62860  306
+    ## 4        EDUCATION 340 510.0    550 597.5 680 554.6479 66.81893  142
+    ## 5      ENGINEERING 430 630.0    680 720.0 800 675.1655 74.23923  695
+    ## 6        FINE ARTS 370 550.0    600 650.0 740 597.1795 71.53429  156
+    ## 7     LIBERAL ARTS 330 540.0    600 650.0 800 597.5041 76.69357 1847
+    ## 8  NATURAL SCIENCE 340 580.0    630 690.0 800 632.9067 79.47781 1125
+    ## 9          NURSING 350 507.5    565 615.0 700 561.1905 78.46709   42
+    ## 10     SOCIAL WORK 530 555.0    600 647.5 670 602.1429 49.64157   14
+    ##    missing
+    ## 1        0
+    ## 2        0
+    ## 3        0
+    ## 4        0
+    ## 5        0
+    ## 6        0
+    ## 7        0
+    ## 8        0
+    ## 9        0
+    ## 10       0
 
-    ## [1] 77.57288
+### Two numerical variables
 
-Next, let's look at a scatterplot of graduating GPA versus SAT math
-scores for all students.
+Our basic tool for visualizing the relationship between two numerical
+variables is the scatter plot. Let's make one which shows graduating GPA
+versus SAT math scores for all students.
 
     plot(GPA ~ SAT.Q, data=ut2000)
 
-![](sat_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](sat_files/figure-markdown_strict/unnamed-chunk-7-1.png)  
+ If you want to get fancy, you can change the type of mark (pch), size
+(cex), or color (col) of the plotted points:
 
-We can compute a simple correlation using cor:
+    plot(GPA ~ SAT.Q, data=ut2000, pch=19, cex=0.5, col='grey')
+
+![](sat_files/figure-markdown_strict/unnamed-chunk-8-1.png)  
+Try `?plot` and `points` to see some more of the plotting options.
+
+To compute a correlation coefficient, use the `cor` function:
 
     cor(GPA ~ SAT.Q, data=ut2000)
 
     ## [1] 0.3164184
 
+### Scatter plot matrix
+
+To visualize the relationships among three or more numerical variables,
+we can create a pairs plot showing each bivariate relationship. In this
+case, we'll make a matrix of scatter plots corresponding to the 1st,
+2nd, and 5th columns of the `ut2000` data set (for SAT Verbal, SAT Math,
+and GPA, respectively):
+
+    pairs(ut2000[,c(1,2,5)])
+
+![](sat_files/figure-markdown_strict/unnamed-chunk-10-1.png)  
+ You might find this plot redundant---for example, the plot of SAT.V
+versus GPA (row 1, column 3) contains the same information as the plot
+of GPA versus SAT.V (row 3, column 1). We've just flipped which variable
+appears on the vertical axis. To suppress this redundancy, pass in the
+following flag:
+
+    pairs(ut2000[,c(1,2,5)], upper.panel=NULL)
+
+![](sat_files/figure-markdown_strict/unnamed-chunk-11-1.png)  
+ \#\#\# Lattice plots
+
 Finally, if we want to see this bivariate relationship plotted
 separately for each of the 10 colleges, we need what's called a lattice
-plot. The `xyplot` command produces one:
+plot. A lattice plot allows us to see whether, and how, the relationship
+between two variables is modulated by a third variable. The `xyplot`
+command produces one:
 
     xyplot(GPA ~ SAT.Q | School, data=ut2000)
 
-![](sat_files/figure-markdown_strict/unnamed-chunk-9-1.png)
-
+![](sat_files/figure-markdown_strict/unnamed-chunk-12-1.png)  
 The vertical bar (|) should be read as "conditional upon" or "stratified
-by."
+by." In this case, the GPA versus SAT.Q relationship looks broadly
+similar across all colleges.

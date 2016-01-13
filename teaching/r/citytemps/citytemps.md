@@ -58,6 +58,15 @@ First, load the mosaic library, like this.
     ## 
     ##     max, mean, min, prod, range, sample, sum
 
+There will be a lot of information returned to the console when you load
+the library, but you only have to worry if you see an actual error, like
+this:
+
+    Error in library(mosaic) : there is no package called ‘mosaic’
+
+This means you haven't installed the package! You'll only have to do the
+installation once, but you will have to load the mosaic library (as
+above) at the beginning of each new R session if you intend to use it.
 If you haven't installed the mosaic library, see the [instructions
 here.](http://jgscott.github.io/teaching/r/basics/installing_library.html)
 
