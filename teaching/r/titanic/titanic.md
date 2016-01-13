@@ -240,9 +240,9 @@ versus age for males alone. We can do this using the subset function:
 This command creates a subset of the original data set containing all
 the males and none of the females. Note two things about the right-hand
 side of this expression:  
-1. We put "male" in quotation marks.  
-2. The double-equals sign `==` is used to check for equality, as opposed
-to the single equals sign `=` used in variable assignment.
+1. We put "male" in quotation marks, because sex is a categorical
+variable. 2. The double-equals sign `==` is used to check for equality,
+as opposed to the single equals sign `=` used in variable assignment.
 
 Let's now build a table from this subset:
 
@@ -288,6 +288,9 @@ like age:
     ## survived 1st 2nd 3rd
     ##      no  101 142 303
     ##      yes 168  86  92
+
+We do not put 18 in quotation marks, because age is a numerical
+variable.
 
 ### Mosaic plot
 
