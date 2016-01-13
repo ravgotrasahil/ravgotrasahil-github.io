@@ -6,6 +6,8 @@ layout: page
 
 ### Exploratory data analysis 
 * [Burritos](burritos/burritos.html): calorie counts for meals at Chipotle.   
+* [Music festivals](musicfestivals/musicfestivals.html): which bands come to ACL Festival?  
+
 
 ### Regression modeling  
 * [Circuit-board manufacturing](solder/solder.html): predictors of manufacturing flaws in AT&T circuit boards  
