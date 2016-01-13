@@ -17,47 +17,6 @@ First, load the mosaic library, like this.
 
     library(mosaic)
 
-    ## Loading required package: dplyr
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-    ## Loading required package: lattice
-
-    ## Loading required package: ggplot2
-
-    ## Loading required package: car
-
-    ## Loading required package: mosaicData
-
-    ## 
-    ## Attaching package: 'mosaic'
-
-    ## The following object is masked from 'package:car':
-    ## 
-    ##     logit
-
-    ## The following objects are masked from 'package:dplyr':
-    ## 
-    ##     count, do, tally
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     binom.test, cor, cov, D, fivenum, IQR, median, prop.test,
-    ##     quantile, sd, t.test, var
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     max, mean, min, prod, range, sample, sum
-
 There will be a lot of information returned to the console when you load
 the library, but you only have to worry if you see an actual error, like
 this:

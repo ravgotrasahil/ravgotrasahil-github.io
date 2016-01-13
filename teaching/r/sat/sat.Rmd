@@ -20,7 +20,7 @@ You'll need this data file:
 ### Preliminaries
 
 First, in order to complete this analysis we need to load in the `mosaic` library from within RStudio:  
-```{r}
+```{r, message=FALSE}
 library(mosaic)
 ```
 

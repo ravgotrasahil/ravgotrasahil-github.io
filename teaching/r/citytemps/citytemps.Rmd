@@ -13,7 +13,7 @@ Data files:
 ### Preliminary steps
 
 First, load the mosaic library, like this.
-```{r}
+```{r, message=FALSE}
 library(mosaic)
 ```
 There will be a lot of information returned to the console when you load the library, but you only have to worry if you see an actual error, like this:

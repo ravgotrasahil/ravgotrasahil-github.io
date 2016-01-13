@@ -28,47 +28,6 @@ First, in order to complete this analysis we need to load in the
 
     library(mosaic)
 
-    ## Loading required package: dplyr
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-    ## Loading required package: lattice
-
-    ## Loading required package: ggplot2
-
-    ## Loading required package: car
-
-    ## Loading required package: mosaicData
-
-    ## 
-    ## Attaching package: 'mosaic'
-
-    ## The following object is masked from 'package:car':
-    ## 
-    ##     logit
-
-    ## The following objects are masked from 'package:dplyr':
-    ## 
-    ##     count, do, tally
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     binom.test, cor, cov, D, fivenum, IQR, median, prop.test,
-    ##     quantile, sd, t.test, var
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     max, mean, min, prod, range, sample, sum
-
 Next, download the ut2000.csv file and read it in.
 
     ut2000 = read.csv('ut2000.csv')
