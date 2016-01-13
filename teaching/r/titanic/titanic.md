@@ -5,9 +5,12 @@ layout: page
 ### Contingency tables
 
 In this walk-through, you will learn a few tools for summarizing
-categorical data using contingency tables. You will also learn how to
-turn a numerical variable into a categorical variable using the `cut`
-function.
+categorical data using contingency tables. You will also learn two other
+basic data-handling skills:  
+- to look at subsets of a data set defined by conditioning on a specific
+variable, using the `subset` function, and  
+- to turn a numerical variable into a categorical variable using the
+`cut` function.
 
 Data files:  
 \* [TitanicSurvival.csv](TitanicSurvival.csv)
@@ -74,7 +77,7 @@ Notice how this is presented as a set of two-way tables, given the
 constraints of the two-dimensional screen.
 
 We can also turn a table of counts into a table of proportions using the
-`prob.table` command.
+`prop.table` command.
 
     table1 = xtabs(~survived + sex, data=TitanicSurvival)
     prop.table(table1, margin=1)
@@ -226,13 +229,73 @@ Let's now use this to build a table:
 
 Many more children than adults survived.
 
+### Subsets of the data
+
+R makes it easy to condition on a variable in looking at various data
+summaries. For example, let's say we want to look at survival status
+versus age for males alone. We can do this using the subset function:
+
+    TitanicMales = subset(TitanicSurvival, sex=="male")
+
+This command creates a subset of the original data set containing all
+the males and none of the females. Note two things about the right-hand
+side of this expression:  
+1. We put "male" in quotation marks.  
+2. The double-equals sign `==` is used to check for equality, as opposed
+to the single equals sign `=` used in variable assignment.
+
+Let's now build a table from this subset:
+
+    xtabs(~survived + AgeCategory, data=TitanicMales)
+
+    ##         AgeCategory
+    ## survived (0,17] (17,80]
+    ##      no      51     472
+    ##      yes     31     104
+
+Many more children than adults survived.
+
+We could have actually accomplished the same thing in a single line, by
+chaining together the two statements:
+
+    xtabs(~survived + AgeCategory, data=subset(TitanicSurvival, sex=="male"))
+
+    ##         AgeCategory
+    ## survived (0,17] (17,80]
+    ##      no      51     472
+    ##      yes     31     104
+
+    xtabs(~survived + AgeCategory, data=subset(TitanicSurvival, sex=="female"))
+
+    ##         AgeCategory
+    ## survived (0,17] (17,80]
+    ##      no      22      74
+    ##      yes     50     242
+
+Finally, we can also define subsets in terms of a numerical variable
+like age:
+
+    xtabs(~survived + sex, data=subset(TitanicSurvival, age < 18))
+
+    ##         sex
+    ## survived female male
+    ##      no      22   51
+    ##      yes     50   31
+
+    xtabs(~survived + passengerClass, data=subset(TitanicSurvival, age >= 18))
+
+    ##         passengerClass
+    ## survived 1st 2nd 3rd
+    ##      no  101 142 303
+    ##      yes 168  86  92
+
 ### Mosaic plot
 
-A mosaic plot can be useful to visualize multiway tables.
+A mosaic plot can help to visualize multiway tables.
 
     mosaicplot(~ sex + AgeCategory + survived, data=TitanicSurvival)
 
-![](titanic_files/figure-markdown_strict/unnamed-chunk-17-1.png)  
+![](titanic_files/figure-markdown_strict/unnamed-chunk-21-1.png)  
 The area of each box tells you what fraction of cases fall into the
 corresponding cell of the contingency table. From this plot, it's clear
 that adult male passengers of the Titanic died in far higher proportions
