@@ -5,29 +5,28 @@ output:
       in_header: ../header.txt
 ---
 
-In this walk-through, you'll learn to fit a power law curve to data using linear least squares and the log transformation.  The log transform is often useful for data bounded below by 0, or data that span many orders of magnitude.
+## Economic development and infant mortality
+
+In this walk-through, you'll learn to fit a power law to data using linear least squares and log transformations.  The log transform is often useful for data bounded below by 0, or data that span many orders of magnitude.
 
 Data files:  
 * [infmort.csv](infmort.csv): infant mortality and size of economy for 207 countries.
 
-### Log transformations
 
-First load the two libraries you'll need: mosaic and faraway.
+### Preliminaries
+
+First load the mosaic library.
 ```{r, message=FALSE}
 library(mosaic)
-library(faraway)
 ```
-If you see an error like this:
-```
-Error in library(faraway) : there is no package called ‘faraway’
-```
-then you need to install the `faraway` package.
 
-Next, read in the infant mortality data set.  The variables are infant deaths per 1000 live births and GDP per capita, in U.S. dollars.
+Next, read in the infant mortality data set.  The variables are infant deaths per 1000 live births and GDP per capita, in U.S. dollars.  Use the Import Dataset button in RStudio, or the command line:
 ```{r}
 infmort = read.csv('infmort.csv', header=TRUE)
 ```
-If you use the Import Dataset button in RStudio, you won't need this line.
+If you use the Import Dataset button, you won't need this preceding line.
+
+### Log transformations  
 
 We'll start by plotting the data:
 ```{r}
@@ -64,7 +63,7 @@ plot(log(mortality) ~ log(gdp), data=infmort)
 abline(lm1)
 ```
 
-### Displaying the model on the original scale
+### Visualizing the fitted power law on the original scale
 
 Suppose we wanted to show the model on the original scale.  We know that a linear model on the log-log scale corresponds to a power law on the original scale.  Let's exploit this to generate a plot of the fitted curve.  First let's remember what the data looks like on the original scale.
 ```{r}
@@ -92,12 +91,6 @@ We could also add the fitted curve directly to the scatter plot using the `curve
 ```{r}
 plot(mortality ~ gdp, data= infmort)
 curve(exp(mybeta[1]) * x^(mybeta[2]), add=TRUE, col='blue')
-```
-
-As the above example suggests, the `curve` function allows you to treat R as a graphing calculator.  It can plot functions or add those functions to existing scatter plots, as above.  If you want to see this function in action, try a few examples:
-```
-curve(x^2 - x, from=-3, to=3)
-curve(sin(x), from=0, to=4*pi)
 ```
 
 
