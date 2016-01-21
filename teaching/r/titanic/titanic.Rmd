@@ -1,5 +1,4 @@
 ---
-title: "Contingency tables"
 output:
   md_document:
     includes:
