@@ -3,12 +3,13 @@ layout: page
 title: Teaching
 ---
 
-## Current Courses (Spring 2015)
+## Current Courses (Spring 2016)
+* [STA 371H: Statistics and Modeling Honors](/STA371H_Spring2016/)
+* [SDS 325H: Honors Statistics](/SDS325H_Spring2016/)
 
-* [SDS 383D: Statistical Modeling II](/SDS383D_Spring2015/)
-* [SDS 325H: Honors Statistics](/SDS325H_Spring2015/)
-* [STA 371H: Statistics and Modeling Honors](/STA371H_Spring2015/)
-
+Last year's sites:
+* [SDS 383D: Statistical Modeling II](/SDS383D_Spring2015/)  
+* [STA 380: Predictive Modeling](https://github.com/jgscott/STA380)   
 
 ## R Walk-throughs
 

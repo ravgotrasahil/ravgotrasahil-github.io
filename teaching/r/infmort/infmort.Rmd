@@ -63,7 +63,8 @@ plot(log(mortality) ~ log(gdp), data=infmort)
 abline(lm1)
 ```
 
-### Visualizing the fitted power law on the original scale
+
+### Visualizing the fitted power law on the original scale   
 
 Suppose we wanted to show the model on the original scale.  We know that a linear model on the log-log scale corresponds to a power law on the original scale.  Let's exploit this to generate a plot of the fitted curve.  First let's remember what the data looks like on the original scale.
 ```{r}

@@ -12,7 +12,7 @@ Open up RStudio; on the left-hand side is the Console window with a little caret
 
 ![](files/RStudio_console.png)
 
-Try typing some basic mathematical expressions directly into the console and verify that the output looks right.
+Try typing some basic mathematical expressions directly into the console and verify that the output looks right. To execute any command, like `2+2`, just type it into the console and hit Enter.
 
     2 + 2
     3*7

@@ -88,7 +88,8 @@ We can add the line straight to the plot on the log-log scale:
     abline(lm1)
 
 ![](infmort_files/figure-markdown_strict/unnamed-chunk-8-1.png)  
- \#\#\# Visualizing the fitted power law on the original scale
+
+### Visualizing the fitted power law on the original scale
 
 Suppose we wanted to show the model on the original scale. We know that
 a linear model on the log-log scale corresponds to a power law on the
