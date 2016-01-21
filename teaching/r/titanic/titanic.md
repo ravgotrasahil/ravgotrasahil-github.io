@@ -2,9 +2,9 @@
 layout: post
 ---
 
-<title>
-Contingency Tables
-</title>
+Contingency tables
+==================
+
 In this walk-through, you will learn a few tools for summarizing
 categorical data using contingency tables. You will also learn two other
 basic data-handling skills:  
