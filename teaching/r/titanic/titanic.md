@@ -2,14 +2,8 @@
 layout: post
 ---
 
--   Relative risk
--   Odds ratio
--   Discretizing a variable into categories
--   Subsets of the data
--   Mosaic plot
-
 <title>
-Contingency tables
+Contingency Tables
 </title>
 In this walk-through, you will learn a few tools for summarizing
 categorical data using contingency tables. You will also learn two other
