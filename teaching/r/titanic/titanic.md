@@ -154,15 +154,15 @@ table looks like this:
 Let's store the odds of dying for each sex in new variables:
 
     odds_men = risk_table[1,2]/risk_table[2,2]
-    odds_women = risk_table[1,1]/risk_table[1,2]
+    odds_women = risk_table[1,1]/risk_table[2,1]
 
     odds_ratio = odds_men/odds_women
     odds_ratio
 
-    ## [1] 12.5747
+    ## [1] 11.30718
 
-An odds ratio of about 12 quantifies the extent to which males were more
-likely to die than females.
+An odds ratio of about 11.3 quantifies the extent to which males were
+more likely to die than females.
 
 ### Discretizing a variable into categories
 
