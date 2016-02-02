@@ -8,6 +8,10 @@ title: Papers
 
 ### Preprints
 
+(2015) [A deconvolution path for mixtures](http://arxiv.org/abs/1511.06750) O.M. Padilla, N.G. Polson and J.G. Scott.  arXiv:1511.06750.
+
+(2015) [Nonparametric density estimation by histogram trend filtering](http://arxiv.org/abs/1509.04348). O.M. Padilla and J.G. Scott.  arXiv:1509.04348.
+
 (2015) [Multiscale spatial density smoothing: an application to large-scale radiological survey and anomaly detection](http://arxiv.org/abs/1507.07271) (with W. Tansey, A. Athey, and A. Reinhart).   
 
 (2015) [A fast and flexible algorithm for the graph-fused lasso](http://arxiv.org/abs/1505.06475) (with W. Tansey).   
@@ -21,6 +25,14 @@ title: Papers
  
 
 ### Journal Articles and Refereed Conference Proceedings
+
+(2016) Respiratory virus transmission dynamics determines timing of asthma exacerbation peaks: evidence from a population-level model.  Rosalind M Eggo, James G Scott, Alison P Galvani, and Lauren Ancel Meyers. _Proceedings of the National Academy of Sciences_ (accepted).
+
+(2016) Weekend working: A retrospective cohort study of maternal and neonatal outcomes in a large NHS delivery unit.  C. Aiken, A.R.A. Aiken, J.G. Scott, J. Trussell, and J.C Brockelsby.  _European Journal of Obstetrics & Gynecology and Reproductive Biology_ (accepted).
+
+(2016) [Family planning policy in the United States: the converging politics of abortion and contraception](http://www.ncbi.nlm.nih.gov/pubmed/26794846).  ARA Aiken, J Scott _Contraception_ (to appear).
+
+(2016) The influence of hours worked prior to delivery on maternal and fetal outcomes.  C Aiken, AR Aiken, JG Scott, JC Brockelsby. _American Journal of Obstetrics & Gynecology_ 214 (1), S154.
 
 (2015) [Priors for Random Count Matrices Derived from a Family of Negative Binomial Processes](http://arxiv.org/abs/1404.3331) (with M. Zhou).  _Journal of the American Statistical Association (Theory and Methods)_ (accepted).
 
