@@ -10,7 +10,7 @@ output:
 Learning goals:  
 * fit regression models with a single numerical predictor and multiple categorical predictors    
 * correctly interpret dummy variables and interaction terms in linear regression models   
-
+* correctly interpret an ANOVA table in a model with correlated predictors     
 
 Data files:  
 * [house.csv](house.csv): sales prices of houses in Kansas City
@@ -19,9 +19,13 @@ Data files:
 ### Aggregation paradoxes in regression 
 
 Let's start by loading the mosaic library, reading in the house-price data set and summarizing the variables.
+
+```{r, echo=FALSE}
+house = read.csv("house.csv", header=TRUE)
+```
+
 ```{r, message=FALSE}
 library(mosaic)
-house = read.csv("house.csv", header=TRUE)
 ```
 
 ```{r}
@@ -147,6 +151,33 @@ lm6 = lm(price ~ sqft + nbhd + brick + brick:sqft, data=house)
 coef(lm6)
 ```
 
+### ANOVA in the presence of correlated predictors  
+
+In the walkthrough on [reaction time in video games](http://jgscott.github.io/teaching/r/rxntime/rxntime.html), we learned that an analysis of variance can be used to partition variation in the outcome among the individual predictor variables in a regression model.  An ANOVA table is constructed by adding variables to the model sequentially, and tracking the amount by which the predictive ability of the model improves at each stage.  We measure the improvement by change in predictable variation (PV), or equivalently the reduction in the residual sums of squares (unpredictable variation, or UV).
+
+If we run an analysis of variance on our final model above, we get the following table.  We'll divide the sales price by $1000 (so that an outcome of 200 corresponds to a $200,000 sales price), just to make the numbers in our ANOVA table a little bit easier to interpret:
+```{r}
+lm6 = lm(price/1000 ~ sqft + nbhd + brick + brick:sqft, data=house)
+anova(lm6)
+```
+It looks as though the neighborhood predicts the most variation (change in PV = 34773), followed by sqft (delta-PV = 28036) and then brick (delta-PV = 9646).
+
+But what if we arbitrarily change the order in which we add the variables?  
+```{r}
+lm6alt = lm(price/1000 ~ brick + nbhd + sqft + brick:sqft, data=house)
+anova(lm6alt)
+```
+
+Now the importance of brick and neighborhood looks much larger, and the importance of size much smaller.  But the coefficients in the two models are exactly the same:
+```{r}
+coef(lm6)
+coef(lm6alt)
+```
+
+When the predictor variables are correlated with each other, an analysis of variance for a regression model---but not the model itself---will depend upon the order in which those variables are added.  This is because the first predictor your add greedily takes credit for all the information it shares in common with any other predictors that are subsequently added to the model.  
+
+The moral of the story is that there is no such thing as "the" ANOVA table for a regression model with correlated predictors.  There are multiple ANOVA tables, one for each possible ordering of the variables.  Thus there is no unique way to unambiguously assign credit to individual variables in the model.
+
 ### Advanced plotting (optional)
 
 You can use a lattice plot to reproduce my "split and fit" strategy from above: that is, split the data into subsets and fit a line to each one.  Here's one way that involves defining a custom "panel function" that is used by `xyplot`.
@@ -155,7 +186,8 @@ You can use a lattice plot to reproduce my "split and fit" strategy from above: 
 # Define a custom plotting function to be applied to each panel
 plot_with_lines = function(x, y) {
          panel.xyplot(x, y)
-         panel.abline(lm(y ~ x))         
+         model_for_panel = lm(y~x)
+         panel.abline(model_for_panel)         
 }
 
 # Pass this custom plotting function to xyplot
