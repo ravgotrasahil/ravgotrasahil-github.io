@@ -4,7 +4,7 @@ layout: page
 
 ## What should a data-analysis write-up look like?
 
-Writing up the results of a data analysis is not a skill that anyone is born with.  It requires practice and, at least in the beginnin, a bit of guidance.
+Writing up the results of a data analysis is not a skill that anyone is born with.  It requires practice and, at least in the beginning, a bit of guidance.
 
 ### Organization  
 
@@ -28,17 +28,18 @@ What did you learn from the analysis?  What is the answer, if any, to the questi
 
 ### General advice
 
-Make the sections as short or long as they need to be.  For example, a conclusions section is often pretty short, while a results section is usually a bit longer.
+- Make the sections as short or long as they need to be.  For example, a conclusions section is often pretty short, while a results section is usually a bit longer.   
 
-It's OK to use the first person to avoid awkward or bizarre sentence constructions, but try to do so sparingly.
+- It's OK to use the first person to avoid awkward or bizarre sentence constructions, but try to do so sparingly.  
 
-Do not include computer code unless explicitly called for.
+- Do not include computer code unless explicitly called for.  
 
-When in doubt, use shorter words and sentences.
+- When in doubt, use shorter words and sentences.  
 
-A very common way for reports to go wrong is when the writer simply narrates the thought process he or she followed: ``First I did this, but it didn't work.  Then I did something else, and I found A, B, and C.  I wasn't really sure what to make of B, but C was interesting, so I followed up with D and E.  Then having done this.~.~.~.''  Do not do this.  The desire for specificity is admirable, but the overall effect is one of amateurism.  Follow the recommended outline above.
+- A very common way for reports to go wrong is when the writer simply narrates the thought process he or she followed: ``First I did this, but it didn't work.  Then I did something else, and I found A, B, and C.  I wasn't really sure what to make of B, but C was interesting, so I followed up with D and E.  Then having done this.~.~.~.''  Do not do this.  The desire for specificity is admirable, but the overall effect is one of amateurism.  Follow the recommended outline above.  
+
 
 ### Examples  
 
-[Here's a good example of a write-up](files/example_writeup1.pdf) for an analysis of a few relatively simple problems.  Notice the clear exposition, the labeled figures and tables that are referred to in the text, and the careful integration of visual and numerical evidence into the overall argument.  This is one worth emulating.    
+[Here's a good example of a write-up](files/example_writeup1.pdf) for an analysis of a few relatively simple problems.  Because the problems are so straightforward, there's not much of a need for an outline of the kind described above.  Nonetheless, the spirit of these guidelines is clearly in evidence.   Notice the clear exposition focused, the labeled figures and tables that are referred to in the text, and the careful integration of visual and numerical evidence into the overall argument.  This is one worth emulating.    
 
