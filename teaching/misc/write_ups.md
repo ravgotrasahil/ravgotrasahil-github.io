@@ -32,14 +32,14 @@ What did you learn from the analysis?  What is the answer, if any, to the questi
 
 - It's OK to use the first person to avoid awkward or bizarre sentence constructions, but try to do so sparingly.  
 
-- Do not include computer code unless explicitly called for.  
+- Do not include computer code unless explicitly called for.  Note: model outputs do not count as computer code.  Outputs should be used as evidence in your results section (ideally formatted in a nice way).  By code, I mean the sequence of commands you used to process the data and produce the outputs.  
 
 - When in doubt, use shorter words and sentences.  
 
-- A very common way for reports to go wrong is when the writer simply narrates the thought process he or she followed: ``First I did this, but it didn't work.  Then I did something else, and I found A, B, and C.  I wasn't really sure what to make of B, but C was interesting, so I followed up with D and E.  Then having done this.~.~.~.''  Do not do this.  The desire for specificity is admirable, but the overall effect is one of amateurism.  Follow the recommended outline above.  
+- A very common way for reports to go wrong is when the writer simply narrates the thought process he or she followed: :First I did this, but it didn't work.  Then I did something else, and I found A, B, and C.  I wasn't really sure what to make of B, but C was interesting, so I followed up with D and E.  Then having done this..."  Do not do this.  The desire for specificity is admirable, but the overall effect is one of amateurism.  Follow the recommended outline above.  
 
 
 ### Examples  
 
-[Here's a good example of a write-up](files/example_writeup1.pdf) for an analysis of a few relatively simple problems.  Because the problems are so straightforward, there's not much of a need for an outline of the kind described above.  Nonetheless, the spirit of these guidelines is clearly in evidence.   Notice the clear exposition focused, the labeled figures and tables that are referred to in the text, and the careful integration of visual and numerical evidence into the overall argument.  This is one worth emulating.    
+[Here's a good example of a write-up](files/example_writeup1.pdf) for an analysis of a few relatively simple problems.  Because the problems are so straightforward, there's not much of a need for an outline of the kind described above.  Nonetheless, the spirit of these guidelines is clearly in evidence.   Notice the clear exposition, the labeled figures and tables that are referred to in the text, and the careful integration of visual and numerical evidence into the overall argument.  This is one worth emulating.    
 
