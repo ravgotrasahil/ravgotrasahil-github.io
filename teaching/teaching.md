@@ -18,3 +18,10 @@ I use R in all my courses, and over the years I've built up a library of teachin
 ## Case studies
 
 I have built up a library of data-analysis case studies, which I am slowly migrating to this website.  [You can find them here.](cases/cases.html)
+
+
+## What should a write-up look like?
+
+I am often asked by students: what do you expect from a write-up of a data analysis that's been assigned in class?  [Here are some thoughts.](misc/write_ups.html).  
+
+
