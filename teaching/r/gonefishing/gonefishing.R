@@ -1,7 +1,7 @@
 library(mosaic)
 
 # Read in the data
-#gonefishing = read.csv("gonefishing.csv", header=TRUE)
+gonefishing = read.csv("gonefishing.csv", header=TRUE)
 
 npop = nrow(gonefishing)
 
@@ -20,7 +20,7 @@ abline(lmfull)
 nsamp = 30
 
 # Try taking a sample a few different times
-lmsamp = lm(weight~volume, data=sample(gonefishing,30))
+lmsamp = lm(weight~volume, data=sample(gonefishing,nsamp))
 coef(lmsamp)
 
 
@@ -30,6 +30,12 @@ do(10)*lm(weight~volume, data=sample(gonefishing,30))
 
 # How about 1000?
 do(1000)*lm(weight~volume, data=sample(gonefishing,30))
+
+# Plot some lines
+plot(weight~volume, data=gonefishing, pch=19, col=rgb(1, 0, 0, 0.2))
+for(i in 1:1000) {
+  abline(lm(weight~volume, data=sample(gonefishing,30)), col=rgb(0.5,0.5,0.5,0.1))
+}
 
 # We can avoid the screen dump by saving the output.
 montecarlo = do(1000)*lm(weight~volume, data=sample(gonefishing,30))
@@ -79,3 +85,20 @@ sd(myboot$volume)
 
 # Coverage interval from the bootstrapped samples
 confint(myboot, level=0.95)
+
+
+# sample size versus precision
+n_size = seq(10, 100, by=2)
+out = rep(0, length(n_size))
+for(i in 1:length(n_size)) {
+  n = n_size[i]
+  montecarlo = do(1000)*{
+    lmmytrip = lm(weight~volume, data=sample(gonefishing, n, replace=TRUE))
+    coef(lmmytrip)
+  }
+  out[i] = sqrt(mean( (montecarlo$volume - coef(lmfull)[2])^2))
+}
+
+plot(n_size, out)
+
+plot(n_size, out*sqrt(n_size))

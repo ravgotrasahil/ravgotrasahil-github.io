@@ -52,7 +52,7 @@ head(bootstrapped_sample, 20)
 ```
 If you look carefully, you may see a repeated entry in these first 20 rows.  That's because our bootstrapped sample is a sample with replacement from the original sample.  You can visualize the pattern of ties and omissions with the following plot:
 ```{r}
-plot(table(bootstrapped_sample$orig.ids))
+plot(table(bootstrapped_sample$orig.id))
 ```
 
 The height of each bar shows how many times that original data point was picked.  The gaps show data points that were omitted.
@@ -61,7 +61,7 @@ There's actually a more concise way to draw bootstrapped samples using the `resa
 ```{r}
 # same as sample(creatinine, size = 157, replace=TRUE)
 bootstrapped_sample = resample(creatinine)  
-plot(table(bootstrapped_sample$orig.ids))
+plot(table(bootstrapped_sample$orig.id))
 ```
 
 ### Bootstrapping the sample mean

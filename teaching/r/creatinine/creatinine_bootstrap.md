@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 ---
 
 Approximating the sampling distribution by bootstrapping
@@ -75,36 +75,36 @@ command.
     bootstrapped_sample = sample(creatinine, size = 157, replace=TRUE)
     head(bootstrapped_sample, 20)
 
-    ##     age creatclear orig.ids
-    ## 95   25      139.7       95
-    ## 120  25      133.1      120
-    ## 139  27      129.8      139
-    ## 58   18      143.8       58
-    ## 18   34      128.6       18
-    ## 69   62      102.3       69
-    ## 138  23      119.9      138
-    ## 81   44      121.2       81
-    ## 22   31      122.4       22
-    ## 47   36      133.5       47
-    ## 39   32      132.7       39
-    ## 125  24      129.6      125
-    ## 129  29      128.2      129
-    ## 152  70       95.8      152
-    ## 144  45      117.8      144
-    ## 146  19      120.0      146
-    ## 93   21      135.9       93
-    ## 133  43      123.2      133
-    ## 113  63      112.5      113
-    ## 42   23      131.6       42
+    ##     age creatclear orig.id
+    ## 19   27      132.8      19
+    ## 148  25      123.0     148
+    ## 115  54      113.9     115
+    ## 103  27      132.0     103
+    ## 138  23      119.9     138
+    ## 79   23      136.2      79
+    ## 20   71      105.5      20
+    ## 43   24      142.9      43
+    ## 64   63      114.6      64
+    ## 61   22      124.0      61
+    ## 122  41      121.5     122
+    ## 8    73      103.0       8
+    ## 95   25      139.7      95
+    ## 12   24      128.6      12
+    ## 58   18      143.8      58
+    ## 25   28      126.8      25
+    ## 73   65       89.3      73
+    ## 23   23      131.2      23
+    ## 121  57      113.4     121
+    ## 74   51      110.4      74
 
 If you look carefully, you may see a repeated entry in these first 20
 rows. That's because our bootstrapped sample is a sample with
 replacement from the original sample. You can visualize the pattern of
 ties and omissions with the following plot:
 
-    plot(table(bootstrapped_sample$orig.ids))
+    plot(table(bootstrapped_sample$orig.id))
 
-![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-5-1.png)<!-- -->
 
 The height of each bar shows how many times that original data point was
 picked. The gaps show data points that were omitted.
@@ -116,9 +116,9 @@ patterns of ties and omissions that arise in each bootstrapped sample.
 
     # same as sample(creatinine, size = 157, replace=TRUE)
     bootstrapped_sample = resample(creatinine)  
-    plot(table(bootstrapped_sample$orig.ids))
+    plot(table(bootstrapped_sample$orig.id))
 
-![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-6-1.png)<!-- -->
 
 ### Bootstrapping the sample mean
 
@@ -140,7 +140,7 @@ different sample means you get for each bootstrapped sample.
     bootstrapped_sample = resample(creatinine)
     mean(bootstrapped_sample$creatclear)
 
-    ## [1] 124.7917
+    ## [1] 124.6592
 
 The final trick is to use the `do` command to automatic the process of
 taking repeated bootstrapped samples and computing the sample mean for
@@ -152,16 +152,16 @@ each one.
     }
 
     ##      result
-    ## 1  124.8745
-    ## 2  127.0350
-    ## 3  124.9299
-    ## 4  125.6752
-    ## 5  125.0191
-    ## 6  125.6076
-    ## 7  125.4535
-    ## 8  125.4682
-    ## 9  124.1707
-    ## 10 124.5783
+    ## 1  124.0675
+    ## 2  125.4312
+    ## 3  125.9962
+    ## 4  127.9217
+    ## 5  125.4713
+    ## 6  125.7452
+    ## 7  124.8115
+    ## 8  125.9662
+    ## 9  125.1796
+    ## 10 125.1981
 
 If this looks unfamiliar, try revisiting the ["Gone
 fishing"](http://jgscott.github.io/teaching/r/gonefishing/gonefishing.html)
@@ -178,11 +178,11 @@ sample mean for each one and visualize the results.
     # Visualize the sampling distribution and compute the bootstrapped standard error
     hist(myboot$result)
 
-![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-9-1.png)<!-- -->
 
     sd(myboot$result)
 
-    ## [1] 0.9907289
+    ## [1] 0.9462928
 
 Because we have different bootstrapped samples, your histogram and
 estimated standard error will look slightly different from mine. But
@@ -214,7 +214,7 @@ the relationship between creatinine clearance rate and age:
 
     abline(lm1)
 
-![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-10-1.png)<!-- -->
 
 Let's warm-up by computing the OLS estimator for a single bootstrapped
 sample. Try executing this code block 5-10 different times:
@@ -228,7 +228,7 @@ sample. Try executing this code block 5-10 different times:
     ## 
     ## Coefficients:
     ## (Intercept)          age  
-    ##    145.8344      -0.5667
+    ##    147.7911      -0.6039
 
 Notice how the slope and intercept of the fitted line change for each
 sample.
@@ -244,13 +244,13 @@ command to automate the whole process and save the result.
     # Inspect the first several lines
     head(myboot2)
 
-    ##   Intercept        age    sigma r.squared        F
-    ## 1  146.3874 -0.5949259 7.349727 0.6366280 271.5601
-    ## 2  146.5769 -0.5885913 6.848672 0.6077806 240.1869
-    ## 3  147.0285 -0.6098881 6.864993 0.6616170 303.0608
-    ## 4  147.4192 -0.6291794 6.969385 0.6259461 259.3787
-    ## 5  148.5842 -0.6448014 7.029900 0.6859843 338.6058
-    ## 6  146.3252 -0.5841131 6.653937 0.6304692 264.4509
+    ##   Intercept        age    sigma r.squared        F numdf dendf
+    ## 1  145.0474 -0.5397870 6.528623 0.6062594 238.6602     1   155
+    ## 2  148.8132 -0.6324065 6.373743 0.7178894 394.4299     1   155
+    ## 3  148.2369 -0.6137878 7.304570 0.6550942 294.3981     1   155
+    ## 4  147.4649 -0.6052031 6.057047 0.7441424 450.8057     1   155
+    ## 5  148.0294 -0.6316402 7.501825 0.6822983 332.8790     1   155
+    ## 6  147.6815 -0.6113110 6.590104 0.6758277 323.1409     1   155
 
 Notice that we have separate columns for the intercept, slope on the age
 variable, sigma (the residual standard deviation), and R-squared. (Don't
@@ -259,19 +259,19 @@ distributions for the intercept and slope.
 
     hist(myboot2$Intercept)
 
-![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-13-1.png)<!-- -->
 
     sd(myboot2$Intercept)
 
-    ## [1] 1.393358
+    ## [1] 1.445293
 
     hist(myboot2$age)
 
-![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-13-2.png)
+![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-13-2.png)<!-- -->
 
     sd(myboot2$age)
 
-    ## [1] 0.03712744
+    ## [1] 0.03723882
 
 ### Confidence intervals
 
@@ -289,12 +289,12 @@ endpoints on the plot.
     myinterval = quantile(myboot2$age, probs=c(0.1, 0.9))
     abline(v = myinterval, col='blue')
 
-![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-14-1.png)
+![](creatinine_bootstrap_files/figure-markdown_strict/unnamed-chunk-14-1.png)<!-- -->
 
     myinterval
 
     ##        10%        90% 
-    ## -0.6691491 -0.5711980
+    ## -0.6665540 -0.5723913
 
 We would refer to this interval as an 80% confidence interval for the
 slope of the age variable in our regression model. (As above, your
@@ -313,18 +313,20 @@ for all model parameters:
 
     confint(myboot2, level=0.8)
 
+    ## Warning: confint: Using df=Inf.
+
     ##        name       lower       upper level method    estimate
-    ## 1 Intercept 145.9965686 149.5678883   0.8 stderr 147.7822285
-    ## 2       age  -0.6664781  -0.5713167   0.8 stderr  -0.6188974
-    ## 3     sigma   6.3963693   7.3316052   0.8 stderr   6.8639873
-    ## 4 r.squared   0.6151126   0.7222152   0.8 stderr   0.6686639
-    ## 5         F 243.1687314 397.3969785   0.8 stderr 320.2828549
+    ## 1 Intercept 145.9438823 149.6483186   0.8 stderr 147.8129158
+    ## 2       age  -0.6673584  -0.5719115   0.8 stderr  -0.6198159
+    ## 3     sigma   6.3841670   7.3367439   0.8 stderr   6.9105379
+    ## 4 r.squared   0.6224707   0.7236303   0.8 stderr   0.6724361
+    ## 5         F 250.7264505 401.4040296   0.8 stderr 318.1901588
     ##   margin.of.error
-    ## 1      1.78565986
-    ## 2      0.04758073
-    ## 3      0.46761796
-    ## 4      0.05355127
-    ## 5     77.11412359
+    ## 1      1.85221814
+    ## 2      0.04772347
+    ## 3      0.47628841
+    ## 4      0.05057979
+    ## 5     75.33878957
 
 You will notice that this gives a slightly different answer to the
 confidence interval we calculated from the quantiles, above. That's
