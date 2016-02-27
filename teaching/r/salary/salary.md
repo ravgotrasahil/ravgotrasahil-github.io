@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 ---
 
 ### Example: predictors of white-collar salaries
@@ -14,7 +14,7 @@ Learning goals:
 \* fit a multiple regression model  
 \* correctly interpret the estimated coefficients  
 \* quantify uncertainty about parameters in a multiple-regression model
-using both normal-theory formulas and bootstrapping
+using bootstrapping
 
 Data files:  
 \* [salary.csv](salary.csv): human-resources data on employees at a tech
@@ -24,11 +24,8 @@ First load the mosaic library and read in the data.
 
     library(mosaic)
 
-    salary = read.csv('salary.csv', header=TRUE)
-
-The variables in the data set are:  
+The variables we'll use from this data set are:  
 \* Salary: annual salary in dollars  
-\* Education: years of post-second education  
 \* Experience: months of experience at the particular company  
 \* Months: total months of work experience, including all previous
 jobs  
@@ -43,37 +40,24 @@ Let's first Look at the distibution of salary by sex.
 
     boxplot(Salary~Sex,data=salary, names=c("Female", "Male"))
 
-![](salary_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+![](salary_files/figure-markdown_strict/unnamed-chunk-3-1.png)<!-- -->
 
-It looks as though women are paid more at this company than men, on
-average. However, does the story change if we adjust for work
-experience?
+Upon first glance, it looks as though women are paid more at this
+company than men, on average.
+
+### Statistical adjustment for experience.
+
+However, does the story change if we adjust for work experience?
 
     plot(Salary~Experience, data=salary)
 
-![](salary_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![](salary_files/figure-markdown_strict/unnamed-chunk-4-1.png)<!-- -->
 
     lm1 = lm(Salary~Experience, data=salary)
-    summary(lm1)
+    coef(lm1)
 
-    ## 
-    ## Call:
-    ## lm(formula = Salary ~ Experience, data = salary)
-    ## 
-    ## Residuals:
-    ##      Min       1Q   Median       3Q      Max 
-    ## -18112.6  -6604.7    458.1   7542.4  17436.5 
-    ## 
-    ## Coefficients:
-    ##             Estimate Std. Error t value Pr(>|t|)    
-    ## (Intercept)  52516.7     2880.4  18.232  < 2e-16 ***
-    ## Experience     361.5      107.0   3.379  0.00161 ** 
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
-    ## Residual standard error: 9143 on 41 degrees of freedom
-    ## Multiple R-squared:  0.2178, Adjusted R-squared:  0.1988 
-    ## F-statistic: 11.42 on 1 and 41 DF,  p-value: 0.001605
+    ## (Intercept)  Experience 
+    ##  52516.6821    361.5327
 
 We expect experienced workers to be paid more, all else being equal. How
 do these residuals---that is, salary adjusted for experience---look when
@@ -81,105 +65,81 @@ we stratify them by sex?
 
     boxplot(resid(lm1)~salary$Sex)
 
-![](salary_files/figure-markdown_strict/unnamed-chunk-5-1.png)
-
-### Fitting a multiple regression model by least squares
+![](salary_files/figure-markdown_strict/unnamed-chunk-5-1.png)<!-- -->
 
 Now it looks like men are being paid more than women for an equivalent
-amount of work experience. What about a multiple-regression model that
-accounts for education, too? It is straightforward to fit such a model
-by least squares in R.
+amount of work experience, since men have a positive residual, on
+average. The story is similar if we look at overall work experience,
+including jobs prior to the one with this particular company:
 
-    lm2 = lm(Salary~Experience+Education, data=salary)
-    summary(lm2)
+    plot(Salary~Months, data=salary)
 
-    ## 
-    ## Call:
-    ## lm(formula = Salary ~ Experience + Education, data = salary)
-    ## 
-    ## Residuals:
-    ##      Min       1Q   Median       3Q      Max 
-    ## -18124.1  -5134.0   -692.4   7833.8  19029.2 
-    ## 
-    ## Coefficients:
-    ##             Estimate Std. Error t value Pr(>|t|)    
-    ## (Intercept)  45928.4     6195.1   7.414 5.01e-09 ***
-    ## Experience     356.0      106.5   3.342  0.00181 ** 
-    ## Education     1709.5     1425.3   1.199  0.23741    
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
-    ## Residual standard error: 9094 on 40 degrees of freedom
-    ## Multiple R-squared:  0.245,  Adjusted R-squared:  0.2072 
-    ## F-statistic:  6.49 on 2 and 40 DF,  p-value: 0.003623
+![](salary_files/figure-markdown_strict/unnamed-chunk-6-1.png)<!-- -->
+
+    lm2 = lm(Salary~Months, data=salary)
+    coef(lm2)
+
+    ## (Intercept)      Months 
+    ##  44807.1515    277.8743
+
+The story in the residuals is similar: the distribution of adjusted
+salaries for men is shifted upward compared to that for women.
 
     boxplot(resid(lm2)~salary$Sex)
 
-![](salary_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](salary_files/figure-markdown_strict/unnamed-chunk-7-1.png)<!-- -->
 
-The story appears similar: for equivalent levels of Experience and
-Education, women appear to be paid less. Let's build a model that
-accounts for both these factors and includes a dummy variable for the
-sex of the employee.
+### Fitting a multiple regression model by least squares
 
-    lm3= lm(Salary~Experience+Education+Sex, data=salary)
-    summary(lm3)
+To get at the partial relationship between gender and salary, we must
+fit multiple-regression model that accounts for experience with the
+company and total number of months of professional work. It is
+straightforward to fit such a model by least squares in R.
 
-    ## 
-    ## Call:
-    ## lm(formula = Salary ~ Experience + Education + Sex, data = salary)
-    ## 
-    ## Residuals:
-    ##      Min       1Q   Median       3Q      Max 
-    ## -18002.9  -5330.1   -293.9   7276.1  20560.0 
-    ## 
-    ## Coefficients:
-    ##             Estimate Std. Error t value Pr(>|t|)    
-    ## (Intercept)  42922.4     6878.0   6.241  2.4e-07 ***
-    ## Experience     439.4      135.0   3.255  0.00235 ** 
-    ## Education     1533.8     1435.7   1.068  0.29196    
-    ## Sex           3544.6     3525.3   1.005  0.32087    
-    ## ---
-    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
-    ## Residual standard error: 9093 on 39 degrees of freedom
-    ## Multiple R-squared:  0.2641, Adjusted R-squared:  0.2075 
-    ## F-statistic: 4.665 on 3 and 39 DF,  p-value: 0.007029
+    lm3 = lm(Salary ~ Experience + Months + Sex, data=salary)
+    coef(lm3)
 
-According to this model, men are paid \$3544 more per year than
-similarly qualified women, but the standard error of the effect size is
-\$3525. This makes it tough to rule out \$0 as a plausible value for the
-wage gap. We can also see this by noting that the 95% confidence
-interval contains zero:
+    ## (Intercept)  Experience      Months         Sex 
+    ##  41348.0287    125.8495    265.5492   2485.9645
 
-    confint(lm3)
-
-    ##                  2.5 %     97.5 %
-    ## (Intercept) 29010.3689 56834.3760
-    ## Experience    166.3287   712.5244
-    ## Education   -1370.2657  4437.8634
-    ## Sex         -3586.0132 10675.2388
+According to this model, men are paid $2486 more per year than women
+with similar levels of work experience, both overall and with this
+particular company.
 
 ### Bootstrapping a multiple regression model
 
-If we don't trust the normality assumptions, we can quantify uncertainty
-about this effect via bootstrapping:
+We can quantify our uncertainty about this effect via bootstrapping:
 
-    myboot = do(1000)*{
-      lm_boot = lm(Salary~Experience+Education+Sex, data=resample(salary))
-      coef(lm_boot)
+    boot3 = do(10000)*{
+      lm(Salary~Experience+Education+Sex, data=resample(salary))
     }
-    hist(myboot$Sex)
+    hist(boot3$Sex)
 
-![](salary_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](salary_files/figure-markdown_strict/unnamed-chunk-9-1.png)<!-- -->
 
-    confint(myboot)
+    confint(boot3)
 
-    ##         name      lower      upper level method   estimate margin.of.error
-    ## 1  Intercept 29935.1224 55228.3470  0.95 stderr 42581.7347      12646.6123
-    ## 2 Experience   216.7165   643.4637  0.95 stderr   430.0901        213.3736
-    ## 3  Education  -581.5238  3895.3986  0.95 stderr  1656.9374       2238.4612
-    ## 4        Sex -2454.6020  9639.1313  0.95 stderr  3592.2647       6046.8666
+    ## Warning: confint: Using df=Inf.
 
-In this case, the bootstrapped confidence interval is pretty similar to
-the one we estimate using the normal-theory formulas.
+    ##         name         lower        upper level method     estimate
+    ## 1  Intercept  3.011667e+04 5.542272e+04  0.95 stderr 4.292237e+04
+    ## 2 Experience  2.114495e+02 6.492590e+02  0.95 stderr 4.394266e+02
+    ## 3  Education -6.234819e+02 3.843099e+03  0.95 stderr 1.533799e+03
+    ## 4        Sex -2.607113e+03 9.782201e+03  0.95 stderr 3.544613e+03
+    ## 5      sigma  6.945121e+03 1.045042e+04  0.95 stderr 9.092978e+03
+    ## 6  r.squared  6.212497e-02 5.352548e-01  0.95 stderr 2.640703e-01
+    ## 7          F -1.298750e+00 1.363493e+01  0.95 stderr 4.664730e+00
+    ##   margin.of.error
+    ## 1    1.265302e+04
+    ## 2    2.189047e+02
+    ## 3    2.233291e+03
+    ## 4    6.194657e+03
+    ## 5    1.752648e+03
+    ## 6    2.365649e-01
+    ## 7    7.466838e+00
+
+In this case, the bootstrapped confidence interval runs from about
+-$2600 to about $9600. Thus while there is the suggestion of higher
+salaries for men, we cannot rule the hypothesis that there is no overall
+difference (i.e. a coefficient of zero on the dummy variable) on
+average.
