@@ -41,3 +41,6 @@ layout: page
 * [Google flu trends](flu/flu.html): Building and checking a predictive model  
 * [Basketball point spreads](bballbets/bballbets.html): Logistic regression.  
 * [Atmospheric CO2](maunaloa/maunaloa.html): Trends and seasonal variation in time-series models.  
+
+### Monte Carlo simulation  
+* [Introduction to Monte Carlo](montecarlo/montecarlo_intro.md) in the context of a simplified investment problem.  
