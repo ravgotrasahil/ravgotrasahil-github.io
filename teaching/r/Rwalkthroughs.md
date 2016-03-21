@@ -43,4 +43,4 @@ layout: page
 * [Atmospheric CO2](maunaloa/maunaloa.html): Trends and seasonal variation in time-series models.  
 
 ### Monte Carlo simulation  
-* [Introduction to Monte Carlo](montecarlo/montecarlo_intro.md) in the context of a simplified investment problem.  
+* [Introduction to Monte Carlo](montecarlo/montecarlo_intro.html) in the context of a simplified investment problem.  

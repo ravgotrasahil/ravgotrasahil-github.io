@@ -79,6 +79,8 @@ compound-interest formula:
 
     10000 * (1+InterestRate)^10
 
+    ## [1] 16288.95
+
 Of course, we definitely didn't need the power of R in order to do this
 calculation. But seeing how the for-loop works will set us up for the
 much more realistic examples to come, in future walkthroughs.
@@ -166,7 +168,7 @@ Here's the code block:
 
 You can see how at each pass (from year=1 to year=10), the "Old Wealth"
 is the same as the "New Wealth" from the previous step, indicating that
-the computations have been chain together at each year to produce the
+the computations have been chained together at each year to produce the
 final result.
 
 ### Now with random interest rates
@@ -218,7 +220,7 @@ wealth changes from one simulation to the next:
     }
     Wealth
 
-    ## [1] 98497.33
+    ## [1] 89543.02
 
 If you want, you can also add print statements (this is optional). I'm
 going to make these "print" statements a little more concise, using R's
@@ -231,52 +233,52 @@ going to make these "print" statements a little more concise, using R's
       
       # Here's where the actual updating gets done
       InterestRate = sample(outcome_values, size = 1, prob = outcome_probs)
-        Wealth = Wealth * (1 + InterestRate)  # Same command as above. 
+      Wealth = Wealth * (1 + InterestRate)  # Same command as above. 
         
       cat(", New Wealth = ", Wealth)
       cat("\n")  # adds a new line
     }
 
-    ## Year =  1, Old Wealth =  10000, New Wealth =  10000
-    ## Year =  2, Old Wealth =  10000, New Wealth =  10000
-    ## Year =  3, Old Wealth =  10000, New Wealth =  11000
-    ## Year =  4, Old Wealth =  11000, New Wealth =  12100
+    ## Year =  1, Old Wealth =  10000, New Wealth =  11000
+    ## Year =  2, Old Wealth =  11000, New Wealth =  12100
+    ## Year =  3, Old Wealth =  12100, New Wealth =  12100
+    ## Year =  4, Old Wealth =  12100, New Wealth =  12100
     ## Year =  5, Old Wealth =  12100, New Wealth =  13310
-    ## Year =  6, Old Wealth =  13310, New Wealth =  13310
-    ## Year =  7, Old Wealth =  13310, New Wealth =  14641
-    ## Year =  8, Old Wealth =  14641, New Wealth =  16105.1
-    ## Year =  9, Old Wealth =  16105.1, New Wealth =  17715.61
-    ## Year =  10, Old Wealth =  17715.61, New Wealth =  19487.17
-    ## Year =  11, Old Wealth =  19487.17, New Wealth =  19487.17
-    ## Year =  12, Old Wealth =  19487.17, New Wealth =  19487.17
-    ## Year =  13, Old Wealth =  19487.17, New Wealth =  19487.17
-    ## Year =  14, Old Wealth =  19487.17, New Wealth =  21435.89
-    ## Year =  15, Old Wealth =  21435.89, New Wealth =  21435.89
-    ## Year =  16, Old Wealth =  21435.89, New Wealth =  21435.89
-    ## Year =  17, Old Wealth =  21435.89, New Wealth =  23579.48
-    ## Year =  18, Old Wealth =  23579.48, New Wealth =  25937.42
-    ## Year =  19, Old Wealth =  25937.42, New Wealth =  25937.42
-    ## Year =  20, Old Wealth =  25937.42, New Wealth =  28531.17
-    ## Year =  21, Old Wealth =  28531.17, New Wealth =  31384.28
-    ## Year =  22, Old Wealth =  31384.28, New Wealth =  31384.28
-    ## Year =  23, Old Wealth =  31384.28, New Wealth =  31384.28
-    ## Year =  24, Old Wealth =  31384.28, New Wealth =  31384.28
-    ## Year =  25, Old Wealth =  31384.28, New Wealth =  31384.28
-    ## Year =  26, Old Wealth =  31384.28, New Wealth =  34522.71
-    ## Year =  27, Old Wealth =  34522.71, New Wealth =  34522.71
-    ## Year =  28, Old Wealth =  34522.71, New Wealth =  37974.98
-    ## Year =  29, Old Wealth =  37974.98, New Wealth =  41772.48
-    ## Year =  30, Old Wealth =  41772.48, New Wealth =  41772.48
-    ## Year =  31, Old Wealth =  41772.48, New Wealth =  45949.73
-    ## Year =  32, Old Wealth =  45949.73, New Wealth =  50544.7
-    ## Year =  33, Old Wealth =  50544.7, New Wealth =  55599.17
-    ## Year =  34, Old Wealth =  55599.17, New Wealth =  55599.17
-    ## Year =  35, Old Wealth =  55599.17, New Wealth =  61159.09
-    ## Year =  36, Old Wealth =  61159.09, New Wealth =  61159.09
-    ## Year =  37, Old Wealth =  61159.09, New Wealth =  61159.09
+    ## Year =  6, Old Wealth =  13310, New Wealth =  14641
+    ## Year =  7, Old Wealth =  14641, New Wealth =  14641
+    ## Year =  8, Old Wealth =  14641, New Wealth =  14641
+    ## Year =  9, Old Wealth =  14641, New Wealth =  14641
+    ## Year =  10, Old Wealth =  14641, New Wealth =  16105.1
+    ## Year =  11, Old Wealth =  16105.1, New Wealth =  16105.1
+    ## Year =  12, Old Wealth =  16105.1, New Wealth =  16105.1
+    ## Year =  13, Old Wealth =  16105.1, New Wealth =  17715.61
+    ## Year =  14, Old Wealth =  17715.61, New Wealth =  17715.61
+    ## Year =  15, Old Wealth =  17715.61, New Wealth =  17715.61
+    ## Year =  16, Old Wealth =  17715.61, New Wealth =  17715.61
+    ## Year =  17, Old Wealth =  17715.61, New Wealth =  19487.17
+    ## Year =  18, Old Wealth =  19487.17, New Wealth =  19487.17
+    ## Year =  19, Old Wealth =  19487.17, New Wealth =  19487.17
+    ## Year =  20, Old Wealth =  19487.17, New Wealth =  19487.17
+    ## Year =  21, Old Wealth =  19487.17, New Wealth =  21435.89
+    ## Year =  22, Old Wealth =  21435.89, New Wealth =  23579.48
+    ## Year =  23, Old Wealth =  23579.48, New Wealth =  23579.48
+    ## Year =  24, Old Wealth =  23579.48, New Wealth =  23579.48
+    ## Year =  25, Old Wealth =  23579.48, New Wealth =  25937.42
+    ## Year =  26, Old Wealth =  25937.42, New Wealth =  28531.17
+    ## Year =  27, Old Wealth =  28531.17, New Wealth =  31384.28
+    ## Year =  28, Old Wealth =  31384.28, New Wealth =  31384.28
+    ## Year =  29, Old Wealth =  31384.28, New Wealth =  34522.71
+    ## Year =  30, Old Wealth =  34522.71, New Wealth =  37974.98
+    ## Year =  31, Old Wealth =  37974.98, New Wealth =  41772.48
+    ## Year =  32, Old Wealth =  41772.48, New Wealth =  41772.48
+    ## Year =  33, Old Wealth =  41772.48, New Wealth =  45949.73
+    ## Year =  34, Old Wealth =  45949.73, New Wealth =  45949.73
+    ## Year =  35, Old Wealth =  45949.73, New Wealth =  50544.7
+    ## Year =  36, Old Wealth =  50544.7, New Wealth =  55599.17
+    ## Year =  37, Old Wealth =  55599.17, New Wealth =  61159.09
     ## Year =  38, Old Wealth =  61159.09, New Wealth =  61159.09
-    ## Year =  39, Old Wealth =  61159.09, New Wealth =  61159.09
-    ## Year =  40, Old Wealth =  61159.09, New Wealth =  61159.09
+    ## Year =  39, Old Wealth =  61159.09, New Wealth =  67275
+    ## Year =  40, Old Wealth =  67275, New Wealth =  74002.5
 
 ### Saving the trajectory of wealth over time
 
@@ -312,7 +314,7 @@ following block of code several times.
     }
     plot(WealthTracker)
 
-![](montecarlo_intro_files/figure-markdown_strict/unnamed-chunk-10-1.png)<!-- -->
+![](montecarlo_intro_files/figure-markdown_strict/unnamed-chunk-11-1.png)<!-- -->
 
 ### Multiple realizations: a Monte Carlo simulation
 
@@ -363,40 +365,40 @@ lines:
     head(wealthsim)
 
     ##      V1    V2    V3    V4    V5      V6      V7       V8       V9      V10
-    ## 1 11000 12100 13310 14641 14641 14641.0 16105.1 16105.10 16105.10 17715.61
-    ## 2 11000 12100 12100 12100 12100 13310.0 13310.0 14641.00 16105.10 17715.61
-    ## 3 11000 12100 13310 13310 14641 16105.1 16105.1 17715.61 17715.61 19487.17
-    ## 4 11000 12100 13310 13310 13310 14641.0 16105.1 17715.61 19487.17 19487.17
-    ## 5 11000 11000 12100 12100 12100 13310.0 13310.0 14641.00 16105.10 17715.61
-    ## 6 11000 11000 11000 11000 11000 12100.0 13310.0 13310.00 13310.00 13310.00
+    ## 1 11000 11000 11000 12100 12100 12100.0 13310.0 14641.00 16105.10 17715.61
+    ## 2 11000 11000 12100 13310 13310 14641.0 16105.1 16105.10 17715.61 19487.17
+    ## 3 11000 12100 12100 13310 13310 14641.0 14641.0 14641.00 16105.10 17715.61
+    ## 4 11000 12100 13310 13310 13310 14641.0 16105.1 17715.61 17715.61 19487.17
+    ## 5 10000 11000 12100 13310 14641 16105.1 16105.1 17715.61 19487.17 21435.89
+    ## 6 11000 11000 11000 11000 12100 12100.0 12100.0 13310.00 14641.00 14641.00
     ##        V11      V12      V13      V14      V15      V16      V17      V18
-    ## 1 17715.61 19487.17 19487.17 19487.17 21435.89 21435.89 23579.48 23579.48
-    ## 2 17715.61 17715.61 19487.17 21435.89 21435.89 23579.48 23579.48 25937.42
-    ## 3 21435.89 23579.48 23579.48 25937.42 28531.17 28531.17 31384.28 34522.71
-    ## 4 19487.17 19487.17 21435.89 23579.48 23579.48 23579.48 25937.42 25937.42
-    ## 5 17715.61 17715.61 17715.61 19487.17 19487.17 21435.89 23579.48 25937.42
-    ## 6 14641.00 14641.00 16105.10 16105.10 16105.10 17715.61 19487.17 21435.89
+    ## 1 17715.61 19487.17 19487.17 21435.89 21435.89 21435.89 23579.48 25937.42
+    ## 2 19487.17 19487.17 21435.89 21435.89 21435.89 21435.89 21435.89 21435.89
+    ## 3 17715.61 19487.17 21435.89 21435.89 21435.89 23579.48 23579.48 25937.42
+    ## 4 19487.17 19487.17 21435.89 21435.89 21435.89 21435.89 21435.89 21435.89
+    ## 5 23579.48 23579.48 23579.48 23579.48 25937.42 25937.42 25937.42 25937.42
+    ## 6 14641.00 16105.10 16105.10 16105.10 16105.10 17715.61 17715.61 17715.61
     ##        V19      V20      V21      V22      V23      V24      V25      V26
-    ## 1 25937.42 28531.17 31384.28 34522.71 34522.71 37974.98 37974.98 41772.48
-    ## 2 25937.42 25937.42 28531.17 31384.28 34522.71 37974.98 41772.48 41772.48
-    ## 3 34522.71 37974.98 37974.98 37974.98 41772.48 45949.73 45949.73 50544.70
-    ## 4 28531.17 28531.17 31384.28 34522.71 34522.71 34522.71 37974.98 41772.48
-    ## 5 25937.42 28531.17 31384.28 31384.28 34522.71 37974.98 41772.48 41772.48
-    ## 6 21435.89 21435.89 21435.89 23579.48 23579.48 23579.48 23579.48 25937.42
+    ## 1 28531.17 31384.28 31384.28 34522.71 34522.71 34522.71 34522.71 37974.98
+    ## 2 21435.89 23579.48 23579.48 25937.42 28531.17 31384.28 31384.28 34522.71
+    ## 3 25937.42 28531.17 31384.28 34522.71 37974.98 37974.98 41772.48 41772.48
+    ## 4 21435.89 21435.89 23579.48 23579.48 25937.42 28531.17 28531.17 28531.17
+    ## 5 28531.17 31384.28 34522.71 34522.71 37974.98 41772.48 41772.48 41772.48
+    ## 6 17715.61 19487.17 21435.89 23579.48 23579.48 25937.42 25937.42 28531.17
     ##        V27      V28      V29      V30      V31      V32      V33      V34
-    ## 1 41772.48 45949.73 50544.70 50544.70 50544.70 50544.70 50544.70 55599.17
-    ## 2 41772.48 45949.73 50544.70 55599.17 61159.09 61159.09 67275.00 67275.00
-    ## 3 55599.17 55599.17 61159.09 67275.00 74002.50 81402.75 81402.75 89543.02
-    ## 4 41772.48 45949.73 50544.70 55599.17 61159.09 61159.09 67275.00 74002.50
-    ## 5 41772.48 45949.73 50544.70 55599.17 55599.17 55599.17 55599.17 55599.17
-    ## 6 25937.42 28531.17 28531.17 28531.17 28531.17 28531.17 31384.28 34522.71
-    ##        V35      V36      V37       V38       V39       V40
-    ## 1 55599.17 55599.17 55599.17  55599.17  55599.17  61159.09
-    ## 2 67275.00 74002.50 81402.75  89543.02  89543.02  89543.02
-    ## 3 98497.33 98497.33 98497.33 108347.06 108347.06 119181.77
-    ## 4 81402.75 81402.75 89543.02  98497.33 108347.06 108347.06
-    ## 5 55599.17 55599.17 61159.09  61159.09  61159.09  61159.09
-    ## 6 37974.98 41772.48 41772.48  45949.73  50544.70  50544.70
+    ## 1 41772.48 41772.48 45949.73 45949.73 45949.73 50544.70 55599.17 61159.09
+    ## 2 37974.98 37974.98 41772.48 45949.73 45949.73 45949.73 50544.70 55599.17
+    ## 3 45949.73 50544.70 50544.70 50544.70 55599.17 55599.17 61159.09 67275.00
+    ## 4 28531.17 28531.17 31384.28 31384.28 31384.28 31384.28 34522.71 34522.71
+    ## 5 41772.48 45949.73 45949.73 50544.70 50544.70 50544.70 55599.17 61159.09
+    ## 6 28531.17 28531.17 31384.28 34522.71 37974.98 41772.48 41772.48 41772.48
+    ##        V35      V36      V37      V38      V39      V40
+    ## 1 61159.09 67275.00 74002.50 81402.75 81402.75 81402.75
+    ## 2 61159.09 67275.00 67275.00 74002.50 74002.50 81402.75
+    ## 3 67275.00 67275.00 74002.50 74002.50 74002.50 74002.50
+    ## 4 34522.71 34522.71 34522.71 37974.98 41772.48 41772.48
+    ## 5 67275.00 74002.50 81402.75 81402.75 81402.75 81402.75
+    ## 6 41772.48 45949.73 45949.73 45949.73 50544.70 50544.70
 
 Each row corresponds to a single Monte Carlo simulation for the
 trajectory for your portfolio (of which there are 1000). Each column
@@ -406,15 +408,15 @@ column of `wealthsim`:
 
     hist(wealthsim[,40], 20)
 
-![](montecarlo_intro_files/figure-markdown_strict/unnamed-chunk-14-1.png)<!-- -->
+![](montecarlo_intro_files/figure-markdown_strict/unnamed-chunk-15-1.png)<!-- -->
 
     mean(wealthsim[,40])
 
-    ## [1] 70669.18
+    ## [1] 70774.49
 
     sd(wealthsim[,40])
 
-    ## [1] 21734.16
+    ## [1] 21738.86
 
 The expected value of your portfolio is about $70,000 after 40 years,
 with a standard deviation of about $20,000.
@@ -422,7 +424,8 @@ with a standard deviation of about $20,000.
 ### Postscript
 
 The above example is unrealistic, in that it makes a several major
-simplifying assumptions: 1) There is only one asset to invest in.  
+simplifying assumptions:  
+1) There is only one asset to invest in.  
 2) The probability distribution of that asset's returns is very simple,
 with only two possibilities.  
 3) We assume that we know exactly what those possibilities are (0% and
@@ -434,9 +437,9 @@ dynamic asset-allocation strategy.
 Nonetheless, the example illustrates a very important concept: future
 investment performance is path dependent, and the path is known. We can
 describe individual components of that path using a probability
-distribution, and then simulate many realization of that path to
-estimate, by Monte Carlo, a probability distribution over future
-investment results.
+distribution, and then simulate many realizations of that path. This
+allows us to arrive at a Monte Carlo approximation to the probability
+distribution over future investment results.
 
 Plus, in the walkthroughs to come, we will learn to relax all of the
 above simplifying assumptions, so that in the end we'll have a powerful
