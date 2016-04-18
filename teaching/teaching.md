@@ -3,6 +3,16 @@ layout: page
 title: Teaching
 ---
 
+## To students interested in SDS 385 (Fall 2016)
+
+I have received a very large number of e-mails from students interested in SDS 385 (Statistical Models for Big Data) for Fall 2016.  I cannot feasibly respond to every one individually.  I am sorry for this, but here is what I would say if I could:  
+* the course is designed for students in four programs: biology, statistics, computer science, and biomedical engineering.  If you are not in one of these four programs, I will not give permission for you to be added to the course at this time (spring or summer 2016).  
+* the course focuses on methods appropriate for biology and biomedical applications, with a few other applications in the hard sciences.  If you are interested in taking the course because you want to learn a software stack for big-data applications in industry, you will possibly end up disappointed.  
+* the course will nonetheless still teach methods appropriate for big-data applications in a wider range of fields.  There just won't be our focus.  
+* students in other programs are welcome to enroll... eventually.  But you have to wait until the fall add/drop period so that students in the four core programs served by the course receive priority.  
+
+
+
 ## Current Courses (Spring 2016)
 * [STA 371H: Statistics and Modeling Honors](/STA371H_Spring2016/)
 * [SDS 325H: Honors Statistics](/SDS325H_Spring2016/)
