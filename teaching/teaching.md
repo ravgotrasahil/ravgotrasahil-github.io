@@ -9,7 +9,7 @@ I have received a very large number of e-mails from students interested in SDS 3
 * the course is designed for students in four programs: biology, statistics, computer science, and biomedical engineering.  If you are not in one of these four programs, I will not give permission for you to be added to the course at this time (spring or summer 2016).  
 * I do not have a syllabus or list of topics at this time.  It is a brand new course, and I will be preparing these materials over the summer.  
 * the course focuses on methods appropriate for biology and biomedical applications, with a few other applications in the hard sciences.  If you are interested in taking the course because you want to learn a software stack for big-data applications in industry, you will possibly end up disappointed.  
-* the course will nonetheless still teach methods appropriate for big-data applications in a wider range of fields.  There just won't be our focus.  
+* the course will nonetheless still teach methods appropriate for big-data applications in a wider range of fields.  These applications just won't be our focus.  
 * students in other programs are welcome to enroll... eventually.  But you have to wait until the fall add/drop period so that students in the four core programs served by the course receive priority.  
 
 
