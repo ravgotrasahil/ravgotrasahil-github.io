@@ -8,6 +8,8 @@ title: Papers
 
 ### Preprints
 
+(2016) [Better conditional density estimation for neural networks.](http://arxiv.org/abs/1606.02321)  W. Tansey, K Pichotta, and JG Scott.  arXiv:1606.02321.
+
 (2015) [A deconvolution path for mixtures](http://arxiv.org/abs/1511.06750) O.M. Padilla, N.G. Polson and J.G. Scott.  arXiv:1511.06750.
 
 (2015) [Nonparametric density estimation by histogram trend filtering](http://arxiv.org/abs/1509.04348). O.M. Padilla and J.G. Scott.  arXiv:1509.04348.
@@ -24,15 +26,17 @@ title: Papers
 
  
 
-### Journal Articles and Refereed Conference Proceedings
+### Peer-reviewed articles
+
+(2016) [Requests for Abortion in Latin America Related to Concern about Zika Virus Exposure.](http://www.nejm.org/doi/full/10.1056/NEJMc1605389#t=article) ARA Aiken, JG Scott, R Gomperts, J Trussell, and C Aiken. Requests for abortion in Latin America related to concern about Zika virus exposure. _New England Journal of Medicine_ DOI: 10.1056/NEJMc1605389.  (accepted).
 
 (2016) Respiratory virus transmission dynamics determines timing of asthma exacerbation peaks: evidence from a population-level model.  Rosalind M Eggo, James G Scott, Alison P Galvani, and Lauren Ancel Meyers. _Proceedings of the National Academy of Sciences_ (accepted).
+
+(2016) The influence of hours worked prior to delivery on maternal and neonatal outcomes: a retrospective cohort study.  C Aiken, AR Aiken, JG Scott, JC Brockelsby. _American Journal of Obstetrics & Gynecology_ (accepted).
 
 (2016) Weekend working: A retrospective cohort study of maternal and neonatal outcomes in a large NHS delivery unit.  C. Aiken, A.R.A. Aiken, J.G. Scott, J. Trussell, and J.C Brockelsby.  _European Journal of Obstetrics & Gynecology and Reproductive Biology_ (accepted).
 
 (2016) [Family planning policy in the United States: the converging politics of abortion and contraception](http://www.ncbi.nlm.nih.gov/pubmed/26794846).  ARA Aiken, J Scott _Contraception_ (to appear).
-
-(2016) The influence of hours worked prior to delivery on maternal and fetal outcomes.  C Aiken, AR Aiken, JG Scott, JC Brockelsby. _American Journal of Obstetrics & Gynecology_ 214 (1), S154.
 
 (2015) [Priors for Random Count Matrices Derived from a Family of Negative Binomial Processes](http://arxiv.org/abs/1404.3331) (with M. Zhou).  _Journal of the American Statistical Association (Theory and Methods)_ (accepted).
 
