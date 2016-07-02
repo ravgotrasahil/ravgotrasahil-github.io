@@ -25,32 +25,33 @@ title: Papers
 (2014) [False discovery rate smoothing](http://arxiv.org/abs/1411.6144) (with W. Tansey, O. Koyejo, and R. Poldrack).   
 
  
-
 ### Peer-reviewed articles
 
-(2016) [Requests for Abortion in Latin America Related to Concern about Zika Virus Exposure.](http://www.nejm.org/doi/full/10.1056/NEJMc1605389#t=article) ARA Aiken, JG Scott, R Gomperts, J Trussell, and C Aiken. Requests for abortion in Latin America related to concern about Zika virus exposure. _New England Journal of Medicine_ DOI: 10.1056/NEJMc1605389.  (accepted).
+(2016) [Requests for Abortion in Latin America Related to Concern about Zika Virus Exposure.](http://www.nejm.org/doi/full/10.1056/NEJMc1605389#t=article) ARA Aiken, JG Scott, R Gomperts, J Trussell, and C Aiken. Requests for abortion in Latin America related to concern about Zika virus exposure. _New England Journal of Medicine_ DOI: 10.1056/NEJMc1605389.  (in press).
 
-(2016) Respiratory virus transmission dynamics determines timing of asthma exacerbation peaks: evidence from a population-level model.  Rosalind M Eggo, James G Scott, Alison P Galvani, and Lauren Ancel Meyers. _Proceedings of the National Academy of Sciences_ (accepted).
+(2016) The influence of hours worked prior to delivery on maternal and neonatal outcomes: a retrospective cohort study.  C Aiken, AR Aiken, JG Scott, JC Brockelsby. _American Journal of Obstetrics & Gynecology_ (in press).
 
-(2016) The influence of hours worked prior to delivery on maternal and neonatal outcomes: a retrospective cohort study.  C Aiken, AR Aiken, JG Scott, JC Brockelsby. _American Journal of Obstetrics & Gynecology_ (accepted).
+(2016) [Priors for Random Count Matrices Derived from a Family of Negative Binomial Processes](http://arxiv.org/abs/1404.3331) (with M. Zhou).  _Journal of the American Statistical Association (Theory and Methods)_ (in press).
 
-(2016) Weekend working: A retrospective cohort study of maternal and neonatal outcomes in a large NHS delivery unit.  C. Aiken, A.R.A. Aiken, J.G. Scott, J. Trussell, and J.C Brockelsby.  _European Journal of Obstetrics & Gynecology and Reproductive Biology_ (accepted).
+(2016) Respiratory virus transmission dynamics determines timing of asthma exacerbation peaks: evidence from a population-level model.  Rosalind M Eggo, James G Scott, Alison P Galvani, and Lauren Ancel Meyers. _Proceedings of the National Academy of Sciences_ 113(8): 2194-9.
 
-(2016) [Family planning policy in the United States: the converging politics of abortion and contraception](http://www.ncbi.nlm.nih.gov/pubmed/26794846).  ARA Aiken, J Scott _Contraception_ (to appear).
+(2016) Modeling unobserved heterogeneity using finite mixture random parameters for spatially correlated discrete count data.  Prasad Buddhavarapu, James G. Scott, and Jorge A. Prozzi. _Transportation Research (Part B: Methodological)_ 91: 492-510.
 
-(2015) [Priors for Random Count Matrices Derived from a Family of Negative Binomial Processes](http://arxiv.org/abs/1404.3331) (with M. Zhou).  _Journal of the American Statistical Association (Theory and Methods)_ (accepted).
+(2016) Weekend working: A retrospective cohort study of maternal and neonatal outcomes in a large NHS delivery unit.  C. Aiken, A.R.A. Aiken, J.G. Scott, J. Trussell, and J.C Brockelsby.  _European Journal of Obstetrics & Gynecology and Reproductive Biology_ 199: 5-10. 
 
-(2015) [Estimating trait heritability in highly fecund species](http://biorxiv.org/content/early/2015/04/17/018044) (with S Scarpino, SW Davies, T Pongwarin, and M Matz). _G3: Genes, Genomes, Genetics_ (accepted).
+(2016) [Family planning policy in the United States: the converging politics of abortion and contraception](http://www.ncbi.nlm.nih.gov/pubmed/26794846).  ARA Aiken, J Scott _Contraception_ 93(5): 412-20.
 
-(2015) [Proximal algorithms in statistics and machine learning](http://arxiv.org/abs/1502.03175) (with N. Polson and B. Willard).   _Statistical Science_ (accepted).
+(2016) [Mixtures, envelopes, and hierarchical duality](http://arxiv.org/abs/1406.0177) (with N. Polson).  _Journal of the Royal Statistical Society, Series B_ (in press).
 
-(2015) [Mixtures, envelopes, and hierarchical duality](http://arxiv.org/abs/1406.0177) (with N. Polson).  _Journal of the Royal Statistical Society, Series B_ (in press).
+(2015) [Proximal algorithms in statistics and machine learning](http://arxiv.org/abs/1502.03175) (with N. Polson and B. Willard).   _Statistical Science_ 30(4): 559-81. 
 
-(2015) [Nonparametric Bayesian testing for monotonicity](http://arxiv.org/abs/1304.3378) (with T. Shively and S. Walker). _Biometrika_ (in press). 
+(2015) [Nonparametric Bayesian testing for monotonicity](http://arxiv.org/abs/1304.3378) (with T. Shively and S. Walker). _Biometrika_ 102(3): 617-30.
 
 (2015) [False discovery rate regression: an application to neural synchrony detection in primary visual cortex](http://arxiv.org/abs/1307.3495) (with R. Kelly, M. Smith, P. Zhou, and R. Kass).  _Journal of the American Statistical Association_ 110: 510, pp 459-71.
 
 (2015) [Management of Fetal Malposition in the Second Stage of Labor: A Propensity Score Analysis](http://www.ncbi.nlm.nih.gov/pubmed/25446659). (with A. Aiken, C. Aiken, M. Alberry, J. Brocklesby).  _American Journal of Obstetrics and Gynecology_ 212: 3, p. 355.  
+(2015) [Estimating trait heritability in highly fecund species](http://biorxiv.org/content/early/2015/04/17/018044) (with S Scarpino, SW Davies, T Pongwarin, and M Matz). _G3: Genes, Genomes, Genetics_ 5(12): 2639-45.
+
 
 (2014) [Factors influencing the likelihood of instrumental delivery success](http://www.ncbi.nlm.nih.gov/pubmed/24785607) (with C. Aiken, A. Aiken, and J. Brocklesby).  _Obstetrics and Gynecology_ 123(4): 796-803.  
 
