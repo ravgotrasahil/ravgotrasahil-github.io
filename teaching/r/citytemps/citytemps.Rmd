@@ -101,7 +101,7 @@ Or about 2.3 standard deviations _below_ the mean.
 
 On the other hand, for a 10-degree day in Rapid City, this is
 ```{r}
-(10 - mean(citytemps$Temp.RapidCity)) / sd(citytemps$Temp.SanDiego)
+(10 - mean(citytemps$Temp.RapidCity)) / sd(citytemps$Temp.RapidCity)
 ```
 Or about 1.9 standard deviations below the mean.  Thus a 50-degree day in San Diego is actually more extreme than a 10-degree day in Rapid City!
 
