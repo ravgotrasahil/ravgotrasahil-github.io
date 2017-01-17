@@ -140,30 +140,24 @@ Now we can compute the relative risk from these two quantities:
 It looks like men were about three times as likely to die on the Titanic
 as women.
 
-### Odds ratio
-
-We can compute the odds ratio in a similar way. First let's compute the
-odds of dying for both men and women, remembering that the relevant
-table looks like this:
-
-            sex
-    survived    female      male
-         no  0.2725322 0.8090154
-         yes 0.7274678 0.1909846
-
-Let's store the odds of dying for each sex in new variables:
-
-    odds_men = risk_table[1,2]/risk_table[2,2]
-    odds_women = risk_table[1,1]/risk_table[2,1]
-
-    odds_ratio = odds_men/odds_women
-    odds_ratio
-
-    ## [1] 11.30718
-
-An odds ratio of about 11.3 quantifies the extent to which males were
-more likely to die than females.
-
+<!-- ### Odds ratio -->
+<!-- We can compute the odds ratio in a similar way.  First let's compute the odds of dying for both men and women, remembering that the relevant table looks like this: -->
+<!-- ``` -->
+<!--         sex -->
+<!-- survived    female      male -->
+<!--      no  0.2725322 0.8090154 -->
+<!--      yes 0.7274678 0.1909846 -->
+<!-- ``` -->
+<!-- Let's store the odds of dying for each sex in new variables: -->
+<!-- ```{r} -->
+<!-- odds_men = risk_table[1,2]/risk_table[2,2] -->
+<!-- odds_women = risk_table[1,1]/risk_table[2,1] -->
+<!-- ``` -->
+<!-- ```{r} -->
+<!-- odds_ratio = odds_men/odds_women -->
+<!-- odds_ratio -->
+<!-- ``` -->
+<!-- An odds ratio of about 11.3 quantifies the extent to which males were more likely to die than females. -->
 ### Discretizing a variable into categories
 
 Our data set on the Titanic also has a numerical variable called `age`,
@@ -299,8 +293,8 @@ A mosaic plot can help to visualize multiway tables.
 
     mosaicplot(~ sex + AgeCategory + survived, data=TitanicSurvival)
 
-![](titanic_files/figure-markdown_strict/unnamed-chunk-21-1.png)  
-The area of each box tells you what fraction of cases fall into the
+![](titanic_files/figure-markdown_strict/unnamed-chunk-19-1.png) The
+area of each box tells you what fraction of cases fall into the
 corresponding cell of the contingency table. From this plot, it's clear
 that adult male passengers of the Titanic died in far higher proportions
 than any other category of person.

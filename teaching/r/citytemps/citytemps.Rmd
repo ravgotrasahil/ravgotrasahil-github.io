@@ -87,9 +87,29 @@ To summarize:
 - You give `pdata` a data set and a value, and it returns the corresponding quantile for that value.  
 
 
+### Standardizing using z-scores
+
+Which temperature is more extreme: 50 degrees in San Diego, or 10 degrees in Rapid City?  In an absolute sense, of course 10 degrees is a more extreme temperature.  But what about in a relative sense?  In other words, is a 10-degree day more extreme _for Rapid City_ than a 50-degree day is for San Diego?
+
+This question could certainly be answered using quantiles, which you've already learned how to handle.  But let's discuss a second way: by calculating a z-score for each temperature.  
+
+A z-score is the number of standard deviations by which some observation is above the mean.  (So if a z-score is negative, then the corresponding observation is _below_ the mean.)  To calculate a z-score, we subtract the mean and divide by the standard deviation.  For a 50-degree day in San Diego, this is:
+```{r}
+(50 - mean(citytemps$Temp.SanDiego)) / sd(citytemps$Temp.SanDiego)
+```
+Or about 2.3 standard deviations _below_ the mean.
+
+On the other hand, for a 10-degree day in Rapid City, this is
+```{r}
+(10 - mean(citytemps$Temp.RapidCity)) / sd(citytemps$Temp.SanDiego)
+```
+Or about 1.9 standard deviations below the mean.  Thus a 50-degree day in San Diego is actually more extreme than a 10-degree day in Rapid City!
+
+As this example suggests, z-scores are useful for comparing numbers that come from different distributions, with different statistical properties. It tells you how extreme a number is, relative to other numbers from that some distribution.
+
 ### Fancier histograms
 
-Next, we'll make a histogram for Rapid City, except we'll change the default title and x-axis label to something a bit more fit for human consumption.
+To close, we'll make a histogram for Rapid City, except we'll change the default title and x-axis label to something a bit more fit for human consumption.
 ```{r}
 hist(citytemps$Temp.RapidCity, main="Average Daily Temperatures in Rapid City, 1995-2011", xlab='Temperature')
 ```

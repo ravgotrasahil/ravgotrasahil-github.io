@@ -1,10 +1,9 @@
 ---
-layout: page
+layout: post
 ---
 
 Learning goals:  
-\* create a naive prediction interval to quantify forecasting
-uncertainty  
+\* create a prediction interval to quantify forecasting uncertainty  
 \* compute R-squared of a linear model, both "by hand" and using R's
 `summary` function.
 
@@ -12,9 +11,13 @@ Data files:
 \* [creatinine.csv](creatinine.csv): data on age and kidney function for
 157 adult males from a single clinic.
 
-### Naive prediction intervals
+### Prediction intervals
 
-First read in the creatinine data set and get a summary of the
+First, load the mosaic library.
+
+    library(mosaic)
+
+Now let's read in the creatinine data set and get a summary of the
 variables.
 
     creatinine = read.csv('creatinine.csv', header=TRUE)
@@ -55,7 +58,7 @@ rate and age.
 
     abline(lm1)
 
-![](creatinine_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+![](creatinine_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
 Clearly a decline in kidney function is something we can all look
 forward to as we age.
@@ -97,8 +100,8 @@ rate.
 
     ## [1] 6.888353
 
-Let's use this information to construct a naive prediction interval for
-our hypothetical 50-year-old man. We center our interval at the model's
+Let's use this information to construct a prediction interval for our
+hypothetical 50-year-old man. We center our interval at the model's
 prediction and use some multiple (say, 2) of the residual standard
 deviation to determine the width of the interval.
 
@@ -133,7 +136,7 @@ intercepts will be shifted up and down accordingly.
     abline(betahat[1] + 2*sigma, betahat[2], col='red')
     abline(betahat[1] - 2*sigma, betahat[2], col='red')
 
-![](creatinine_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](creatinine_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
 What if we wanted to quantify the accuracy of our family of prediction
 intervals? Let's count the number of times our intervals missed (i.e.
@@ -144,22 +147,23 @@ prediction interval for everyone:
     yhat_all = fitted(lm1)
     lower_bound = yhat_all - 2*sigma
     upper_bound = yhat_all + 2*sigma
-    # Store the actual values along with the endpoints and centers of the intervals in a matrix
-    predinterval_all = cbind(creatinine$creatclear, lower_bound, yhat_all, upper_bound)
-    # Show the first 10 rows of this matrix
+
+    # Store the actual values along with the intervals in a data frame
+    predinterval_all = data.frame(creatinine, lower_bound, yhat_all, upper_bound)
+    # Show the first 10 rows of this data frame
     head(predinterval_all, n=10)
 
-    ##          lower_bound yhat_all upper_bound
-    ## 1  117.3   114.82192 128.5986    142.3753
-    ## 2  124.8   111.72284 125.4995    139.2763
-    ## 3  145.8   119.16063 132.9373    146.7140
-    ## 4  118.8   112.34265 126.1194    139.8961
-    ## 5  103.2   101.18597 114.9627    128.7394
-    ## 6  127.0   111.72284 125.4995    139.2763
-    ## 7  139.5   110.48321 124.2599    138.0366
-    ## 8  103.0    88.78965 102.5664    116.3431
-    ## 9  115.2   110.48321 124.2599    138.0366
-    ## 10 134.7   114.20210 127.9788    141.7555
+    ##    age creatclear lower_bound yhat_all upper_bound
+    ## 1   31      117.3   114.82192 128.5986    142.3753
+    ## 2   36      124.8   111.72284 125.4995    139.2763
+    ## 3   24      145.8   119.16063 132.9373    146.7140
+    ## 4   35      118.8   112.34265 126.1194    139.8961
+    ## 5   53      103.2   101.18597 114.9627    128.7394
+    ## 6   36      127.0   111.72284 125.4995    139.2763
+    ## 7   38      139.5   110.48321 124.2599    138.0366
+    ## 8   73      103.0    88.78965 102.5664    116.3431
+    ## 9   38      115.2   110.48321 124.2599    138.0366
+    ## 10  32      134.7   114.20210 127.9788    141.7555
 
 Now let's count how many times someone in our data set had an actual
 creatinine-clearance rate that fell outside our family of prediction
@@ -180,9 +184,95 @@ It looks like 8 data points, or about 5% of the total, fell outside our
 family of prediction intervals. Thus our intervals have an empirical
 coverage (or accuracy) rate of 95%.
 
+### Using the `predict` function as a shortcut
+
+Hopefully you now have some intuition about what a prediction interval
+is, and how its accuracy is measured. But admittedly, the commands we've
+learned can get a bit tedious. Luckily, there is a shortcut, using R's
+`predict` function.
+
+There are two commands in the following block of code. The first
+constructs a prediction interval for every case in the original data
+set, at the 95% coverage level. The second command shows the intervals
+for the first 6 cases.
+
+    pred_interval = predict(lm1, interval = 'prediction', level = 0.95)
+
+    ## Warning in predict.lm(lm1, interval = "prediction", level = 0.95): predictions on current data refer to _future_ responses
+
+    head(pred_interval)
+
+    ##        fit      lwr      upr
+    ## 1 128.5986 114.8992 142.2980
+    ## 2 125.4995 111.8051 139.1940
+    ## 3 132.9373 119.2165 146.6581
+    ## 4 126.1194 112.4246 139.8141
+    ## 5 114.9627 101.2209 128.7044
+    ## 6 125.4995 111.8051 139.1940
+
+We get three columns: `fit` gives the fitted values from the model,
+while `lwr` and `upr` show the lower and upper ranges of the prediction
+interval. As before, we can combine these with the original data set
+into a new data frame:
+
+    predinterval_all = data.frame(creatinine, pred_interval)
+    # Show the first 10 rows of this data frame
+    head(predinterval_all, n=10)
+
+    ##    age creatclear      fit       lwr      upr
+    ## 1   31      117.3 128.5986 114.89923 142.2980
+    ## 2   36      124.8 125.4995 111.80513 139.1940
+    ## 3   24      145.8 132.9373 119.21654 146.6581
+    ## 4   35      118.8 126.1194 112.42463 139.8141
+    ## 5   53      103.2 114.9627 101.22093 128.7044
+    ## 6   36      127.0 125.4995 111.80513 139.1940
+    ## 7   38      139.5 124.2599 110.56508 137.9547
+    ## 8   73      103.0 102.5664  88.64338 116.4893
+    ## 9   38      115.2 124.2599 110.56508 137.9547
+    ## 10  32      134.7 127.9788 114.28109 141.6765
+
+Note that these predictions on current data refer to *future* responses.
+That is, suppose we saw a new group of patients whose ages were the same
+as those in the original data set. These prediction intervals gives us a
+range of plausible values for those patients' creatinine clearance
+levels.
+
+You can change the coverage level as desired, by changing the
+`level = 0.95` flag to whatever you want.
+
+### Predictions on new data
+
+What if we wanted to form prediction intervals for a genuinely new group
+of patients? To be concrete, let's say we're interested in three
+patients whose ages are 40, 50, and 60.
+
+We can use the `predict` function for this case as well. There's a
+two-step process: first we create a new data frame, corresponding to our
+new group of patients. This data frame must have the same predictor
+variable as the original data frame (in this case, age). Second, we
+input this new data frame into the `predict` function, together with the
+model we fit to the original data set. It goes like this:
+
+    # 1) Create new data frame
+    new_patients = data.frame(age=c(40,50,60))
+    # 2) Input this data frame to the predict function
+    predinterval_new = predict(lm1, newdata=new_patients, interval = 'prediction', level = 0.95)
+
+    # Output the x values along with the endpoints and centers of the intervals in a data frame
+    data.frame(age = new_patients$age, predinterval_new)
+
+    ##   age      fit       lwr      upr
+    ## 1  40 123.0203 109.32365 136.7169
+    ## 2  50 116.8221 103.09593 130.5483
+    ## 3  60 110.6240  96.83406 124.4139
+
+The predictions are ordered in the same way as the `new_patients` data
+frame: that is, for the 40, 50, and 60 year old.
+
 ### The variance decomposition and R-squared
 
-Let's compare the following three quantities:  
+To introduce the idea of the variance decomposition and R^2, let's
+compare the following three quantities:  
 \* the standard deviation of the original response variable (creatinine
 clearance)  
 \* the standard deviation of the fitted values from our linear model  
@@ -219,7 +309,7 @@ fact about linear statistical models fit by ordinary least squares. In
 statistics, this fact is called the "decomposition of variance," but
 it's really the Pythagorean theorem in disguise.
 
-The decomposition of variance leads to R\^2 (sometimes called the
+The decomposition of variance leads to R^2 (sometimes called the
 "coefficient of determination"), which is a standard measure of the
 predictive ability of a linear statistical model. It is computed as the
 ratio of the variance of the fitted values to the variance of the
@@ -232,8 +322,15 @@ always between 0 and 1:
     ## [1] 0.6724361
 
 This number means that about 67% of the total variation in creatinine
-clearance rate is predictable using age. We can get the same number from
-R's `summary` function:
+clearance rate is predictable using age. Luckily there's a shortcut:
+using the `mosaic` library's `rsquared` function, we can extract this
+information directly from the fitted model object:
+
+    rsquared(lm1)
+
+    ## [1] 0.6724361
+
+We can also get the same number from R's `summary` function:
 
     summary(lm1)
 

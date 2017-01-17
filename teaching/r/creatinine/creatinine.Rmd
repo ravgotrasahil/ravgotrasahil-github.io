@@ -6,15 +6,20 @@ output:
 ---
   
 Learning goals:  
-* create a naive prediction interval to quantify forecasting uncertainty  
+* create a prediction interval to quantify forecasting uncertainty  
 * compute R-squared of a linear model, both "by hand" and using R's `summary` function.
 
 Data files:  
 * [creatinine.csv](creatinine.csv): data on age and kidney function for 157 adult males from a single clinic.
 
-### Naive prediction intervals
+### Prediction intervals
 
-First read in the creatinine data set and get a summary of the variables.
+First, load the mosaic library.
+```{r, message=FALSE}
+library(mosaic)
+```
+
+Now let's read in the creatinine data set and get a summary of the variables.
 ```{r}
 creatinine = read.csv('creatinine.csv', header=TRUE)
 summary(creatinine)
@@ -58,7 +63,7 @@ sigma = sd(resid(lm1))
 sigma
 ```
 
-Let's use this information to construct a naive prediction interval for our hypothetical 50-year-old man.  We center our interval at the model's prediction and use some multiple (say, 2) of the residual standard deviation to determine the width of the interval.
+Let's use this information to construct a prediction interval for our hypothetical 50-year-old man.  We center our interval at the model's prediction and use some multiple (say, 2) of the residual standard deviation to determine the width of the interval.
 ```{r}
 yhat - 2*sigma
 yhat + 2*sigma
@@ -84,9 +89,10 @@ What if we wanted to quantify the accuracy of our family of prediction intervals
 yhat_all = fitted(lm1)
 lower_bound = yhat_all - 2*sigma
 upper_bound = yhat_all + 2*sigma
-# Store the actual values along with the endpoints and centers of the intervals in a matrix
-predinterval_all = cbind(creatinine$creatclear, lower_bound, yhat_all, upper_bound)
-# Show the first 10 rows of this matrix
+
+# Store the actual values along with the intervals in a data frame
+predinterval_all = data.frame(creatinine, lower_bound, yhat_all, upper_bound)
+# Show the first 10 rows of this data frame
 head(predinterval_all, n=10)
 ```
 
@@ -99,10 +105,50 @@ misses_above + misses_below
 ```
 It looks like 8 data points, or about 5% of the total, fell outside our family of prediction intervals.  Thus our intervals have an empirical coverage (or accuracy) rate of 95%.
 
+### Using the `predict` function as a shortcut
+
+Hopefully you now have some intuition about what a prediction interval is, and how its accuracy is measured.  But admittedly, the commands we've learned can get a bit tedious.  Luckily, there is a shortcut, using R's `predict` function.
+
+There are two commands in the following block of code.  The first constructs a prediction interval for every case in the original data set, at the 95% coverage level.  The second command shows the intervals for the first 6 cases.
+```{r}
+pred_interval = predict(lm1, interval = 'prediction', level = 0.95)
+head(pred_interval)
+```
+
+We get three columns: `fit` gives the fitted values from the model, while `lwr` and `upr` show the lower and upper ranges of the prediction interval.  As before, we can combine these with the original data set into a new data frame:
+```{r}
+predinterval_all = data.frame(creatinine, pred_interval)
+# Show the first 10 rows of this data frame
+head(predinterval_all, n=10)
+```
+
+Note that these predictions on current data refer to _future_ responses.  That is, suppose we saw a new group of patients whose ages were the same as those in the original data set.  These prediction intervals gives us a range of plausible values for those patients' creatinine clearance levels.
+
+You can change the coverage level as desired, by changing the `level = 0.95` flag to whatever you want.
+
+
+### Predictions on new data
+
+What if we wanted to form prediction intervals for a genuinely new group of patients?  To be concrete, let's say we're interested in three patients whose ages are 40, 50, and 60.
+
+We can use the `predict` function for this case as well.  There's a two-step process: first we create a new data frame, corresponding to our new group of patients.  This data frame must have the same predictor variable as the original data frame (in this case, age).  Second, we input this new data frame into the `predict` function, together with the model we fit to the original data set.  It goes like this:
+
+```{r}
+# 1) Create new data frame
+new_patients = data.frame(age=c(40,50,60))
+# 2) Input this data frame to the predict function
+predinterval_new = predict(lm1, newdata=new_patients, interval = 'prediction', level = 0.95)
+
+# Output the x values along with the endpoints and centers of the intervals in a data frame
+data.frame(age = new_patients$age, predinterval_new)
+```
+
+The predictions are ordered in the same way as the `new_patients` data frame: that is, for the 40, 50, and 60 year old.
+
 
 ### The variance decomposition and R-squared
 
-Let's compare the following three quantities:  
+To introduce the idea of the variance decomposition and R^2, let's compare the following three quantities:  
 * the standard deviation of the original response variable (creatinine clearance)  
 * the standard deviation of the fitted values from our linear model  
 * the standard deviation of the residuals  
@@ -131,7 +177,14 @@ R2 = var(fitted(lm1)) / var(creatinine$creatclear)
 R2
 ```
 
-This number means that about 67% of the total variation in creatinine clearance rate is predictable using age.  We can get the same number from R's `summary` function:
+This number means that about 67% of the total variation in creatinine clearance rate is predictable using age.  Luckily there's a shortcut:
+using the `mosaic` library's `rsquared` function, we can extract this information directly from the fitted model object:
+
+```{r}
+rsquared(lm1)
+```
+
+We can also get the same number from R's `summary` function:
 ```{r}
 summary(lm1)
 ```

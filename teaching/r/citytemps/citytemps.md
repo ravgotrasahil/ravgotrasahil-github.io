@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 ---
 
 In this walk-through, you'll learn how to measure and visualize
@@ -69,14 +69,15 @@ most basic plots for a single quantitative variable:
 
     hist(citytemps$Temp.SanDiego)
 
-![](citytemps_files/figure-markdown_strict/unnamed-chunk-4-1.png)  
- If you want the histogram to have more bins, you can specify this via
+![](citytemps_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+
+If you want the histogram to have more bins, you can specify this via
 the `breaks` flag:
 
     hist(citytemps$Temp.SanDiego, breaks=30)
 
-![](citytemps_files/figure-markdown_strict/unnamed-chunk-5-1.png)  
-This is called "adding a flag", (in this case, `breaks=30`) to the basic
+![](citytemps_files/figure-markdown_strict/unnamed-chunk-5-1.png) This
+is called "adding a flag", (in this case, `breaks=30`) to the basic
 command. This is a very common paradigm in R: a command will have a
 default behavior which you can modify by providing a function with
 optional flags. In this case, we're asking R to provide a histogram with
@@ -90,8 +91,9 @@ line at the sample mean.
     hist(citytemps$Temp.SanDiego, breaks=30)
     abline(v=muSanDiego, col='red')
 
-![](citytemps_files/figure-markdown_strict/unnamed-chunk-6-1.png)  
- \#\#\# Measuring dispersion: standard deviation and quantiles
+![](citytemps_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+
+### Measuring dispersion: standard deviation and quantiles
 
 You already know one way of summarizing the dispersion of this
 distribution: the standard deviation.
@@ -149,16 +151,55 @@ the corresponding value at that quantile.
 - You give `pdata` a data set and a value, and it returns the
 corresponding quantile for that value.
 
+### Standardizing using z-scores
+
+Which temperature is more extreme: 50 degrees in San Diego, or 10
+degrees in Rapid City? In an absolute sense, of course 10 degrees is a
+more extreme temperature. But what about in a relative sense? In other
+words, is a 10-degree day more extreme *for Rapid City* than a 50-degree
+day is for San Diego?
+
+This question could certainly be answered using quantiles, which you've
+already learned how to handle. But let's discuss a second way: by
+calculating a z-score for each temperature.
+
+A z-score is the number of standard deviations by which some observation
+is above the mean. (So if a z-score is negative, then the corresponding
+observation is *below* the mean.) To calculate a z-score, we subtract
+the mean and divide by the standard deviation. For a 50-degree day in
+San Diego, this is:
+
+    (50 - mean(citytemps$Temp.SanDiego)) / sd(citytemps$Temp.SanDiego)
+
+    ## [1] -2.295631
+
+Or about 2.3 standard deviations *below* the mean.
+
+On the other hand, for a 10-degree day in Rapid City, this is
+
+    (10 - mean(citytemps$Temp.RapidCity)) / sd(citytemps$Temp.SanDiego)
+
+    ## [1] -6.542401
+
+Or about 1.9 standard deviations below the mean. Thus a 50-degree day in
+San Diego is actually more extreme than a 10-degree day in Rapid City!
+
+As this example suggests, z-scores are useful for comparing numbers that
+come from different distributions, with different statistical
+properties. It tells you how extreme a number is, relative to other
+numbers from that some distribution.
+
 ### Fancier histograms
 
-Next, we'll make a histogram for Rapid City, except we'll change the
+To close, we'll make a histogram for Rapid City, except we'll change the
 default title and x-axis label to something a bit more fit for human
 consumption.
 
     hist(citytemps$Temp.RapidCity, main="Average Daily Temperatures in Rapid City, 1995-2011", xlab='Temperature')
 
-![](citytemps_files/figure-markdown_strict/unnamed-chunk-11-1.png)  
- Notice again that we've used optional flags (main and xlab) to change
+![](citytemps_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+
+Notice again that we've used optional flags (main and xlab) to change
 the main title and x-axis label, respectively.
 
 Next, let's stack the two histograms on top of each other, to make a
@@ -171,12 +212,13 @@ frames.
     hist(citytemps$Temp.SanDiego)
     hist(citytemps$Temp.RapidCity)
 
-![](citytemps_files/figure-markdown_strict/unnamed-chunk-12-1.png)  
- This won't do: notice that the axes and bin sizes differ between the
-two plots. This makes it hard to compare the two distributions at a
-glance. We need to align these two plots to have the same axes and bins.
-Just as we did above, we'll do this by passing additional flags to the
-`hist` function.
+![](citytemps_files/figure-markdown_strict/unnamed-chunk-14-1.png)
+
+This won't do: notice that the axes and bin sizes differ between the two
+plots. This makes it hard to compare the two distributions at a glance.
+We need to align these two plots to have the same axes and bins. Just as
+we did above, we'll do this by passing additional flags to the `hist`
+function.
 
 First, we must define a set of breakpoints for the histogram grams.
 We'll do this with the `seq` (which stands for sequence) command:
@@ -201,9 +243,9 @@ change the x and y axes using the xlim and ylim arguments:
     hist(citytemps$Temp.SanDiego, breaks=mybreaks, xlim=c(-20,100), ylim=c(0, 760))
     hist(citytemps$Temp.RapidCity, breaks=mybreaks, xlim=c(-20,100), ylim=c(0, 760))
 
-![](citytemps_files/figure-markdown_strict/unnamed-chunk-15-1.png)  
-Now the bins and axes are comparable, making the distributions
-themselves much easier to compare.
+![](citytemps_files/figure-markdown_strict/unnamed-chunk-17-1.png) Now
+the bins and axes are comparable, making the distributions themselves
+much easier to compare.
 
 In the expression above, you'll notice that we used the same `breaks`
 flag as before, except this time we passed in a full set of breaks
@@ -224,8 +266,9 @@ behavior they produce. You can learn a lot about R this way.
     text(55, 770, "San Diego, CA", pos=4, font=2)
     text(30, 260, "Rapid City, SD", pos=4, font=2)
 
-![](citytemps_files/figure-markdown_strict/unnamed-chunk-16-1.png)  
- Remember you that can always use the question mark, e.g.
+![](citytemps_files/figure-markdown_strict/unnamed-chunk-18-1.png)
+
+Remember you that can always use the question mark, e.g.
 
     ?text
 
