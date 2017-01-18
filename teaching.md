@@ -24,11 +24,11 @@ Last year's sites:
 
 ## R Walk-throughs
 
-I use R in all my courses, and over the years I've built up a library of teaching scripts.  Since 2015 I've been converting these to R Markdown as each one comes up in class.  [Here are the ones I've gotten to so far.](r/Rwalkthroughs.html)  You can find the raw R markdown files through my [GitHub page.](http://www.github.com/jgscott/)
+I use R in all my courses, and over the years I've built up a library of teaching scripts.  Since 2015 I've been converting these to R Markdown as each one comes up in class.  [Here are the ones I've gotten to so far.](r/Rwalkthroughs)  You can find the raw R markdown files through my [GitHub page.](http://www.github.com/jgscott/)
 
 ## Case studies
 
-I have built up a library of data-analysis case studies, which I am slowly migrating to this website.  [You can find them here.](cases/cases.html)
+I have built up a library of data-analysis case studies, which I am slowly migrating to this website.  [You can find them here.](cases/)
 
 
 ## What should a write-up look like?
