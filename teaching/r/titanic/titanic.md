@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 ---
 
 Contingency tables
