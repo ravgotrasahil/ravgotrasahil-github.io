@@ -8,30 +8,33 @@ title: Papers
 
 ### Preprints
 
+(2016) [Sequential nonparametric tests for a change in distribution: an application to detecting radiological anomalies.](https://arxiv.org/abs/1612.07867)  OHM Padilla, A Athey, A Reinhart, JG Scott.  arXiv:1612.07867
+
+(2016) [The DFS Fused Lasso: Linear-Time Denoising over General Graphs.](https://arxiv.org/abs/1608.03384)  OHM Padilla, JG Scott, J Sharpnack, RJ Tibshirani.  arXiv:1608.03384]
+
+(2016) [False discovery rate smoothing](http://arxiv.org/abs/1411.6144) (with W. Tansey, O. Koyejo, and R. Poldrack).   
+
 (2016) [Better conditional density estimation for neural networks.](http://arxiv.org/abs/1606.02321)  W. Tansey, K Pichotta, and JG Scott.  arXiv:1606.02321.
 
 (2015) [A deconvolution path for mixtures](http://arxiv.org/abs/1511.06750) O.M. Padilla, N.G. Polson and J.G. Scott.  arXiv:1511.06750.
 
 (2015) [Nonparametric density estimation by histogram trend filtering](http://arxiv.org/abs/1509.04348). O.M. Padilla and J.G. Scott.  arXiv:1509.04348.
 
-(2015) [Multiscale spatial density smoothing: an application to large-scale radiological survey and anomaly detection](http://arxiv.org/abs/1507.07271) (with W. Tansey, A. Athey, and A. Reinhart).   
-
-(2015) [A fast and flexible algorithm for the graph-fused lasso](http://arxiv.org/abs/1505.06475) (with W. Tansey).   
-
-(2015) [Tensor decomposition with generalized lasso penalties](http://arxiv.org/abs/1502.06930) (with O. Padilla).  
-
 (2015) [Vertical-likelihood Monte Carlo](http://arxiv.org/abs/1409.3601) (with N. Polson).  
-
-(2014) [False discovery rate smoothing](http://arxiv.org/abs/1411.6144) (with W. Tansey, O. Koyejo, and R. Poldrack).   
 
  
 ### Peer-reviewed articles
 
+(2016) [Multiscale spatial density smoothing: an application to large-scale radiological survey and anomaly detection](http://arxiv.org/abs/1507.07271). W. Tansey, A. Athey, A. Reinhart, and J.G. Scott.  Accepted in _Journal of the American Statistical Association_.   
+(2016) [Tensor decomposition with generalized lasso penalties](http://arxiv.org/abs/1502.06930).  Oscar Padilla and J.G. Scott.  _Journal of Computational and Graphical Statistics_ (in press).
+
+(2016) [Diet2Vec: Multi-scale analysis of massive dietary data.](https://arxiv.org/abs/1612.00388). W Tansey, EW Lowe Jr, JG Scott.  _Neural Information Processing Systems_ (NIPS) 2016, Workshop on Machine Learning for Health.
+
 (2016) [Requests for Abortion in Latin America Related to Concern about Zika Virus Exposure.](http://www.nejm.org/doi/full/10.1056/NEJMc1605389#t=article) ARA Aiken, JG Scott, R Gomperts, J Trussell, and C Aiken. Requests for abortion in Latin America related to concern about Zika virus exposure. _New England Journal of Medicine_ DOI: 10.1056/NEJMc1605389.  (in press).
 
-(2016) The influence of hours worked prior to delivery on maternal and neonatal outcomes: a retrospective cohort study.  C Aiken, AR Aiken, JG Scott, JC Brockelsby. _American Journal of Obstetrics & Gynecology_ (in press).
+(2016) The influence of hours worked prior to delivery on maternal and neonatal outcomes: a retrospective cohort study.  C Aiken, AR Aiken, JG Scott, JC Brockelsby. _American Journal of Obstetrics & Gynecology_ 215(5), p634.
 
-(2016) [Priors for Random Count Matrices Derived from a Family of Negative Binomial Processes](http://arxiv.org/abs/1404.3331) (with M. Zhou).  _Journal of the American Statistical Association (Theory and Methods)_ (in press).
+(2016) [Priors for Random Count Matrices Derived from a Family of Negative Binomial Processes](http://arxiv.org/abs/1404.3331) (with M. Zhou).  _Journal of the American Statistical Association (Theory and Methods)_ 111(515), pp. 1144-56.
 
 (2016) Respiratory virus transmission dynamics determines timing of asthma exacerbation peaks: evidence from a population-level model.  Rosalind M Eggo, James G Scott, Alison P Galvani, and Lauren Ancel Meyers. _Proceedings of the National Academy of Sciences_ 113(8): 2194-9.
 
