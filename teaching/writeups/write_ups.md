@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Data analysis write-ups
 ---
 
 ## What should a data-analysis write-up look like?
@@ -41,5 +42,5 @@ What did you learn from the analysis?  What is the answer, if any, to the questi
 
 ### Examples  
 
-[Here's a good example of a write-up](files/example_writeup1.pdf) for an analysis of a few relatively simple problems.  Because the problems are so straightforward, there's not much of a need for an outline of the kind described above.  Nonetheless, the spirit of these guidelines is clearly in evidence.   Notice the clear exposition, the labeled figures and tables that are referred to in the text, and the careful integration of visual and numerical evidence into the overall argument.  This is one worth emulating.    
+[Here's a good example of a write-up](http://jgscott.github.io/teaching/writeups/files/example_writeup1.pdf) for an analysis of a few relatively simple problems.  Because the problems are so straightforward, there's not much of a need for an outline of the kind described above.  Nonetheless, the spirit of these guidelines is clearly in evidence.   Notice the clear exposition, the labeled figures and tables that are referred to in the text, and the careful integration of visual and numerical evidence into the overall argument.  This is one worth emulating.    
 
