@@ -5,7 +5,7 @@ title: Teaching
 
 ## Current Courses (Spring 2017)  
 * [STA 371H: Statistics and Modeling Honors](/STA371H_Spring2017/)  
-* [SDS 383D: Modeling II](https://github.com/jgscott/SDS383D_Spring2017) (Ph.D sequence in statistics)   
+* [SDS 383D: Modeling II](https://github.com/jgscott/SDS383D) (Ph.D sequence in statistics)   
 
 ## R Walk-throughs
 
