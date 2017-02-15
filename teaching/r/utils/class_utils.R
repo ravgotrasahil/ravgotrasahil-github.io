@@ -37,3 +37,9 @@ coef_table = function(lm0, level = 0.95) {
 	out2 = cbind(s0$coefficients[,1:2], confint(lm0, level=level))
 	out2
 }
+
+# calculate sd of each col
+sd_cols = function(D) {
+	apply(D, 2, sd)
+}
+
