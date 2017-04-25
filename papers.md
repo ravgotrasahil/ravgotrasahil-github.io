@@ -23,9 +23,11 @@ title: Papers
 (2015) [Vertical-likelihood Monte Carlo](http://arxiv.org/abs/1409.3601) (with N. Polson).  
 
  
-### Peer-reviewed articles
+### Published articles and conference proceedings
 
-(2016) [Multiscale spatial density smoothing: an application to large-scale radiological survey and anomaly detection](http://arxiv.org/abs/1507.07271). W. Tansey, A. Athey, A. Reinhart, and J.G. Scott.  Accepted in _Journal of the American Statistical Association_.   
+(2016) [Multiscale spatial density smoothing: an application to large-scale radiological survey and anomaly detection](http://arxiv.org/abs/1507.07271). W. Tansey, A. Athey, A. Reinhart, and J.G. Scott.  Accepted in _Journal of the American Statistical Association_.     
+(2016) [Diet2Vec: Multi-scale analysis of massive dietary data](https://arxiv.org/abs/1612.00388).  Wesley Tansey, Edward W. Lowe Jr., J.G. Scott.  arXiv:1612.00388 [stat.ML].  
+
 (2016) [Tensor decomposition with generalized lasso penalties](http://arxiv.org/abs/1502.06930).  Oscar Padilla and J.G. Scott.  _Journal of Computational and Graphical Statistics_ (in press).
 
 (2016) [Diet2Vec: Multi-scale analysis of massive dietary data.](https://arxiv.org/abs/1612.00388). W Tansey, EW Lowe Jr, JG Scott.  _Neural Information Processing Systems_ (NIPS) 2016, Workshop on Machine Learning for Health.
