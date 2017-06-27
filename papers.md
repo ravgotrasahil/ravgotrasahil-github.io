@@ -8,13 +8,14 @@ title: Papers
 
 ### Preprints
 
+(2017) [Interpretable Low-Dimensional Regression via Data-Adaptive Smoothing](https://openreview.net/forum?id=SkxH09bmW&noteId=SkxH09bmW). W Tansey, J Thomason, JG Scott.
+
+(2017) [Deep Nonparametric Estimation of Discrete Conditional Distributions via Smoothed Dyadic Partitioning](https://arxiv.org/abs/1702.07398).  W Tansey, K Pichotta, JG Scott. arXiv preprint arXiv:1702.07398
+
 (2016) [Sequential nonparametric tests for a change in distribution: an application to detecting radiological anomalies.](https://arxiv.org/abs/1612.07867)  OHM Padilla, A Athey, A Reinhart, JG Scott.  arXiv:1612.07867
 
-(2016) [The DFS Fused Lasso: Linear-Time Denoising over General Graphs.](https://arxiv.org/abs/1608.03384)  OHM Padilla, JG Scott, J Sharpnack, RJ Tibshirani.  arXiv:1608.03384]
+(2016) [The DFS Fused Lasso: Linear-Time Denoising over General Graphs.](https://arxiv.org/abs/1608.03384)  OHM Padilla, JG Scott, J Sharpnack, RJ Tibshirani.  arXiv:1608.03384] 
 
-(2016) [False discovery rate smoothing](http://arxiv.org/abs/1411.6144) (with W. Tansey, O. Koyejo, and R. Poldrack).   
-
-(2016) [Better conditional density estimation for neural networks.](http://arxiv.org/abs/1606.02321)  W. Tansey, K Pichotta, and JG Scott.  arXiv:1606.02321.
 
 (2015) [A deconvolution path for mixtures](http://arxiv.org/abs/1511.06750) O.M. Padilla, N.G. Polson and J.G. Scott.  arXiv:1511.06750.
 
@@ -25,12 +26,13 @@ title: Papers
  
 ### Published articles and conference proceedings
 
-(2016) [Multiscale spatial density smoothing: an application to large-scale radiological survey and anomaly detection](http://arxiv.org/abs/1507.07271). W. Tansey, A. Athey, A. Reinhart, and J.G. Scott.  Accepted in _Journal of the American Statistical Association_.     
-(2016) [Diet2Vec: Multi-scale analysis of massive dietary data](https://arxiv.org/abs/1612.00388).  Wesley Tansey, Edward W. Lowe Jr., J.G. Scott.  arXiv:1612.00388 [stat.ML].  
+(2017) [False discovery rate smoothing](http://arxiv.org/abs/1411.6144) (with W. Tansey, O. Koyejo, and R. Poldrack).  Accepted in _Journal of the American Statistical Association_.     
 
-(2016) [Tensor decomposition with generalized lasso penalties](http://arxiv.org/abs/1502.06930).  Oscar Padilla and J.G. Scott.  _Journal of Computational and Graphical Statistics_ (in press).
+(2017) [Multiscale spatial density smoothing: an application to large-scale radiological survey and anomaly detection](http://arxiv.org/abs/1507.07271). W. Tansey, A. Athey, A. Reinhart, and J.G. Scott.  Accepted in _Journal of the American Statistical Association_.
 
-(2016) [Diet2Vec: Multi-scale analysis of massive dietary data.](https://arxiv.org/abs/1612.00388). W Tansey, EW Lowe Jr, JG Scott.  _Neural Information Processing Systems_ (NIPS) 2016, Workshop on Machine Learning for Health.
+(2017) [Tensor decomposition with generalized lasso penalties](http://arxiv.org/abs/1502.06930).  Oscar Padilla and J.G. Scott.  _Journal of Computational and Graphical Statistics_ (in press).  
+
+(2016) [Diet2Vec: Multi-scale analysis of massive dietary data.](https://arxiv.org/abs/1612.00388). W Tansey, EW Lowe Jr, JG Scott.  _Neural Information Processing Systems_ (NIPS) 2016, Workshop on Machine Learning for Health.  
 
 (2016) [Requests for Abortion in Latin America Related to Concern about Zika Virus Exposure.](http://www.nejm.org/doi/full/10.1056/NEJMc1605389#t=article) ARA Aiken, JG Scott, R Gomperts, J Trussell, and C Aiken. Requests for abortion in Latin America related to concern about Zika virus exposure. _New England Journal of Medicine_ DOI: 10.1056/NEJMc1605389.  (in press).
 
