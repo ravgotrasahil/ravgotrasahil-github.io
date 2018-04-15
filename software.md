@@ -1,7 +1,10 @@
 ---
 layout: page
 title: Software
+permalink: /software/
 ---
+
+[My GitHub page](https://github.com/jgscott) has the most up-to-date repository of software projects.  
 
 Below you'll find details on software packages that my students and I have built.
 
