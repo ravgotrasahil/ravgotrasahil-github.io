@@ -18,7 +18,7 @@ I also [teach classes]({{ site.baseurl }}/teaching/) in statistical modeling, bi
 
 ### Recent work
 
-I've recently finished writing a book, [_AIQ: How People and Machines are Smarter Together_](https://www.amazon.com/dp/1250182158?tag=macmillan-20) (jointly with my colleague Nick Polson).  _AIQ_ will be published by [St. Martin's Press](https://us.macmillan.com/smp/) in May 2018, and it answers lots of question people tend to have about artificial intelligence.  What is AI?  How does it work?  Where did it come from, and how is it changing the world?  For more information, see my [Books and Articles]({{ site.baseurl }}/books/) page.  
+In 2018, my colleague Nick Polson and I published [_AIQ: How People and Machines are Smarter Together_](https://www.amazon.com/dp/1250182158?tag=macmillan-20), with [St. Martin's Press](https://us.macmillan.com/smp/).  AIQ answers lots of question people tend to have about artificial intelligence.  What is AI?  How does it work?  Where did it come from, and how is it changing the world?  For more information, see my [Books and Articles]({{ site.baseurl }}/books/) page.  
 
 Much of my recent research has been in maternal and child health.  My collaborators and I have studied the [impact of Zika virus](http://www.nejm.org/doi/full/10.1056/NEJMc1605389) on pregnant women in Latin America, the [burden of asthma](http://www.pnas.org/content/113/8/2194.short) in Texas school children, and why you shouldn't have your baby in the [9th hour of your doctor's 12-hour shift.](https://www.ncbi.nlm.nih.gov/pubmed/27343567)  See my [research page]({{ site.baseurl }}/research/), [my CV]({{ site.baseurl }}/share/jamesscott-CV.pdf), or my [software page]({{ site.baseurl }}/software/) for details.  
 
