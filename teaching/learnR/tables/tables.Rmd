@@ -1,9 +1,7 @@
 ---
 title: "Tables in R"
 output:
-  github_document:
-    includes:
-      in_header: header.md
+  github_document
 ---
 
 

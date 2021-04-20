@@ -1,11 +1,6 @@
 Tables in R
 ================
 
----
-layout: page
-title: "Tables in R"
----
-
 ## Learning goals
 
 Key R functions and concepts:
