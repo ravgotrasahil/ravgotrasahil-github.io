@@ -308,10 +308,11 @@ xtabs(~acl + lollapalooza, data=aclfest)
     ##   1  81  77
 
 From this table of counts, it’s fairly straightforward to reason as
-follows:  
-\- There were 361 + 77 = 438 bands that played at Lollapalooza.  
-\- Of those 438 bands, 77 played at ACL.  
-\- Therefore, P(played ACL | played Lollapalooza) = 77/438.
+follows:
+
+  - There were 361 + 77 = 438 bands that played at Lollapalooza.  
+  - Of those 438 bands, 77 played at ACL.  
+  - Therefore, P(played ACL | played Lollapalooza) = 77/438.
 
 Let’s use R as a calculator to express this as a decimal number:
 
