@@ -1,0 +1,29 @@
+---
+  title: "Tables in R, Part 2"
+output:
+  github_document
+---
+
+
+### Adding margins
+
+We are almost there!  The last step is to add one more link in our chain of computations: `addmargins`.  It's easiest to understand what `addmargins` does when you see the result:
+  
+  ```{r}
+xtabs(~acl + lollapalooza, data=aclfest) %>%
+  prop.table %>%
+  addmargins %>%
+  round(3)
+```
+
+(Notice how we added the `addmargins` step in the _middle_ of the chain, before we piped into `round(3)`.  The ability to do this is nice feature of writing code using pipes: it's simple to insert a new step into the middle of chain of computations, not just at the beginning or end.)  
+
+So what `addmargins` does here is to __sum__ each row and column for you and to prints those sums in the margins of the table.  So, for example, let's focus on the `Sum` column.  These numbers tell us that:
+   - the overall probability that a band did not play ACL Fest was 0.581 + 0.292 = 0.872
+ - the overall probability that a band did play ACL Fest was 0.065 + 0.062 = 0.128.
+ 
+ probability is calculated as the sum of the two terms in the corresponding row:  
+   - P(played ACL, did not play Lollapalooza) = 0.065
+ - P(played ACL, played Lollapalooza) = 0.062    
+ 
+ Or 
