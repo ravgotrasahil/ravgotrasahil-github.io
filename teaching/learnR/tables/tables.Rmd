@@ -1,7 +1,4 @@
 ---
-title: "Tables in R"
-author: "James Scott"
-date: "4/20/2021"
 output:
   github_document:
     includes:

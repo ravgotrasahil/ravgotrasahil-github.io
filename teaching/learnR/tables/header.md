@@ -1,4 +1,4 @@
 ---
 layout: page
-title: Tables in R
+title: "Tables in R"
 ---

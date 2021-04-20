@@ -1,11 +1,7 @@
-Tables in R
-================
-James Scott
-4/20/2021
 
 ---
 layout: page
-title: Tables in R
+title: "Tables in R"
 ---
 
 ## Learning goals
