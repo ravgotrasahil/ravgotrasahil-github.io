@@ -1,20 +1,20 @@
 Tables in R
 ================
 
-## Learning goals
+In this walkthrough, we’ll learn the following key concepts and R
+functions:
 
-Key R functions and concepts:
-
-  - `xtabs`
-  - `prop.table`
-  - `addmargins`
-  - piping (`%>%`)
+  - Using tables to estimate relatively simple probabilities (including
+    conditional and joint probabilities)  
+  - Making tables with `xtabs`  
+  - Modifying tables with `prop.table` and `addmargins`  
+  - piping (`%>%`) as a way of chaining together computations
 
 ## The data
 
 Before you get started, download
 [aclfest.csv](http://jgscott.github.io/teaching/data/aclfest.csv), which
-contains data on the bands that played at several major U.S. music
+contains data on some bands that played at several major U.S. music
 festivals (including our our ACL Festival here in Austin).
 
 ## Getting started
@@ -36,18 +36,53 @@ library(tidyverse)
     ## x dplyr::filter() masks stats::filter()
     ## x dplyr::lag()    masks stats::lag()
 
-If you haven’t installed the tidyverse library, this will give you an
-error. To avoid the error, you’ll need to install `tidyverse` using the
-`Install` button under the Packages tab, which is typically located in
-the bottom-right panel of RStudio’s four-panel layout.
+If you see a similar set of messages to what’s shown above, you’re good
+to go\!
 
-Then use the `Import Dataset` button, which you can find under the
-`Environment` tab in the top-right panel. Follow the prompts to import
-aclfest.csv.
+But if you haven’t installed the `tidyverse` library, executing this
+command will give you an error. To avoid the error, you’ll first need to
+install `tidyverse` using the `Install` button under the Packages tab,
+which is typically located in the bottom-right panel of RStudio’s
+four-panel layout. Remember, an R library is like an app on your phone:
+you only have to install it once, but you have to load it each time you
+want to use it. On a phone, you load an app by clicking on its icon; in
+R, you load a library using the `library` command.
 
-For a reminder on how to accomplish these key steps of loading a library
-and importing a data set, see the previous walkthrough on [Getting
+Then use the `Import Dataset` button to read in the data you downloaded,
+which you can find under the `Environment` tab in the top-right panel.
+Follow the prompts to import `aclfest.csv`.
+
+For a reminder on how to accomplish these two key steps (loading a
+library, importing a data set), see the previous walkthrough on [Getting
 Started in R]().
+
+If you’re imported the data correctly, you can run the `head` function
+to get the first six lines of the file. You should see the following
+result:
+
+``` r
+head(aclfest)
+```
+
+    ##                          band acl bonnaroo coachella lollapalooza outsidelands
+    ## 1                         ALO   0        0         0            0            1
+    ## 2                     Battles   0        1         1            1            0
+    ## 3                    Bon Iver   0        0         0            0            1
+    ## 4              Flogging Molly   0        0         1            1            0
+    ## 5 Ivan Neville's Dumpstaphunk   0        0         0            0            1
+    ## 6                   Radiohead   0        0         0            1            1
+    ##   year
+    ## 1 2008
+    ## 2 2008
+    ## 3 2008
+    ## 4 2008
+    ## 5 2008
+    ## 6 2008
+
+Each entry is either a 1 or a 0, meaning “yes” and “no”, respectively.
+So, for example, on the 6th line we see an entry of 1 for Radiohead
+under the `lollapalooza` column, which means that Radiohead played at
+Lollapalooza that year.
 
 ## Simple probabilities from tables
 
@@ -60,10 +95,9 @@ estimate probabilities like:
 3.  How like is a band to play either ACL *or* Lollapalooza?
 
 Let’s address question 1: what is P(played Lollapalooza) for a randomly
-selected band in this sample?
-
-To answer this, we’ll use R’s `xtabs` function to tabulate the data
-according to whether a band played Lollapalooza (1) or not (0).
+selected band in this sample? To answer this, we’ll use R’s `xtabs`
+function to tabulate the data according to whether a band played
+Lollapalooza (1) or not (0).
 
 ``` r
 xtabs(~lollapalooza, data=aclfest)
@@ -73,9 +107,14 @@ xtabs(~lollapalooza, data=aclfest)
     ##   0   1 
     ## 800 438
 
-Remember, 1 means yes. So of the 1238 bands (800 + 438) in this sample,
-438 of them played Lollapalooza. We can now just use R as a calculator
-to get this proportion:
+(You might be curious about the little tilde (`~`) symbol in front of
+`lollapalooza`. Roughly speaking, `~` means “by”—as in, “cross-tabulate
+BY the `lollapalooza` variable.”)
+
+OK, back to the table. Remember that 1 means yes and 0 means no. So of
+the 1238 bands (800 + 438) in this sample, 438 of them played
+Lollapalooza. We can now just use R as a calculator to get this
+proportion:
 
 ``` r
 438/(800 + 438)
@@ -93,12 +132,25 @@ although you could call it something more imaginative if you wanted to.
 t1 = xtabs(~lollapalooza, data=aclfest)
 ```
 
-Remember one of the core ideas in programming: chaining computations
-together. That’s exactly what we’re doing here: we’ll take this `t1`
-object we’ve created (the first link our chain) and pass it into the
-`prop.table` function (the second link in our chain). This function
-turns a table of counts (like `t1`) into a table of proportions, like
-this:
+Notice that nothing gets printed to the screen when you execute this
+command. But if you ask R what `t1` is, it will show you the same table
+as before:
+
+``` r
+t1
+```
+
+    ## lollapalooza
+    ##   0   1 
+    ## 800 438
+
+OK, so why did we bother to store this table in something called `t1`?
+Well, remember one of the core ideas in programming: chaining
+computations together. That’s exactly what we’re doing here: we’ll take
+this `t1` object we’ve created (the first link our chain) and pass it
+into the `prop.table` function (the second link in our chain). This
+function turns a table of counts (like `t1`) into a table of
+proportions, like this:
 
 ``` r
 prop.table(t1)
@@ -108,7 +160,14 @@ prop.table(t1)
     ##         0         1 
     ## 0.6462036 0.3537964
 
-Here’s a nicer way to do this, using a “pipe” (`%>%`):
+### Using pipes
+
+The above way of doing things—using `xtabs` creating an “intermediate”
+object called `t1` and then passing `t1` into the `prop.table`
+function—works just fine. Lots of people write R code this way.
+
+But it turns out there’s a nicer way to accomplish the same task, using
+a “pipe” (`%>%`). Here’s how it works:
 
 ``` r
 xtabs(~lollapalooza, data=aclfest) %>%
@@ -120,12 +179,18 @@ xtabs(~lollapalooza, data=aclfest) %>%
     ## 0.6462036 0.3537964
 
 This code block says: “make a table of counts of the `lollapalooza`
-variable in the `aclfest` data set, and pipe the resulting table into
-`prop.table` to turn the table of counts into a table of proportions.”
+variable in the `aclfest` data set, and pipe (`%>%`) the resulting table
+into `prop.table` to turn the table of counts into a table of
+proportions.”
 
-The result is exactly the same as before, when we first created an
-“intermediate” table called t1, but there are some good reasons to use
-the “piped” version.
+The result is exactly the same as before. But using pipes tends to make
+your code easier to easier to write, easier to read, and easier to
+modify. For a simple calculation like this involving only two steps, the
+difference is minimal. But for the more complex kinds of calculations
+we’ll see later in the course, the difference can be substantial. I
+strongly recommend learning to write R code using pipes.
+
+## Joint and conditional probabilities from tables
 
 <!-- # Q2: what is P(played ACL | played Lollapalooza)? -->
 
