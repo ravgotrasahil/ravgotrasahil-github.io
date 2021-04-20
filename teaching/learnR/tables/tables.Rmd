@@ -2,8 +2,10 @@
 title: "Tables in R"
 author: "James Scott"
 date: "4/20/2021"
-output: md_document
+output: html_document
 ---
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
