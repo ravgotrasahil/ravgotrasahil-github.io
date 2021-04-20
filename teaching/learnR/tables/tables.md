@@ -1,27 +1,36 @@
-Learning goals
---------------
+Tables in R
+================
+James Scott
+4/20/2021
+
+---
+layout: page
+title: Tables in R
+---
+
+## Learning goals
 
 Key R functions and concepts:
 
--   `xtabs`
--   `prop.table`
--   `addmargins`
--   piping (`%>%`)
+  - `xtabs`
+  - `prop.table`
+  - `addmargins`
+  - piping (`%>%`)
 
-The data
---------
+## The data
 
 Before you get started, download
 [aclfest.csv](http://jgscott.github.io/teaching/data/aclfest.csv), which
 contains data on the bands that played at several major U.S. music
 festivals (including our our ACL Festival here in Austin).
 
-Getting started
----------------
+## Getting started
 
 We’ll first load the [tidyverse library](https://www.tidyverse.org/).
 
-    library(tidyverse)
+``` r
+library(tidyverse)
+```
 
     ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
 
@@ -47,8 +56,7 @@ For a reminder on how to accomplish these key steps of loading a library
 and importing a data set, see the previous walkthrough on [Getting
 Started in R]().
 
-Simple probabilities from tables
---------------------------------
+## Simple probabilities from tables
 
 Let’s make a few simple tables with this data. This will allow us to
 estimate probabilities like:
@@ -64,7 +72,9 @@ selected band in this sample?
 To answer this, we’ll use R’s `xtabs` function to tabulate the data
 according to whether a band played Lollapalooza (1) or not (0).
 
-    xtabs(~lollapalooza, data=aclfest)
+``` r
+xtabs(~lollapalooza, data=aclfest)
+```
 
     ## lollapalooza
     ##   0   1 
@@ -74,7 +84,9 @@ Remember, 1 means yes. So of the 1238 bands (800 + 438) in this sample,
 438 of them played Lollapalooza. We can now just use R as a calculator
 to get this proportion:
 
-    438/(800 + 438)
+``` r
+438/(800 + 438)
+```
 
     ## [1] 0.3537964
 
@@ -84,7 +96,9 @@ we’ll make the same table as before, except now we’ll save the result in
 an “object” whose name we get to choose. We’ll just call it `t1` here,
 although you could call it something more imaginative if you wanted to.
 
-    t1 = xtabs(~lollapalooza, data=aclfest)
+``` r
+t1 = xtabs(~lollapalooza, data=aclfest)
+```
 
 Remember one of the core ideas in programming: chaining computations
 together. That’s exactly what we’re doing here: we’ll take this `t1`
@@ -93,7 +107,9 @@ object we’ve created (the first link our chain) and pass it into the
 turns a table of counts (like `t1`) into a table of proportions, like
 this:
 
-    prop.table(t1)
+``` r
+prop.table(t1)
+```
 
     ## lollapalooza
     ##         0         1 
@@ -101,8 +117,10 @@ this:
 
 Here’s a nicer way to do this, using a “pipe” (`%>%`):
 
-    xtabs(~lollapalooza, data=aclfest) %>%
-      prop.table
+``` r
+xtabs(~lollapalooza, data=aclfest) %>%
+  prop.table
+```
 
     ## lollapalooza
     ##         0         1 
@@ -117,38 +135,73 @@ The result is exactly the same as before, when we first created an
 the “piped” version.
 
 <!-- # Q2: what is P(played ACL | played Lollapalooza)? -->
+
 <!-- # A: cross tabulate the data by both festivals -->
+
 <!-- xtabs(~acl + lollapalooza, data=aclfest) -->
+
 <!-- # As before, we can treat R just like a calculator... -->
+
 <!-- # how many bands played lollapalooza? -->
+
 <!-- # (we actually knew this from the previosu calculuation, -->
+
 <!-- # but pretend we didn't.) -->
+
 <!-- 77+361 -->
+
 <!-- # of those 438 bands, how many also played ACL? -->
+
 <!-- 77/438 -->
+
 <!-- # save the table in an "object" whose name we get to choose. -->
+
 <!-- t2 = xtabs(~acl + lollapalooza, data=aclfest) -->
+
 <!-- my_table -->
+
 <!-- # Turn counts into proportions. -->
+
 <!-- # This makes the whole table sum to 1. -->
+
 <!-- prop.table(my_table) -->
+
 <!-- # It's often easier to organize your steps using "pipes". -->
+
 <!-- # Here we "pipe" the table of counts into the "prop.table" function -->
+
 <!-- xtabs(~acl + lollapalooza, data=aclfest) %>% -->
+
 <!--   prop.table -->
+
 <!-- # You can add further steps in the pipeline. -->
+
 <!-- # For example, "addmargins" adds the sum of each row and column. -->
+
 <!-- xtabs(~acl + lollapalooza, data=aclfest) %>% -->
+
 <!--   prop.table %>% -->
+
 <!--   addmargins -->
+
 <!-- # We can add an optional "flag" to prop.table to get conditional probabilities. -->
+
 <!-- # Here we condition on the second variable (margin=2), which is lollapalooza. -->
+
 <!-- # This makes the columns sum to 1. -->
+
 <!-- xtabs(~acl + lollapalooza, data=aclfest) %>% -->
+
 <!--   prop.table(margin=2) -->
+
 <!-- # Concusion: P(ACL = 1 | Loll = 1) = 0.176 -->
+
 <!-- # This is exactly what we calculated "by hand." -->
+
 <!-- # Add a step in the pipeline to round to three decimal places. -->
+
 <!-- xtabs(~acl + lollapalooza, data=aclfest) %>% -->
+
 <!--   prop.table(margin=2) %>% -->
+
 <!--   round(3) -->

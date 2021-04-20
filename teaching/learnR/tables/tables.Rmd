@@ -2,7 +2,10 @@
 title: "Tables in R"
 author: "James Scott"
 date: "4/20/2021"
-output: html_document
+output:
+  github_document:
+    includes:
+      in_header: header.md
 ---
 
 
