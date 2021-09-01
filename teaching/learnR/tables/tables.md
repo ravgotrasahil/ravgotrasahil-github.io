@@ -1,13 +1,14 @@
 Tables in R
 ================
 
-In this walk-through, we’ll learn the following key concepts and R
+In this walk-through, you’ll learn the following key concepts and R
 functions:
 
   - Using tables to estimate relatively simple probabilities (including
     conditional and joint probabilities)  
   - Making tables with `xtabs`  
-  - Modifying tables with `prop.table` and `addmargins`  
+  - Using `prop.table` to turn tables of counts into tables of
+    proportions  
   - piping (`%>%`) as a way of chaining together computations
 
 ## The data
@@ -61,7 +62,7 @@ For a reminder on how to accomplish these two key steps (loading a
 library, importing a data set), see the previous walkthrough on [Getting
 Started in R]().
 
-If you’re imported the data correctly, you can run the `head` function
+If you’re imported the data correctly, you can use the `head` function
 to get the first six lines of the file. You should see the following
 result:
 
