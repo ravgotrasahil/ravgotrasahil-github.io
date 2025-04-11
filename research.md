@@ -4,27 +4,23 @@ title: Research
 permalink: /research/
 ---
 
-I work at the intersection of **macroeconomic theory**, **behavioral economics**, and **open economy dynamics**, with a focus on monetary and fiscal policy. My research combines dynamic stochastic general equilibrium (DSGE) modeling, Bayesian estimation, and insights from bounded rationality.
+<p>You can find an up-to-date list of my papers on 
+<a href="https://scholar.google.com/citations?user=Ww_1EOMAAAAJ" target="_blank">Google Scholar</a>. 
+You can also view 
+<a href="{{ site.baseurl }}/share/sahil_cv.pdf" target="_blank">my academic CV</a>.</p>
 
-An up-to-date list of my publications is available on [Google Scholar](https://scholar.google.com/citations?user=Ww_1EOMAAAAJ).  
-You can also view [my academic CV]({{ site.baseurl }}/share/sahil_cv.pdf).
+<br>
 
----
+<h2>Publications</h2>
 
-## Selected Publications
-
-**Monetary Policy and Exchange Rate Dynamics in a Behavioral Open Economy Model**  
-*with Marcin Kolasa & Pawel Zabczyk*  
-_Forthcoming, Journal of International Economics_  
-[[Link](https://www.sciencedirect.com/science/article/pii/S0022199625000431)]
-
-<!-- Add more publications below as needed -->
-<!-- 
-**Title of Another Paper**  
-*with Coauthor(s)*  
-_Journal Name, Year_  
-[[Link](#)]
--->
+<p>
+  <a href="https://www.sciencedirect.com/science/article/pii/S0022199625000431" target="_blank" style="font-size: 18px; font-weight: bold; color: #1a73e8;">
+    Monetary Policy and Exchange Rate Dynamics in a Behavioral Open Economy Model
+  </a><br>
+  with <a href="https://sites.google.com/view/marcin-kolasa/home" target="_blank" style="color: #1a73e8;">Marcin Kolasa</a> and 
+  <a href="http://www.zabczyk.com/" target="_blank" style="color: #1a73e8;">Pawel Zabczyk</a>. 
+  <em>Journal of International Economics</em>, forthcoming.
+</p>
 
 ---
 
@@ -34,5 +30,4 @@ _Journal Name, Year_
 - Expectations formation and cognitive myopia  
 - Open economy DSGE models  
 - Monetary and fiscal policy interactions  
-- Bayesian and state-space estimation methods  
-
+- Bayesian and state-space estimation methods 
