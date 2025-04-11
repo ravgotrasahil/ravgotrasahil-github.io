@@ -28,9 +28,10 @@ This paper studies the open economy implications of cognitive myopia and imperfe
 </p>
 
 <p style="font-size: 14px;">
-  <a href="{{ site.baseurl }}/share/JIE/JIE_pre.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">Published Version</a> |
-  <a href="{{ site.baseurl }}/share/JIE/IMF_WP.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">IMF Working Paper</a> |
-  <a href="https://data.mendeley.com/datasets/88kmcfxk8k/1" target="_blank" style="color: #1a73e8; text-decoration: none;">Replication code</a>
+  <a href="{{ site.baseurl }}/Files/JIE_pre.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">Published Version</a> |
+  <a href="{{ site.baseurl }}/Files/JIE_app.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">Online Appendix</a> |
+  <a href="{{ site.baseurl }}/Files/IMF_WP.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">IMF Working Paper</a> |
+  <a href="https://data.mendeley.com/datasets/88kmcfxk8k/1" target="_blank" style="color: #1a73e8; text-decoration: none;">Replication Code</a>
 </p>
 
 <hr style="margin: 30px 0;">
