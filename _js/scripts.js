@@ -262,7 +262,7 @@ $( "#contactForm" ).submit( function( e ) {
     $.ajax( {
 
         // Change the email address here:
-        url: "https://formspree.io/james.scott@mccombs.utexas.edu",
+        url: "https://formspree.io/sahil.ravgotra@austin.utexas.edu",
         method: "POST",
         data: $( this ).serialize(),
         dataType: "json",
