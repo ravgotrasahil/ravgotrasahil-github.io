@@ -5,11 +5,10 @@ h1{color:#313237;margin-top:0;margin-bottom:.5rem}.dark-bg{background-color:#313
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  align-items: center;
 }
 
 .research-btn {
-  padding: 3px 10px;
+  padding: 4px 10px;
   font-size: 13px;
   font-weight: 500;
   color: #1a73e8 !important;
@@ -17,9 +16,11 @@ h1{color:#313237;margin-top:0;margin-bottom:.5rem}.dark-bg{background-color:#313
   border: 1px solid #f0b36c;
   border-radius: 6px;
   background-color: transparent;
-  line-height: 1.4;
-  transition: all 0.2s ease;
+  line-height: 1.2;
   display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  transition: all 0.2s ease;
 }
 
 .research-btn:hover {
@@ -27,4 +28,5 @@ h1{color:#313237;margin-top:0;margin-bottom:.5rem}.dark-bg{background-color:#313
   color: #0d1b2a !important;
   border-color: #f0b36c;
 }
+
 
