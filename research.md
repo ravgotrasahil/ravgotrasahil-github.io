@@ -24,16 +24,17 @@ You can also view
 </p>
 
 <p style="font-size: 14px; color: #555; margin-top: -10px;">
-We analyze the implications of adding boundedly rational agents *à la* Gabaix (2020) to the canonical New Keynesian open economy model. We show that accounting for myopia mitigates several *“puzzling”* aspects of the relationship between exchange rates and interest rates and helps explain why some of them only arise in the nested case of rational expectations. Bayesian estimation of the model demonstrates that high degrees of *“cognitive discounting”* significantly improve empirical fit. We also show that this form of bounded rationality makes positive international monetary spillovers more likely and exacerbates the unit root problem in small open economies with incomplete markets.
+We analyze the implications of adding boundedly rational agents à la Gabaix (2020) to the canonical New Keynesian open economy model. We show that accounting for myopia mitigates several “puzzling” aspects of the relationship between exchange rates and interest rates and helps explain why some of them only arise in the nested case of rational expectations. Bayesian estimation of the model demonstrates that high degrees of “cognitive discounting” significantly improve empirical fit. We also show that this form of bounded rationality makes positive international monetary spillovers more likely and exacerbates the unit root problem in small open economies with incomplete markets.
 
 </p>
 
-<p style="font-size: 14px;">
-  <a href="{{ site.baseurl }}/Files/JIE_pre.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">Published Version</a> |
-  <a href="{{ site.baseurl }}/Files/JIE_app.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">Online Appendix</a> |
-  <a href="{{ site.baseurl }}/Files/IMF_WP.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">IMF Working Paper</a> |
-  <a href="https://data.mendeley.com/datasets/88kmcfxk8k/1" target="_blank" style="color: #1a73e8; text-decoration: none;">Replication Code</a>
-</p>
+<div class="research-buttons">
+  <a class="research-btn" href="{{ site.baseurl }}/Files/JIE_pre.pdf" target="_blank">Published Version</a>
+  <a class="research-btn" href="{{ site.baseurl }}/Files/JIE_app.pdf" target="_blank">Online Appendix</a>
+  <a class="research-btn" href="{{ site.baseurl }}/Files/IMF_WP.pdf" target="_blank">IMF Working Paper</a>
+  <a class="research-btn" href="https://data.mendeley.com/datasets/88kmcfxk8k/1" target="_blank">Replication Code</a>
+</div>
+
 
 <hr style="margin: 30px 0;">
 
