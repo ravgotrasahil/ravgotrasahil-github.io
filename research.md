@@ -28,22 +28,12 @@ This paper studies the open economy implications of cognitive myopia and imperfe
 </p>
 
 <p style="font-size: 14px;">
-  <a href="{{ site.baseurl }}/share/sahil_paper_jie.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">Published paper</a> |
-  <a href="{{ site.baseurl }}/share/sahil_wp.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">Working paper</a> |
-  <a href="{{ site.baseurl }}/share/replication_code.zip" target="_blank" style="color: #1a73e8; text-decoration: none;">Replication code</a>
+  <a href="{{ site.baseurl }}/share/JIE/JIE_pre.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">Published Version</a> |
+  <a href="{{ site.baseurl }}/share/JIE/IMF_WP.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">IMF Working Paper</a> |
+  <a href="https://data.mendeley.com/datasets/88kmcfxk8k/1" target="_blank" style="color: #1a73e8; text-decoration: none;">Replication code</a>
 </p>
 
 <hr style="margin: 30px 0;">
-
-
-<p>
-  <a href="https://www.sciencedirect.com/science/article/pii/S0022199625000431" target="_blank" style="font-size: 18px; font-weight: bold; color: #1a73e8;">
-    Monetary Policy and Exchange Rate Dynamics in a Behavioral Open Economy Model
-  </a><br>
-  with <a href="https://sites.google.com/view/marcin-kolasa/home" target="_blank" style="color: #1a73e8;">Marcin Kolasa</a> and 
-  <a href="http://www.zabczyk.com/" target="_blank" style="color: #1a73e8;">Pawel Zabczyk</a>. 
-  <em>Journal of International Economics</em>, forthcoming.
-</p>
 
 ---
 
