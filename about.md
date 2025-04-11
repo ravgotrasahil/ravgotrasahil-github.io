@@ -15,12 +15,12 @@ I received my PhD in Economics from the [University of Surrey, UK](https://www.s
 
 Before joining UT Austin, I held research roles at the International Monetary Fund, Deutsche Bundesbank, and the OECD, and served on the faculty at the University of Delhi. 
 
-You can reach me by e-mail at sahil.ravgotra@austin.utexas.edu.  
+You can reach me by e-mail at [sahil.ravgotra@austin.utexas.edu](mailto:sahil.ravgotra@austin.utexas.edu).  
 
-My mailing address at work is:  
-> Sahil Ravgotra 
-> 2225 Speedway, BRB 3.128
-> University of Texas at Austin 
-> Austin, Texas 78712  
+**My mailing address at work is:**  
+Sahil Ravgotra  
+2225 Speedway, BRB 3.128  
+University of Texas at Austin  
+Austin, Texas 78712   
 
 
