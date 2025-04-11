@@ -24,16 +24,8 @@ You can also view
 </p>
 
 <p style="font-size: 14px; color: #555; margin-top: -10px;">
-We analyze the implications of adding boundedly rational agents \'a
-la Gabaix (2020) to the canonical New Keynesian open economy model.
-We show that accounting for myopia mitigates several ``puzzling"
-aspects of the relationship between exchange rates and interest rates
-and helps explain why some of them only arise in the nested case of
-rational expectations. Bayesian estimation of the model demonstrates
-that high degrees of ``cognitive discounting" significantly improve
-empirical fit. We also show that this form of bounded rationality
-makes positive international monetary spillovers more likely and exacerbates
-the unit root problem in small open economies with incomplete markets.
+We analyze the implications of adding boundedly rational agents *à la* Gabaix (2020) to the canonical New Keynesian open economy model. We show that accounting for myopia mitigates several *“puzzling”* aspects of the relationship between exchange rates and interest rates and helps explain why some of them only arise in the nested case of rational expectations. Bayesian estimation of the model demonstrates that high degrees of *“cognitive discounting”* significantly improve empirical fit. We also show that this form of bounded rationality makes positive international monetary spillovers more likely and exacerbates the unit root problem in small open economies with incomplete markets.
+
 </p>
 
 <p style="font-size: 14px;">
