@@ -4,20 +4,35 @@ title: Research
 permalink: /research/
 ---
 
-[Google Scholar](https://scholar.google.com/citations?user=Ww_1EOMAAAAJ) has an up-to-date list of my papers.  You can also find [my academic CV]({{ site.baseurl }}/share/jamesscott-CV.pdf) here.  
+I work at the intersection of **macroeconomic theory**, **behavioral economics**, and **open economy dynamics**, with a focus on monetary and fiscal policy. My research combines dynamic stochastic general equilibrium (DSGE) modeling, Bayesian estimation, and insights from bounded rationality.
 
+An up-to-date list of my publications is available on [Google Scholar](https://scholar.google.com/citations?user=Ww_1EOMAAAAJ).  
+You can also view [my academic CV]({{ site.baseurl }}/share/sahil_cv.pdf).
 
-## Ph.D Students and alumni  
+---
 
-I've had the privilege to work with some very smart, dedicated, and wonderful Ph.D. students over the years.  Currently, I'm collaborating with:  
-- [Mauricio Garcia-Tec](https://mauriciogtec.github.io/)    
-- [Rimli Sengupta](https://www.linkedin.com/in/rimli-s-184173152)  
-- [Jennifer Starling](https://jestarling.github.io/)   
-- [Spencer Woody](https://spencerwoody.github.io/)  
+## Selected Publications
 
-In the past, I've supervised (or co-supervised) these Ph.D. alumni:   
-- [Oscar Madrid Padilla](https://sites.google.com/site/oscarhernanmadridpadilla/), Ph.D. 2017, now at Berkeley.  
-- [Wesley Tansey](https://systemsbiology.columbia.edu/people/wesley-s-tansey), Ph.D. 2017, now at Columbia.  
-- [Liang Sun](https://www.linkedin.com/in/liang-sun-7098a13b), Ph.D. 2016, now at Skype.  
-- [Jesse Windle](http://jwindle.github.io/), Ph.D. 2013, now at Hi-Fidelity Genetics.  
+**Monetary Policy and Exchange Rate Dynamics in a Behavioral Open Economy Model**  
+*with Marcin Kolasa & Pawel Zabczyk*  
+_Forthcoming, Journal of International Economics_  
+[[Link](https://www.sciencedirect.com/science/article/pii/S0022199625000431)]
+
+<!-- Add more publications below as needed -->
+<!-- 
+**Title of Another Paper**  
+*with Coauthor(s)*  
+_Journal Name, Year_  
+[[Link](#)]
+-->
+
+---
+
+## Research Interests
+
+- Behavioral macroeconomics  
+- Expectations formation and cognitive myopia  
+- Open economy DSGE models  
+- Monetary and fiscal policy interactions  
+- Bayesian and state-space estimation methods  
 
