@@ -14,6 +14,29 @@ You can also view
 <h2>Publications</h2>
 
 <p>
+  <a href="https://www.sciencedirect.com/science/article/pii/S0022199625000431" target="_blank" style="font-size: 18px; font-weight: bold; color: #1a73e8; text-decoration: none;">
+    Monetary Policy and Exchange Rate Dynamics in a Behavioral Open Economy Model
+  </a><br>
+  with 
+  <a href="https://www.sghedoni.org/marcin-kolasa" target="_blank" style="color: #1a73e8; text-decoration: none;">Marcin Kolasa</a> and 
+  <a href="https://www.ecb.europa.eu/pub/research/authors/profiles/pawel-zabczyk.en.html" target="_blank" style="color: #1a73e8; text-decoration: none;">Pawel Zabczyk</a>. 
+  <em>Journal of International Economics</em>, forthcoming.
+</p>
+
+<p style="font-size: 14px; color: #555; margin-top: -10px;">
+This paper studies the open economy implications of cognitive myopia and imperfect expectations. We show that behavioral frictions amplify exchange rate volatility and alter the transmission of monetary policy. The model is estimated on US data and fits key empirical regularities.
+</p>
+
+<p style="font-size: 14px;">
+  <a href="{{ site.baseurl }}/share/sahil_paper_jie.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">Published paper</a> |
+  <a href="{{ site.baseurl }}/share/sahil_wp.pdf" target="_blank" style="color: #1a73e8; text-decoration: none;">Working paper</a> |
+  <a href="{{ site.baseurl }}/share/replication_code.zip" target="_blank" style="color: #1a73e8; text-decoration: none;">Replication code</a>
+</p>
+
+<hr style="margin: 30px 0;">
+
+
+<p>
   <a href="https://www.sciencedirect.com/science/article/pii/S0022199625000431" target="_blank" style="font-size: 18px; font-weight: bold; color: #1a73e8;">
     Monetary Policy and Exchange Rate Dynamics in a Behavioral Open Economy Model
   </a><br>
