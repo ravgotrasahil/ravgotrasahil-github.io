@@ -9,7 +9,7 @@ permalink: /about/
 
 ### My background
 
-I am an Assistant Professor of Economics at the [University of Texas at Austin] (https://liberalarts.utexas.edu/economics/faculty/sr55289), where I teach undergraduate and graduate courses in macroeconomics and time series econometrics. My research lies at the intersection of macroeconomic theory and behavioral economics, with a particular focus on monetary and fiscal policy in open economies.
+I am an Assistant Professor of Economics at the [University of Texas at Austin](https://liberalarts.utexas.edu/economics/faculty/sr55289), where I teach undergraduate and graduate courses in macroeconomics and time series econometrics. My research lies at the intersection of macroeconomic theory and behavioral economics, with a particular focus on monetary and fiscal policy in open economies.
 
 My work engages with dynamic stochastic general equilibrium (DSGE) models, exploring how bounded rationality, imperfect expectations, and credibility issues shape economic dynamics and policy outcomes. I often draw on Bayesian econometric methods to estimate and test these models using both macroeconomic and financial data.
 
