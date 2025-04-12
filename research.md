@@ -1,28 +1,16 @@
----
-layout: page
-title: Research
-permalink: /research/
----
-
-<h2>Research Interests</h2>
-
-- Behavioral Macroeconomics  
-- Monetary Economics  
-- International Economics  
-- Macroeconometrics  
-
 <hr style="margin: 30px 0;">
 
 <h2>Publications</h2>
 
-<p>
+<p style="margin-bottom: 0.5rem;">
   <a href="https://www.sciencedirect.com/science/article/pii/S0022199625000431" target="_blank" style="font-size: 18px; font-weight: bold; color: #1a73e8; text-decoration: none;">
     Monetary Policy and Exchange Rate Dynamics in a Behavioral Open Economy Model
   </a><br>
-  with 
-  <a href="https://www.sghedoni.org/marcin-kolasa" target="_blank" style="color: #1a73e8; text-decoration: none;">Marcin Kolasa</a> and 
-  <a href="https://www.ecb.europa.eu/pub/research/authors/profiles/pawel-zabczyk.en.html" target="_blank" style="color: #1a73e8; text-decoration: none;">Pawel Zabczyk</a>. 
-  <em>Journal of International Economics</em>, forthcoming.
+  <span style="font-size: 14px; color: #555;">
+    with <a href="https://www.sghedoni.org/marcin-kolasa" target="_blank" style="color: #1a73e8; text-decoration: none;">Marcin Kolasa</a> and 
+    <a href="https://www.ecb.europa.eu/pub/research/authors/profiles/pawel-zabczyk.en.html" target="_blank" style="color: #1a73e8; text-decoration: none;">Pawel Zabczyk</a>. 
+    <strong>Journal of International Economics</strong>, forthcoming.
+  </span>
 </p>
 
 <p style="font-size: 14px; color: #555; margin-top: 5px;">
@@ -34,14 +22,14 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
   <a class="research-btn" href="{{ site.baseurl }}/Files/JIE_app.pdf" target="_blank">Online Appendix</a>
   <a class="research-btn" href="{{ site.baseurl }}/Files/IMF_WP.pdf" target="_blank">IMF Working Paper</a>
   <a class="research-btn" href="https://data.mendeley.com/datasets/88kmcfxk8k/1" target="_blank">Replication Code</a>
-</p> 
+</p>
 
 <hr style="margin: 30px 0;">
 
 <h2>Work in Progress</h2>
 
 <p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #1a73e8;">
+  <span style="font-size: 18px; font-weight: bold; color: #343851;">
     New Keynesian Model of Debt and Equity without Rational Expectations
   </span><br>
   <span style="font-size: 14px; color: #555;">
@@ -50,13 +38,13 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
 </p>
 
 <p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #1a73e8;">
+  <span style="font-size: 18px; font-weight: bold; color: #343851;">
     Habit, Forward Guidance, and Monetary Policy
   </span>
 </p>
 
 <p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #1a73e8;">
+  <span style="font-size: 18px; font-weight: bold; color: #343851;">
     Fiscal Consolidation and Bounded Rationality
   </span><br>
   <span style="font-size: 14px; color: #555;">
@@ -65,7 +53,7 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
 </p>
 
 <p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #1a73e8;">
+  <span style="font-size: 18px; font-weight: bold; color: #343851;">
     Linear-Quadratic Approximation of a Small Open Economy NK Model
   </span><br>
   <span style="font-size: 14px; color: #555;">
@@ -78,7 +66,7 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
 <h2>Discussions</h2>
 
 <p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #1a73e8;">
+  <span style="font-size: 18px; font-weight: bold; color: #343851;">
     Implications of Endogenous Cognitive Discounting
   </span><br>
   <span style="font-size: 14px; color: #555;">
@@ -87,7 +75,7 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
 </p>
 
 <p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #1a73e8;">
+  <span style="font-size: 18px; font-weight: bold; color: #343851;">
     Monetary Policy in a Small Open Economy with Multiple Monetary Assets
   </span><br>
   <span style="font-size: 14px; color: #555;">
