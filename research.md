@@ -3,36 +3,6 @@ layout: default
 title: Research
 permalink: /research/
 ---
-<html lang="en">
-
-{% include head.html %}
-
-<body class="site">
-
-  {% include header.html %}
-
-  <div style="background-color: white; padding: 40px 0; border-bottom: 1px solid #eee;">
-    <div class="container" style="display: flex; justify-content: center; align-items: center;">
-      <h1 style="font-size: 28px; font-weight: 600; color: #343851; margin: 0;">
-        Sahil Ravgotra <span style="font-weight: 300; font-size: 26px; color: #888;">|</span>
-        <img src="{{ site.baseurl }}/assets/img/posts/UT_logo.png" alt="UT Austin Logo" style="height: 30px; vertical-align: middle; margin-left: 10px;">
-      </h1>
-    </div>
-  </div>
-
-  <main class="site__content">
-    <div class="container">
-      <div class="page-content">
-        {{ content }}
-      </div>
-    </div>
-  </main>
-
-  {% include footer.html %}
-
-</body>
-</html>
-
 
 <h2>Research Interests</h2>
 
