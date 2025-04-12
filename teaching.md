@@ -80,3 +80,91 @@ This three-day course offers an introduction to DSGE modeling for MSc, MRES, PhD
 </p>
 
 <hr style="margin: 30px 0;">
+
+<h2>Teaching Assistant: University of Surrey</h2>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    ECOM047: Advanced Macroeconomics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Graduate | Spring 2022
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    ECO2046: Intermediate Macroeconomics-II
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate | Spring 2022
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    ECOM057: Foundations of Macroeconomics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Graduate | Fall 2021
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    ECO1019: Principles of Macroeconomics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate | Fall 2020
+  </span>
+</p>
+
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    ECO1005: Mathematics for Economics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate | Fall 2020
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    ECO1020: Statistics for Economics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate | Spring 2021
+  </span>
+</p>
+
+<hr style="margin: 30px 0;">
+
+<h2>Instructor: University of Delhi</h2>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Mathematical Economics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate | Fall 2015-19
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Statistics for Economics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate | Spring 2015-19
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Macroeconomics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate | Fall 2015-19
+  </span>
+</p>
