@@ -6,10 +6,12 @@ permalink: /research/
 
 <h2>Research Interests</h2>
 
-- Behavioral Macroeconomics  
-- Monetary Economics  
-- International Economics  
-- Macroeconometrics  
+<div style="font-size: 14px; color: #343851;">
+  - Behavioral Macroeconomics<br>
+  - Monetary Economics<br>
+  - International Economics<br>
+  - Macroeconometrics
+</div>
 
 <hr style="margin: 30px 0;">
 
