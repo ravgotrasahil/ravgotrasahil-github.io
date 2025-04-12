@@ -42,7 +42,7 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
 <h2>Work in Progress</h2>
 
 <p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #343851;">
+  <span style="font-size: 18px; color: #343851;">
     New Keynesian Model of Debt and Equity without Rational Expectations
   </span><br>
   <span style="font-size: 14px; color: #555;">
@@ -52,7 +52,7 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
 </p>
 
 <p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #343851;">
+  <span style="font-size: 18px; color: #343851;">
     Fiscal Consolidation and Bounded Rationality
   </span><br>
   <span style="font-size: 14px; color: #555;">
@@ -61,7 +61,7 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
 </p>
 
 <p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #343851;">
+  <span style="font-size: 18px; color: #343851;">
     Linear-Quadratic Approximation of a Small Open Economy NK Model
   </span><br>
   <span style="font-size: 14px; color: #555;">
@@ -71,7 +71,7 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
 </p>
 
 <p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #343851;">
+  <span style="font-size: 18px; color: #343851;">
     Habit, Forward Guidance, and Monetary Policy
   </span>
 </p>
