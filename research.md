@@ -40,26 +40,35 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
 
 <h2>Work in Progress</h2>
 
-<ul>
-  <li><strong>New Keynesian Model of Debt and Equity without Rational Expectations</strong>, with Bruce Preston and Stefano Eusepi</li>
-  <li><strong>Habit, Forward Guidance, and Monetary Policy</strong></li>
-  <li><strong>Fiscal Consolidation and Bounded Rationality</strong>, with Hyungseok Joo</li>
-  <li><strong>Linear-Quadratic Approximation of a Small Open Economy NK Model</strong>, with Leilane Cambara and Paul Levine</li>
-</ul>
+<p>
+  <span style="font-size: 18px; font-weight: bold; color: #1a73e8;">New Keynesian Model of Debt and Equity without Rational Expectations</span><br>
+  with Bruce Preston and Stefano Eusepi
+</p>
+
+<p>
+  <span style="font-size: 18px; font-weight: bold; color: #1a73e8;">Habit, Forward Guidance, and Monetary Policy</span>
+</p>
+
+<p>
+  <span style="font-size: 18px; font-weight: bold; color: #1a73e8;">Fiscal Consolidation and Bounded Rationality</span><br>
+  with Hyungseok Joo
+</p>
+
+<p>
+  <span style="font-size: 18px; font-weight: bold; color: #1a73e8;">Linear-Quadratic Approximation of a Small Open Economy NK Model</span><br>
+  with Leilane Cambara and Paul Levine
+</p>
 
 <hr style="margin: 30px 0;">
 
 <h2>Discussions</h2>
 
-<ul>
-  <li>
-    <strong>"Implications of Endogenous Cognitive Discounting"</strong> by James Moberly,  
-    MMF PhD Conference, Edinburgh (April 2022)  
-    [<a href="#" target="_blank">Slides</a>]
-  </li>
-  <li>
-    <strong>"Monetary Policy in a Small Open Economy with Multiple Monetary Assets"</strong> by Van Nguyen,  
-    DSGE Modelling for Emerging Open Economies, City University of London (April 2022)  
-    [<a href="#" target="_blank">Slides</a>]
-  </li>
-</ul>
+<p>
+  <span style="font-size: 18px; font-weight: bold; color: #1a73e8;">Implications of Endogenous Cognitive Discounting</span><br>
+  by James Moberly, MMF PhD Conference, Edinburgh (April 2022)
+</p>
+
+<p>
+  <span style="font-size: 18px; font-weight: bold; color: #1a73e8;">Monetary Policy in a Small Open Economy with Multiple Monetary Assets</span><br>
+  by Van Nguyen, DSGE Modelling for Emerging Open Economies, City University of London (April 2022)
+</p>
