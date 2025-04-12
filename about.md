@@ -1,10 +1,10 @@
 ---
 layout: page
-title: About Sahil Ravgotra
+title: Sahil Ravgotra
 permalink: /about/
 ---
 
-<!img src="{{ site.baseurl }}/assets/img/posts/jgscott201802.png" ALIGN="right" style="margin:10px 15px"/>
+<!-- <img src="{{ site.baseurl }}/assets/img/posts/jgscott201802.png" ALIGN="right" style="margin:10px 15px"/> -->
 
 
 I am an Assistant Professor of Economics at the [University of Texas at Austin](https://liberalarts.utexas.edu/economics/faculty/sr55289), where I teach undergraduate and graduate courses in macroeconomics and time series econometrics. My research lies at the intersection of macroeconomic theory and behavioral economics, with a particular focus on monetary and fiscal policy in open economies.
