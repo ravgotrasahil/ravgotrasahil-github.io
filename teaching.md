@@ -54,10 +54,10 @@ This course offers a comprehensive introduction to time series models, equipping
 
 <hr style="margin: 30px 0;">
 
-<h2>Instructor: CIMS Summer School, University of Surrey</h2>
+<h2>Instructor: Short Courses</h2>
 <p style="margin-bottom: 0.5rem;">
   <span style="font-size: 18px; color: #343851;">
-    Foundations of DSGE Modelling
+    CIMS Summer School, University of Surrey
   </span><br>
   <span style="font-size: 14px; color: #555;">
     PhD | 2021, 2023 
@@ -66,16 +66,21 @@ This course offers a comprehensive introduction to time series models, equipping
 <p style="font-size: 14px; color: #555; margin-top: 5px;">
 This five-day foundations course is aimed at early-stage researchers familiar with RBC or DSGE models but new to Dynare. Starting with the basics of Dynare in Matlab, the course builds a closed-economy New Keynesian DSGE model, covers Bayesian estimation, and concludes with applications to optimal policy and open-economy extensions.
 </p>
-<p class="research-buttons">
-  <a class="research-btn" href="{{ site.baseurl }}/Files/ECO321_Syllabus.pdf" target="_blank">Syllabus</a>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Open Economy DSGE Modelling | CITY, University of London
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    PhD | 2023 
+  </span>
+</p>
+<p style="font-size: 14px; color: #555; margin-top: 5px;">
+This three-day course offers an introduction to DSGE modeling for MSc, MRES, PhD students, and researchers in academia, central banks, and policy institutions. Focusing on open and emerging economies, it covers the construction, calibration, and estimation of DSGE models using Dynare, assuming basic knowledge of Matlab and dynamic optimization. The course progresses from closed-economy RBC and New Keynesian models to open-economy frameworks with emerging market features, including a behavioral alternative to rational expectations. Practical applications include policy analysis with monetary and foreign exchange intervention tools.
 </p>
 
 
-<h2>Teaching Interests</h2>
 
-<div style="font-size: 14px; color: #343851;">
-  - Macroeconomic Theory (Undergraduate and Graduate)<br>
-  - Monetary and Fiscal Policy Analysis<br>
-  - Behavioral Macroeconomics<br>
-  - Time Series and State-Space Econometrics
-</div>
+<h2>Teaching Assistant: University of Surrey</h2>
+
+
