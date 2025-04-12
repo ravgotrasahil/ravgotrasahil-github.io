@@ -12,7 +12,7 @@ h1{color:#313237;margin-top:0;margin-bottom:.5rem}.dark-bg{background-color:#313
   font-size: 13px;
   font-weight: 500;
   color: #ffffff !important;
-  background-color: #f0b36c !important;
+  background-color: #4d90fe !important; /* soft Google-blue */
   border: none;
   border-radius: 6px;
   text-decoration: none !important;
@@ -22,7 +22,7 @@ h1{color:#313237;margin-top:0;margin-bottom:.5rem}.dark-bg{background-color:#313
 }
 
 .research-btn:hover {
-  background-color: #e3953e !important;
+  background-color: #357ae8 !important; /* darker on hover */
   color: #ffffff !important;
 }
 
