@@ -20,8 +20,8 @@ permalink: /research/
     Monetary Policy and Exchange Rate Dynamics in a Behavioral Open Economy Model
   </a><br>
   <span style="font-size: 14px; color: #555;">
-    with <a href="https://www.sghedoni.org/marcin-kolasa" target="_blank" style="color: #1a73e8; text-decoration: none;">Marcin Kolasa</a> and 
-    <a href="https://www.ecb.europa.eu/pub/research/authors/profiles/pawel-zabczyk.en.html" target="_blank" style="color: #1a73e8; text-decoration: none;">Pawel Zabczyk</a>. 
+    with <a href="https://sites.google.com/view/marcin-kolasa/home" target="_blank" style="color: #1a73e8; text-decoration: none;">Marcin Kolasa</a> and 
+    <a href="https://www.imf.org/en/Research/Researcher-CV/Author/Zabczyk-Pawel?AuthID=422#Background" target="_blank" style="color: #1a73e8; text-decoration: none;">Pawel Zabczyk</a>. 
     <strong>Journal of International Economics</strong>, forthcoming.
   </span>
 </p>
@@ -46,13 +46,8 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
     New Keynesian Model of Debt and Equity without Rational Expectations
   </span><br>
   <span style="font-size: 14px; color: #555;">
-    with Bruce Preston and Stefano Eusepi
-  </span>
-</p>
-
-<p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #343851;">
-    Habit, Forward Guidance, and Monetary Policy
+   with <a href="https://sites.google.com/site/professorbrucepreston" target="_blank" style="color: #1a73e8; text-decoration: none;">Bruce Preston</a> and 
+    <a href="https://sites.google.com/view/stefano-eusepi/home" target="_blank" style="color: #1a73e8; text-decoration: none;">Stefano Eusepi</a>.
   </span>
 </p>
 
@@ -61,7 +56,7 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
     Fiscal Consolidation and Bounded Rationality
   </span><br>
   <span style="font-size: 14px; color: #555;">
-    with Hyungseok Joo
+    with <a href="https://sites.google.com/site/hsjoo214" target="_blank" style="color: #1a73e8; text-decoration: none;">Hyungseok Joo</a>.
   </span>
 </p>
 
@@ -70,7 +65,14 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
     Linear-Quadratic Approximation of a Small Open Economy NK Model
   </span><br>
   <span style="font-size: 14px; color: #555;">
-    with Leilane Cambara and Paul Levine
+    with <a href="https://www.surrey.ac.uk/people/leilane-de-freitas-rocha-cambara" target="_blank" style="color: #1a73e8; text-decoration: none;">Leilane Cambara</a> and 
+    <a href="https://ideas.repec.org/f/ple338.html" target="_blank" style="color: #1a73e8; text-decoration: none;">Paul Levine</a>.
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; font-weight: bold; color: #343851;">
+    Habit, Forward Guidance, and Monetary Policy
   </span>
 </p>
 
