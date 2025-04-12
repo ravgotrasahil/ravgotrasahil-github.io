@@ -8,31 +8,41 @@ layout: compress
   <body class="site">
 
     {% if site.google_tag_manager %}
-
       <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- End Google Tag Manager (noscript) -->
-
     {% endif %}
 
     {% include header.html %}
 
-    <div class="hero--small">
-      <div class="hero__wrap">
-        <h1 class="hero__title">{{ page.title }}</h1>
+    <!-- Clean top section with name and logo -->
+    <div class="hero--small" style="background-color: #fff; padding: 2.5rem 0;">
+      <div class="container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        
+        <div style="flex: 1;">
+          <h1 class="hero__title" style="color: #343851; font-size: 2.5rem; margin-bottom: 0.5rem;">Sahil Ravgotra</h1>
+          <p class="hero__meta" style="font-size: 1.1rem; color: #555;">
+            Assistant Professor of Economics <br>
+            University of Texas at Austin <br>
+            <a href="mailto:sahil.ravgotra@austin.utexas.edu" style="color: #1a73e8; text-decoration: none;">sahil.ravgotra@austin.utexas.edu</a>
+          </p>
+        </div>
+
+        <div style="flex: 0 0 auto; padding-left: 2rem;">
+          <img src="{{ site.baseurl }}/assets/img/posts/ut-logo.png" alt="UT Logo" style="max-height: 90px;">
+        </div>
+
       </div>
     </div>
-    <main class="site__content">
 
+    <!-- Main content -->
+    <main class="site__content">
       <div class="container">
         <div class="page-content">
-
           {{ content }}
-
         </div>
       </div>
-
     </main>
 
     {% include footer.html %}
