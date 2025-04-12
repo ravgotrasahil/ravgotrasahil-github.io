@@ -81,6 +81,130 @@ This three-day course offers an introduction to DSGE modeling for MSc, MRES, PhD
 
 
 
+<hr style="margin: 30px 0;">
+
 <h2>Teaching Assistant: University of Surrey</h2>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Advanced Macroeconomics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Postgraduate
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Foundations of Macroeconomics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Postgraduate
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Mathematical Support
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Postgraduate
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Intermediate Macroeconomics-II
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Principles of Macroeconomics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Introduction to Macroeconomics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Mathematics for Economics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Statistics for Economics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate
+  </span>
+</p>
+
+<hr style="margin: 30px 0;">
+
+<h2>Instructor: University of Delhi</h2>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Mathematical Economics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Statistics for Economics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Macroeconomics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Microeconomics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate
+  </span>
+</p>
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    Data Analysis
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate
+  </span>
+</p>
+
 
 
