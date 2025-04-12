@@ -81,19 +81,27 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
 <h2>Discussions</h2>
 
 <p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #343851;">
-    Implications of Endogenous Cognitive Discounting
-  </span><br>
+  <a href="https://drive.google.com/file/d/1yfWxkPo2NuHeadbL-H3L9kxhA2INNFXi/view" target="_blank" style="font-size: 18px; font-weight: bold; color: #1a73e8; text-decoration: none;">
+    Endogenous Cognitive Discounting
+  </a><br>
   <span style="font-size: 14px; color: #555;">
-    by James Moberly, MMF PhD Conference, Edinburgh (April 2022)
+    by <a href="https://sites.google.com/view/jamesmoberly/home?authuser=0" target="_blank" style="color: #1a73e8; text-decoration: none;">James Moberly</a>. 
   </span>
+</p>
+<p class="research-buttons">
+  <a class="research-btn" href="{{ site.baseurl }}/Files/Discussion_Moberly.pdf" target="_blank">Slides</a>
 </p>
 
 <p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; font-weight: bold; color: #343851;">
+  <a href="https://sites.google.com/view/vanhn/research?authuser=0" target="_blank" style="font-size: 18px; font-weight: bold; color: #1a73e8; text-decoration: none;">
     Monetary Policy in a Small Open Economy with Multiple Monetary Assets
-  </span><br>
+  </a><br>
   <span style="font-size: 14px; color: #555;">
-    by Van Nguyen, DSGE Modelling for Emerging Open Economies, City University of London (April 2022)
+    by
+    <a href="https://econ.tepper.cmu.edu/barnett/welcome.html" target="_blank" style="color: #1a73e8; text-decoration: none;">William Barnett</a>
+    and <a href="https://sites.google.com/view/vanhn/home" target="_blank" style="color: #1a73e8; text-decoration: none;">Van Nguyen</a>. 
   </span>
+</p>
+<p class="research-buttons">
+  <a class="research-btn" href="{{ site.baseurl }}/Files/Discussion_Nguyen.pdf" target="_blank">Slides</a>
 </p>
