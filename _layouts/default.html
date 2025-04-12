@@ -1,17 +1,29 @@
 ---
 layout: compress
 ---
-
+<!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en-US' }}">
+
   {% include head.html %}
 
   <body class="site">
+
+    {% if site.google_tag_manager %}
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    {% endif %}
+
     {% include header.html %}
 
-    <div style="padding: 40px 0 20px 0; text-align: center; font-size: 26px; font-weight: 600; font-family: 'Inter', sans-serif; display: flex; justify-content: center; align-items: center; gap: 12px;">
-      <span style="font-weight: bold; color: #2c2e3e;">Sahil Ravgotra</span>
-      <span style="font-size: 22px;">|</span>
-      <img src="{{ site.baseurl }}/assets/img/posts/UT_logo.png" alt="UT Austin Logo" style="height: 30px;">
+    <!-- Custom Header Section -->
+    <div style="background-color: white; padding: 20px 0; text-align: center;">
+      <h1 style="font-size: 2.5em; margin: 0; display: inline-block; vertical-align: middle;">
+        Sahil Ravgotra
+      </h1>
+      <span style="font-size: 2.5em; margin: 0 10px; vertical-align: middle;">|</span>
+      <img src="{{ site.baseurl }}/assets/img/posts/UT_logo.png" alt="Logo" style="height: 60px; vertical-align: middle;">
     </div>
 
     <main class="site__content">
@@ -23,5 +35,6 @@ layout: compress
     </main>
 
     {% include footer.html %}
+
   </body>
 </html>
