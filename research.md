@@ -4,12 +4,14 @@ title: Research
 permalink: /research/
 ---
 
-<p>You can find an up-to-date list of my papers on 
-<a href="https://scholar.google.com/citations?user=Ww_1EOMAAAAJ" target="_blank">Google Scholar</a>. 
-You can also view 
-<a href="{{ site.baseurl }}/share/sahil_cv.pdf" target="_blank">my academic CV</a>.</p>
+<h2>Research Interests</h2>
 
-<br>
+- Behavioral Macroeconomics  
+- Monetary Economics  
+- International Economics  
+- Macroeconometrics  
+
+<hr style="margin: 30px 0;">
 
 <h2>Publications</h2>
 
@@ -23,7 +25,7 @@ You can also view
   <em>Journal of International Economics</em>, forthcoming.
 </p>
 
-<p style="font-size: 14px; color: #555; margin-top: -10px;">
+<p style="font-size: 14px; color: #555; margin-top: 5px;">
 We analyze the implications of adding boundedly rational agents à la Gabaix (2020) to the canonical New Keynesian open economy model. We show that accounting for myopia mitigates several “puzzling” aspects of the relationship between exchange rates and interest rates and helps explain why some of them only arise in the nested case of rational expectations. Bayesian estimation of the model demonstrates that high degrees of “cognitive discounting” significantly improve empirical fit. We also show that this form of bounded rationality makes positive international monetary spillovers more likely and exacerbates the unit root problem in small open economies with incomplete markets.
 </p>
 
@@ -34,15 +36,30 @@ We analyze the implications of adding boundedly rational agents à la Gabaix (20
   <a class="research-btn" href="https://data.mendeley.com/datasets/88kmcfxk8k/1" target="_blank">Replication Code</a>
 </p> 
 
-<p
-</p>
+<hr style="margin: 30px 0;">
+
+<h2>Work in Progress</h2>
+
+<ul>
+  <li><strong>New Keynesian Model of Debt and Equity without Rational Expectations</strong>, with Bruce Preston and Stefano Eusepi</li>
+  <li><strong>Habit, Forward Guidance, and Monetary Policy</strong></li>
+  <li><strong>Fiscal Consolidation and Bounded Rationality</strong>, with Hyungseok Joo</li>
+  <li><strong>Linear-Quadratic Approximation of a Small Open Economy NK Model</strong>, with Leilane Cambara and Paul Levine</li>
+</ul>
 
 <hr style="margin: 30px 0;">
 
-<h2>Research Interests</h2>
+<h2>Discussions</h2>
 
-- Behavioral macroeconomics  
-- Expectations formation and cognitive myopia  
-- Open economy DSGE models  
-- Monetary and fiscal policy interactions  
-- Bayesian and state-space estimation methods  
+<ul>
+  <li>
+    <strong>"Implications of Endogenous Cognitive Discounting"</strong> by James Moberly,  
+    MMF PhD Conference, Edinburgh (April 2022)  
+    [<a href="#" target="_blank">Slides</a>]
+  </li>
+  <li>
+    <strong>"Monetary Policy in a Small Open Economy with Multiple Monetary Assets"</strong> by Van Nguyen,  
+    DSGE Modelling for Emerging Open Economies, City University of London (April 2022)  
+    [<a href="#" target="_blank">Slides</a>]
+  </li>
+</ul>
