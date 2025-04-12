@@ -57,7 +57,7 @@ This course offers a comprehensive introduction to time series models, equipping
 <h2>Instructor: Short Courses</h2>
 <p style="margin-bottom: 0.5rem;">
   <span style="font-size: 18px; color: #343851;">
-    CIMS Summer School, University of Surrey
+    CIMS Summer School | University of Surrey
   </span><br>
   <span style="font-size: 14px; color: #555;">
     PhD | 2021, 2023 
@@ -87,73 +87,56 @@ This three-day course offers an introduction to DSGE modeling for MSc, MRES, PhD
 
 <p style="margin-bottom: 0.5rem;">
   <span style="font-size: 18px; color: #343851;">
-    Advanced Macroeconomics
+    ECOM047: Advanced Macroeconomics
   </span><br>
   <span style="font-size: 14px; color: #555;">
-    Postgraduate
+    Graduate | Spring 2022
   </span>
 </p>
 
 <p style="margin-bottom: 0.5rem;">
   <span style="font-size: 18px; color: #343851;">
-    Foundations of Macroeconomics
+    ECO2046: Intermediate Macroeconomics-II
   </span><br>
   <span style="font-size: 14px; color: #555;">
-    Postgraduate
+    Undergraduate | Spring 2022
   </span>
 </p>
 
 <p style="margin-bottom: 0.5rem;">
   <span style="font-size: 18px; color: #343851;">
-    Mathematical Support
+    ECOM057: Foundations of Macroeconomics
   </span><br>
   <span style="font-size: 14px; color: #555;">
-    Postgraduate
+    Graduate | Fall 2021
   </span>
 </p>
 
 <p style="margin-bottom: 0.5rem;">
   <span style="font-size: 18px; color: #343851;">
-    Intermediate Macroeconomics-II
+    ECO1019: Principles of Macroeconomics
   </span><br>
   <span style="font-size: 14px; color: #555;">
-    Undergraduate
+    Undergraduate | Fall 2020
+  </span>
+</p>
+
+
+<p style="margin-bottom: 0.5rem;">
+  <span style="font-size: 18px; color: #343851;">
+    ECO1005: Mathematics for Economics
+  </span><br>
+  <span style="font-size: 14px; color: #555;">
+    Undergraduate | Fall 2020
   </span>
 </p>
 
 <p style="margin-bottom: 0.5rem;">
   <span style="font-size: 18px; color: #343851;">
-    Principles of Macroeconomics
+    ECO1020: Statistics for Economics
   </span><br>
   <span style="font-size: 14px; color: #555;">
-    Undergraduate
-  </span>
-</p>
-
-<p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; color: #343851;">
-    Introduction to Macroeconomics
-  </span><br>
-  <span style="font-size: 14px; color: #555;">
-    Undergraduate
-  </span>
-</p>
-
-<p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; color: #343851;">
-    Mathematics for Economics
-  </span><br>
-  <span style="font-size: 14px; color: #555;">
-    Undergraduate
-  </span>
-</p>
-
-<p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; color: #343851;">
-    Statistics for Economics
-  </span><br>
-  <span style="font-size: 14px; color: #555;">
-    Undergraduate
+    Undergraduate | Spring 2021
   </span>
 </p>
 
@@ -166,7 +149,7 @@ This three-day course offers an introduction to DSGE modeling for MSc, MRES, PhD
     Mathematical Economics
   </span><br>
   <span style="font-size: 14px; color: #555;">
-    Undergraduate
+    Undergraduate | Fall 2015-19
   </span>
 </p>
 
@@ -175,7 +158,7 @@ This three-day course offers an introduction to DSGE modeling for MSc, MRES, PhD
     Statistics for Economics
   </span><br>
   <span style="font-size: 14px; color: #555;">
-    Undergraduate
+    Undergraduate | Spring 2015-19
   </span>
 </p>
 
@@ -184,27 +167,11 @@ This three-day course offers an introduction to DSGE modeling for MSc, MRES, PhD
     Macroeconomics
   </span><br>
   <span style="font-size: 14px; color: #555;">
-    Undergraduate
+    Undergraduate | Fall 2015-19
   </span>
 </p>
 
-<p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; color: #343851;">
-    Microeconomics
-  </span><br>
-  <span style="font-size: 14px; color: #555;">
-    Undergraduate
-  </span>
-</p>
 
-<p style="margin-bottom: 0.5rem;">
-  <span style="font-size: 18px; color: #343851;">
-    Data Analysis
-  </span><br>
-  <span style="font-size: 14px; color: #555;">
-    Undergraduate
-  </span>
-</p>
 
 
 
