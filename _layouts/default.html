@@ -8,63 +8,31 @@ layout: compress
   <body class="site">
 
     {% if site.google_tag_manager %}
-
       <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
-
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      </noscript>
     {% endif %}
 
     {% include header.html %}
 
-    <div class="hero--small" style="background-color: #fff; padding: 2.5rem 0;">
-  <div class="container" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-    
-    <div style="flex: 1;">
-      <h1 class="hero__title" style="color: #343851; font-size: 2.5rem; margin-bottom: 0.5rem;">Sahil Ravgotra</h1>
-      <p class="hero__meta" style="font-size: 1.1rem; color: #555;">
-        Assistant Professor of Economics <br>
-        University of Texas at Austin <br>
-        <a href="mailto:sahil.ravgotra@austin.utexas.edu" style="color: #1a73e8; text-decoration: none;">sahil.ravgotra@austin.utexas.edu</a>
-      </p>
+    <!-- SIMPLE WHITE HERO TOP CENTERED -->
+    <div class="hero--clean" style="background-color: white; padding: 1.5rem 0 0.5rem;">
+      <div style="display: flex; justify-content: center; align-items: center; gap: 12px;">
+        <span style="font-size: 24px; font-weight: 600; color: #343851;">Sahil Ravgotra</span>
+        <span style="color: #ccc;">|</span>
+        <img src="{{ site.baseurl }}/assets/img/posts/UT-logo.png" alt="UT Austin Logo" style="height: 40px;">
+      </div>
     </div>
-
-    <div style="flex: 0 0 auto; padding-left: 2rem;">
-      <img src="{{ site.baseurl }}/assets/img/posts/UT_logo.png" alt="UT Logo" style="max-height: 90px;">
-    </div>
-
-  </div>
-</div>
-
 
     <main class="site__content">
       <div class="container">
         <div class="page-content">
-
-          <p>Hi, I'm Sahil Ravgotra.  I am a Macroeconomist at UT-Austin.  Here you can find information on <a href="{{ site.baseurl }}/research/">my research</a>, the <a href="{{ site.baseurl }}/books/">books, articles</a> and <a href="{{ site.baseurl }}/software/">software</a> I've written, and <a href="{{ site.baseurl }}/teaching/">the classes I teach</a>.  
-          </p>
-
+          {{ content }}
         </div>
       </div>
     </main>
-
-    <!--
-    <main class="site__content">
-
-      <section class="blog">
-        <div class="container">
-          <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
-
-            {% for post in site.posts %}
-              {% include card.html %}
-            {% endfor %}
-
-          </div>
-        </div>
-      </section>
-    </main>
-    -->
 
     {% include footer.html %}
 
