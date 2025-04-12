@@ -3,38 +3,37 @@ layout: compress
 ---
 <html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body class="site">
+<body class="site">
 
-    {% if site.google_tag_manager %}
+  {% if site.google_tag_manager %}
     <noscript>
       <iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
               height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
-    {% endif %}
+  {% endif %}
 
-    {% include header.html %}
+  {% include header.html %}
 
-    <!-- Clean header section with centered name and logo -->
-    <div style="padding: 40px 0 10px 0;">
-      <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap; gap: 16px; text-align: center;">
-        <span style="font-size: 28px; font-weight: 600; color: #343851;">Sahil Ravgotra</span>
-        <span style="font-size: 24px; color: #343851;">|</span>
-        <img src="{{ site.baseurl }}/assets/img/posts/UT_logo.png" alt="UT Austin Logo" style="height: 28px; max-width: 200px;">
+  <!-- Centered Name and Logo Header -->
+  <div style="padding: 30px 0 0 0;">
+    <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px;">
+      <span style="font-size: 26px; font-weight: 600; color: #343851;">Sahil Ravgotra</span>
+      <span style="font-size: 20px; color: #343851;">|</span>
+      <img src="{{ site.baseurl }}/assets/img/posts/UT_logo.png" alt="UT Austin Logo" style="height: 26px; max-width: 200px;">
+    </div>
+  </div>
+
+  <main class="site__content">
+    <div class="container">
+      <div class="page-content">
+        {{ content }}
       </div>
     </div>
+  </main>
 
-    <main class="site__content">
-      <div class="container">
-        <div class="page-content">
-          {{ content }}
-        </div>
-      </div>
-    </main>
+  {% include footer.html %}
 
-    {% include footer.html %}
-
-  </body>
-
+</body>
 </html>
