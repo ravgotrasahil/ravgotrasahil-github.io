@@ -1,3 +1,16 @@
+---
+layout: page
+title: Research
+permalink: /research/
+---
+
+<h2>Research Interests</h2>
+
+- Behavioral Macroeconomics  
+- Monetary Economics  
+- International Economics  
+- Macroeconometrics  
+
 <hr style="margin: 30px 0;">
 
 <h2>Publications</h2>
