@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://ravgotrasahil.github.io/ravgotrasahil-github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sahil_ravgotra # replace with your_twitter_username or comment to remove link from footer
-#github_username:  jgscott # replace with your_github_username or comment to remove link from footer
+github_username:  ravgotrasahil # replace with your_github_username or comment to remove link from footer
 #instagram_username: shanlongjj # replace with your_instagram_username or comment to remove link from footer
 social:
   name: Sahil Ravgotra
