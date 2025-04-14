@@ -20,10 +20,9 @@ permalink: /about/
 
 <br><br>
 
-<strong>My mailing address at work is:</strong><br>
+<strong>My mailing address is:</strong><br>
 Sahil Ravgotra<br>
 2225 Speedway, BRB 3.128<br>
 University of Texas at Austin<br>
 Austin, Texas 78712
 
-</div>
