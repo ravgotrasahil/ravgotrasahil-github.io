@@ -141,18 +141,4 @@ a:focus {
   }
 }
 
-/* Mobile nav toggle */
-.header__links {
-  display: none;
-}
-
-.header__links.is-open {
-  display: block;
-}
-
-@media (min-width: 62em) {
-  .header__links {
-    display: flex !important;
-  }
-}
 
