@@ -3,39 +3,25 @@
 /*# sourceMappingURL=maps/main.css.map */
 
 
-/* Header background fix */
+/* Restore the dark header background */
 .header,
 .header__inner,
 .header__links-wrapper {
   background-color: #0a1128 !important;
 }
 
-/* Nav link color on dark header */
+/* Make navigation links blue again */
 .header__link {
-  color: #e0ecff !important;
-  font-weight: 400;
-  font-size: 1rem;
+  color: #277cea !important;
 }
 
-/* Nav hover and underline effect */
+/* Blue hover effect with underline */
 .header__link:hover {
-  color: #fdb462 !important;
+  color: #68a4f1 !important;
 }
 
 .header__link::after {
-  background-color: #fdb462 !important;
+  background-color: #277cea !important;
   height: 2px;
 }
 
-/* Active link style (if manually added) */
-.header__link.active {
-  color: #fdb462 !important;
-  font-weight: bold;
-}
-
-/* Logo and name alignment section */
-.site-header-title span {
-  font-size: 2.6rem;
-  font-weight: 600;
-  color: white;
-}
