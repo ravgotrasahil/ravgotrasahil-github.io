@@ -3,6 +3,24 @@
 /*# sourceMappingURL=maps/main.css.map */
 
 
+/* Existing global styles and resets */
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #343851;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Anchor styling */
 a {
   color: #277cea !important;
   text-decoration: none !important;
@@ -10,14 +28,12 @@ a {
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
-
 a:active,
 a:focus {
   outline: 0;
   text-decoration: none !important;
   border-bottom: none !important;
 }
-
 a:hover,
 a:focus {
   color: #68a4f1 !important;
@@ -29,8 +45,98 @@ a:focus {
 .header__links a {
   color: #277cea !important;
 }
-
 .header__links a:hover {
   color: #68a4f1 !important;
 }
 
+/* General layout containers */
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+/* Responsive Hero Section */
+.hero__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  max-width: 90%;
+  z-index: 1;
+}
+.hero__wrap .hero__title {
+  font-size: 1.8em;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .hero__wrap .hero__title {
+    font-size: 2.625em;
+    line-height: 3.125rem;
+  }
+}
+
+/* RESPONSIVE ADJUSTMENTS FOR PHONES */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .hero__wrap .hero__title {
+    font-size: 1.5em;
+  }
+
+  .header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__links-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .header__link {
+    padding: 0.75rem 1rem;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hero img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  footer .social {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer .social__link {
+    margin: 5px;
+  }
+
+  .page-content {
+    padding: 1.5em 0;
+  }
+}
+
+/* Optional fix for logo spacing */
+@media only screen and (max-width: 480px) {
+  .custom-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .custom-header img {
+    height: 45px !important;
+    top: 0 !important;
+  }
+  .custom-header span {
+    font-size: 1.5rem !important;
+  }
+}
