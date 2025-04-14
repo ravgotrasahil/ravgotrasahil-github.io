@@ -10,8 +10,6 @@ title: Home
 
 <img src="{{ site.baseurl }}/assets/img/posts/sahil.png" ALIGN="right" style="margin:10px 15px"/>
 
-<div style="font-size: 15px; font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 300; line-height: 1.6; color: #343851; text-align: justify; -webkit-font-smoothing: antialiased;">
-
 <p>I am an Assistant Professor of Economics at the <a href="https://liberalarts.utexas.edu/economics/faculty/sr55289" target="_blank" style="color: #1a73e8; text-decoration: none;">University of Texas at Austin</a>, where I teach undergraduate and graduate courses in macroeconomics and time series econometrics. My research lies at the intersection of macroeconomic theory and behavioral economics, with a particular focus on monetary and fiscal policy in open economies.<p>
 
 <p>My work engages with dynamic stochastic general equilibrium (DSGE) models, exploring how bounded rationality, imperfect expectations, and credibility issues shape economic dynamics and policy outcomes. I often draw on Bayesian econometric methods to estimate and test these models using both macroeconomic and financial data.<p>
