@@ -10,24 +10,25 @@ layout: compress
 
     {% if site.google_tag_manager %}
       <!-- Google Tag Manager (noscript) -->
-      <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>
-      </noscript>
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- End Google Tag Manager (noscript) -->
     {% endif %}
 
     {% include header.html %}
 
-    <!-- Custom Header Section -->
-    <div style="background-color: #0a1128; padding: 80px 0 30px 0; text-align: center; color: white;">
-      <span style="display: inline-flex; align-items: center; gap: 12px;">
-        <span style="font-size: 2.6rem; font-weight: 600;">Sahil Ravgotra</span>
-        <span style="font-size: 3.2rem; line-height: 1; color: white;">|</span>
-        <img src="{{ site.baseurl }}/assets/img/posts/eco_logo.png" alt="UT Logo"
-             style="height: 65px; position: relative; top: 13px;">
-      </span>
-    </div>
+   <!-- Custom Header Section -->
+<div style="background-color: white; padding: 90px 0 30px 0; text-align: center;">
+  <span style="display: inline-flex; align-items: center; gap: 10px;">
+    <span style="font-size: 2.5rem; font-weight: 400;">Sahil Ravgotra</span>
+    <span style="font-size: 3.6rem; line-height: 1;">|</span>
+    <img src="{{ site.baseurl }}/assets/img/posts/eco_logo.png" alt="UT Logo"
+         style="height: 65px; position: relative; top: 15px;">
+  </span>
+</div>
+
+
+
 
     <main class="site__content">
       <div class="container">
@@ -40,4 +41,4 @@ layout: compress
     {% include footer.html %}
 
   </body>
-</html>
+</html>.
