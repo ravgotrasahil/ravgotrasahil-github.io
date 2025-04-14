@@ -8,7 +8,7 @@ layout: default
 title: Home 
 ---
 
-<img src="{{ site.baseurl }}/assets/img/posts/sahil.heic" ALIGN="right" style="margin:10px 15px"/>
+<img src="{{ site.baseurl }}/assets/img/posts/sahil.png" ALIGN="right" style="margin:10px 15px"/>
 
 <div style="font-size: 15px; font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 300; line-height: 1.6; color: #343851; text-align: justify; -webkit-font-smoothing: antialiased;">
 
