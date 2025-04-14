@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sahil Ravgotra
-permalink: /about/
+permalink: /
 ---
 
 <!-- <img src="{{ site.baseurl }}/assets/img/posts/jgscott201802.png" ALIGN="right" style="margin:10px 15px"/> -->
