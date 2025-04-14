@@ -24,3 +24,23 @@ a:focus {
   text-decoration: none !important;
   border-bottom: none !important;
 }
+
+/* added */
+
+/* Custom Header Styles for Dark Background */
+.header {
+  background-color: #0B132B !important;
+  color: #ffffff !important;
+}
+
+.header__link {
+  color: #ffffff !important;
+}
+
+.header__link:hover {
+  color: #f6a868 !important;
+}
+
+.header__toggle span {
+  background-color: #ffffff !important;
+}
