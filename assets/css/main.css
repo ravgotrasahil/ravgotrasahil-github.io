@@ -3,44 +3,39 @@
 /*# sourceMappingURL=maps/main.css.map */
 
 
-a {
-  color: #277cea !important;
-  text-decoration: none !important;
-  border-bottom: none !important;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+/* Header background fix */
+.header,
+.header__inner,
+.header__links-wrapper {
+  background-color: #0a1128 !important;
 }
 
-a:active,
-a:focus {
-  outline: 0;
-  text-decoration: none !important;
-  border-bottom: none !important;
-}
-
-a:hover,
-a:focus {
-  color: #68a4f1 !important;
-  text-decoration: none !important;
-  border-bottom: none !important;
-}
-
-/* added */
-
-/* Custom Header Styles for Dark Background */
-.header {
-  background-color: #0B132B !important;
-  color: #ffffff !important;
-}
-
+/* Nav link color on dark header */
 .header__link {
-  color: #ffffff !important;
+  color: #e0ecff !important;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
+/* Nav hover and underline effect */
 .header__link:hover {
-  color: #f6a868 !important;
+  color: #fdb462 !important;
 }
 
-.header__toggle span {
-  background-color: #ffffff !important;
+.header__link::after {
+  background-color: #fdb462 !important;
+  height: 2px;
+}
+
+/* Active link style (if manually added) */
+.header__link.active {
+  color: #fdb462 !important;
+  font-weight: bold;
+}
+
+/* Logo and name alignment section */
+.site-header-title span {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: white;
 }
