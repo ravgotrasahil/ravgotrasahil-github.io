@@ -3,25 +3,28 @@
 /*# sourceMappingURL=maps/main.css.map */
 
 
-/* Restore the dark header background */
+/* Keep header background dark */
 .header,
 .header__inner,
 .header__links-wrapper {
   background-color: #0a1128 !important;
 }
 
-/* Make navigation links blue again */
+/* Blue text for nav links */
 .header__link {
   color: #277cea !important;
 }
 
-/* Blue hover effect with underline */
+/* Lighter blue on hover */
 .header__link:hover {
   color: #68a4f1 !important;
 }
 
+/* Optional: blue underline animation */
 .header__link::after {
   background-color: #277cea !important;
-  height: 2px;
+  height: 2px !important;
+  transition: transform 0.2s ease-in-out;
 }
+
 
